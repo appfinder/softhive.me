@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+
+    <script>
+(function() {
+    // Get the current URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Check if any GET parameter exists (change "redirect" to a specific param if needed)
+    if (urlParams.has("code")) {
+        const redirectParam = urlParams.get("code"); // Get the parameter value
+
+        // Redirect to localhost:3000 while keeping the parameter
+        window.location.href = `http://localhost:3000?callback=${encodeURIComponent(redirectParam)}`;
+    }
+})();
+
+      
+    </script>
+    
+  <title>Softhive - One-Click App Installer</title>
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+
+  <meta name="description"
+    content="Install a variety of apps with just one click using Softhive, our convenient app installer. Streamline your app setup process now.">
+  <meta name="keywords" content="Softhive, app installer, one-click install, app installation, easy app setup">
+  <link rel="canonical" href="https://Softhive.github.io/">
+  <meta property="og:title" content="Softhive - One-Click App Installer">
+  <meta property="og:description"
+    content="Install a variety of apps with just one click using Softhive, our convenient app installer. Streamline your app setup process now.">
+  <meta property="og:image" content="https://Softhive.github.io/images/og-image.jpg">
+  <meta property="og:url" content="https://Softhive.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Softhive - One-Click App Installer">
+  <meta name="twitter:description"
+    content="Install a variety of apps with just one click using Softhive, our convenient app installer. Streamline your app setup process now.">
+  <meta name="twitter:image" content="https://Softhive.github.io/images/twitter-card-image.jpg">
+
+
+    <!--====== CSS Files LinkUp ======-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/lineIcons.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!--====== PRELOADER PART START ======-->
+    <!-- <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+    <header class="header-area">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img style="height: 32px;" src="assets/images/logo/logo.svg" alt="Logo" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#facts">Why</a>
+                    </li>
+                  
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
+
+                <div class="navbar-btn d-none d-sm-inline-block">
+                  <a
+                    class="main-btn"
+                    data-scroll-nav="0"
+                    href="https://github.com/Softhive/app-finder-releases/releases/latest/download/Softhive.exe"
+                    rel="nofollow"
+                  >
+                    Download Now
+                  </a>
+                </div>
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+
+      <div
+        id="home"
+        class="header-hero bg_cover"
+        style="background-image: url(assets/images/header/banner-bg.svg)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="header-hero-content text-center" >
+                <h3
+                  class="header-sub-title wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.2s"
+                >
+                Softhive - One-Click App Installer
+                </h3>
+                <h2
+                  class="header-title wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.5s"
+                >
+                Install a variety of apps with just one click using Softhive
+                </h2>
+                <p
+                  class="text wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.8s"
+                >
+                Streamline your app setup process now.
+                </p>
+                 
+
+                <div class="navbar-btn d-none d-sm-inline-block">
+                  <a
+                    class="main-btn"
+                    data-scroll-nav="0"
+                    href="https://github.com/Softhive/app-finder-releases/releases/latest/download/Softhive.exe"
+                    rel="nofollow"
+                  >
+                  Get Started
+                  </a>
+                </div>
+              </div>
+
+               
+              <!-- header hero content -->
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="header-hero-image text-center wow fadeIn"
+                data-wow-duration="1.3s"
+                data-wow-delay="1.4s"
+              >
+                <img src="assets/images/header/header-hero.png" alt="hero" />
+              </div>
+              <!-- header hero image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div id="particles-1" class="particles"></div>
+      </div>
+      <!-- header hero -->
+    </header>
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== BRAND PART START ======-->
+    <div class="brand-area pt-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="
+                brand-logo
+                d-flex
+                align-items-center
+                justify-content-center justify-content-md-between
+              "
+            >
+              <div
+                class="single-logo mt-30 "
+                 
+              >
+                <img style="width: 56px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/800px-Firefox_logo%2C_2019.svg.png" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.2s"
+              >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                <img  src="https://upload.wikimedia.org/wikipedia/commons/3/38/VLC_icon.png" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                <img  src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="brand" />
+              </div>
+              <!-- single logo -->
+              <div
+                class="single-logo mt-30 wow fadeIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.5s"
+              >
+                <img
+                  src="https://brave.com/static-assets/images/brave-logo-sans-text.svg"
+                  alt="brand"
+                />
+              </div>
+
+              <div
+              class="single-logo mt-30 wow fadeIn"
+              data-wow-duration="1.5s"
+              data-wow-delay="0.5s"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg"
+                alt="brand"
+              />
+            </div>
+            <div
+            class="single-logo mt-30 wow fadeIn"
+            data-wow-duration="1.5s"
+            data-wow-delay="0.5s"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/49/Opera_2015_icon.svg"
+              alt="brand"
+            />
+          </div>
+
+          <div
+          class="single-logo mt-30 wow fadeIn"
+          data-wow-duration="1.5s"
+          data-wow-delay="0.5s"
+        >
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyBpZD0iX+WbvuWxgl8xIiBkYXRhLW5hbWU9IuWbvuWxgiAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PGRlZnM+PHN0eWxlPi5jbHMtMntzdHJva2Utd2lkdGg6MDtmaWxsOiNmZmZ9PC9zdHlsZT48L2RlZnM+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iNiIgcnk9IjYiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iI2ZmNWYwMCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI4LjYgNDMuN2MtLjYuMi0xLjIuMy0xLjcuNWwzLjIgNS42aDE1LjVsLTYuMi0xMWMtMi42IDEuNi02IDMuMi0xMC41IDQuOGgtLjJ6TTI1LjggMTQuOGwtMi42LTQuNkg3LjdsNyAxMi4zYzMtMy4xIDYuOC01LjcgMTEuMS03Ljd6TTguMiA0OC4ycy42LTEwLjIgNS0xNy42YzMuNy03LjggMTMuNi0xNC4zIDI0LjctMTYuMSAwIDAgOS40LTIuMiAxMi4zLTMuOSAwIDAgMy4yLTIgMS43IDIuNyAwIDAtMS45IDQuNi03LjcgNy42LTEuNC43LTIuNC44LTIuMiAyLjIuNCAxLjMgMi42LjMgMi45LjIuNS0uNCA1LjctMS45IDIuMyAzLjEtMy41IDUuMS01LjYgOS44LTE5IDE0LjQtOSAyLjUtMTIuNSAzLjgtMTcuNyA4LjUtMi42IDEuOC0yLjItMS4xLTIuMi0xLjF6Ii8+PC9zdmc+"
+            alt="brand"
+          />
+        </div>
+              <!-- single logo -->
+            </div>
+            <!-- brand logo -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--====== BRAND PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+ 
+
+    <section id="features" class="services-area pt-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="section-title text-center pb-40">
+              <div class="line m-auto"></div>
+              <h3 class="title">
+                Discover the power of Softhive,
+                <span> The ultimate one-click app installer!</span>
+              </h3>
+            </div>
+            <!-- section title -->
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-1.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-rocket"></i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">One-Click Installation</a>
+                </h4>
+                <p class="text">
+                  Install your favorite apps effortlessly with just one click. Softhive makes the setup process quick and easy.
+                </p>
+                <!-- <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"></i>
+                </a> -->
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-2.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-settings"></i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">Streamlined Setup</a>
+                </h4>
+                <p class="text">
+                  With a streamlined setup process, Softhive is easy to install and ready to use in just minutes.
+                </p>
+                <!-- <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"></i>
+                </a> -->
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-8">
+            <div
+              class="single-services text-center mt-30 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.8s"
+            >
+              <div class="services-icon">
+                <img
+                  class="shape"
+                  src="assets/images/services/services-shape.svg"
+                  alt="shape"
+                />
+                <img
+                  class="shape-1"
+                  src="assets/images/services/services-shape-3.svg"
+                  alt="shape"
+                />
+                <i class="lni lni-thunderbolt"></i>
+              </div>
+              <div class="services-content mt-30">
+                <h4 class="services-title">
+                  <a href="javascript:void(0)">Fast & Efficient</a>
+                </h4>
+                <p class="text">
+                  Enjoy a fast and efficient installation process with Softhive, designed to save you time.
+                </p>
+                <!-- <a class="more" href="javascript:void(0)"
+                  >Learn More <i class="lni lni-chevron-right"></i>
+                </a> -->
+              </div>
+            </div>
+            <!-- single services -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+    
+    <!--====== SERVICES PART ENDS ======-->
+ 
+
+    <section id="about">
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="about-content mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    Quick & Easy <span> App Installation with Softhive</span>
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Softhive makes setting up new apps fast and hassle-free with its one-click installation process. Simply search, click, and start using your favorite apps in seconds. Perfect for those who want convenience and efficiency without complexity.
+                </p>
+                <a href="javascript:void(0)" class="main-btn">Try it Free</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/about1.svg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div class="about-shape-1">
+          <img src="assets/images/about/about-shape-1.svg" alt="shape" />
+        </div>
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+    
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="about-shape-2">
+          <img src="assets/images/about/about-shape-2.svg" alt="shape" />
+        </div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-last">
+              <div
+                class="about-content ms-lg-auto mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    Modern Design <span> with Powerful Functionality</span>
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Softhive combines a clean, modern interface with powerful features, providing an easy-to-use platform for all your app installation needs. Whether you're setting up a single app or multiple, Softhive offers unmatched speed and convenience.
+                </p>
+                <a  href="https://github.com/Softhive/app-finder-releases/releases/latest/download/Softhive.exe" class="main-btn">Try it Free</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6 order-lg-first">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/about2.svg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+    
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="about-content mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    <span>Designed for</span> Efficient App Management
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Softhive is built for those who want streamlined app management. From one-click installations to a user-friendly interface, it is ideal for SaaS users, app enthusiasts, and anyone seeking a quick way to set up apps without the fuss.
+                </p>
+                <a href="https://github.com/Softhive/app-finder-releases/releases/latest/download/Softhive.exe" class="main-btn">Try it Free</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/about3.svg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div class="about-shape-1">
+          <img src="assets/images/about/about-shape-1.svg" alt="shape" />
+        </div>
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+    </section>
+    
+    <!--====== VIDEO COUNTER PART START ======-->
+    <section id="facts" class="video-counter pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-lg-last">
+            <div
+              class="counter-wrapper mt-50 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.8s"
+            >
+              <div class="counter-content">
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">Interesting Stats <span> about Softhive</span></h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  Softhive has been helping users install their favorite apps quickly and easily, streamlining app management for thousands of users. Here are some impressive stats about our app.
+                </p>
+              </div>
+              <!-- counter content -->
+              <div class="row no-gutters">
+                <div class="col-4">
+                  <div
+                    class="
+                      single-counter
+                      counter-color-1
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                    "
+                  >
+                    <div class="counter-items text-center">
+                      <span class="count countup text-uppercase" cup-end="223"></span>
+                      <p class="text">Apps Available</p>
+                    </div>
+                  </div>
+                  <!-- single counter -->
+                </div>
+                <div class="col-4">
+                  <div
+                    class="
+                      single-counter
+                      counter-color-2
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                    "
+                  >
+                    <div class="counter-items text-center">
+                      <span class="count countup text-uppercase" cup-end="3000"></span>
+                      <p class="text">Installs</p>
+                    </div>
+                  </div>
+                  <!-- single counter -->
+                </div>
+                <div class="col-4">
+                  <div
+                    class="
+                      single-counter
+                      counter-color-3
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                    "
+                  >
+                    <div class="counter-items text-center">
+                      <span class="count countup text-uppercase" cup-end="4.8"></span>
+                      <p class="text">User Rating</p>
+                    </div>
+                  </div>
+                  <!-- single counter -->
+                </div>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- counter wrapper -->
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="video-content mt-50 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <img class="dots" src="assets/images/video/dots.svg" alt="dots" />
+              <div class="video-wrapper">
+                <div class="video-image">
+                  <img src="assets/images/video/video.png" alt="video" />
+                </div>
+                <div class="video-icon">
+                  <a
+                    href="https://www.youtube.com/watch?v=r44RKWyfcFw"
+                    class="video-popup glightbox"
+                  >
+                    <i class="lni lni-play"> </i>
+                  </a>
+                </div>
+              </div>
+              <!-- video wrapper -->
+            </div>
+            <!-- video content -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+    
+    <!--====== VIDEO COUNTER PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area pt-120">
+      <div class="container">
+        <div
+          class="subscribe-area wow fadeIn"
+          data-wow-duration="1s"
+          data-wow-delay="0.5s"
+        >
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="subscribe-content mt-45">
+                <h2 class="subscribe-title">
+                  Subscribe Our Newsletter <span>get reguler updates</span>
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="subscribe-form mt-50">
+                <form action="#">
+                  <input type="text" placeholder="Enter eamil" />
+                  <button class="main-btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+     
+        </div> 
+        <!-- subscribe area-->
+        <div class="footer-widget pb-100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+              <div
+                class="footer-about mt-50 wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <a class="logo" href="javascript:void(0)">
+                  <img src="assets/images/logo/logo.svg" alt="logo" />
+                </a>
+                <p class="text">
+                  With Softhive, you can back up your installed apps to the cloud, ensuring your favorite applications are always safe and accessible. Whether you're upgrading devices or managing multiple installations, Softhive’s cloud backup feature lets you restore your apps quickly and effortlessly, providing peace of mind and continuity wherever you go.
+                </p>
+                
+                <ul class="social">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-facebook-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-twitter-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-instagram-filled"> </i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <i class="lni lni-linkedin-original"> </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- footer about -->
+            </div>
+                   <div class="col-lg-3 col-md-5 col-sm-12  pull-right">
+              <div
+                class="footer-contact mt-50 wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.8s"
+              >
+                <div class="footer-title">
+                  <h4 class="title">Contact Us</h4>
+                </div>
+                <ul class="contact">
+                  <li>Fenex labs</li>
+                  <li>fenexlabs@gmail.com</li>
+                  <li>https://Softhive.github.io/</li>
+                   
+                </ul>
+              </div>
+              <!-- footer contact -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- footer widget -->
+        <div class="footer-copyright">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright d-sm-flex justify-content-between">
+                <div class="copyright-content">
+                  <p style="font-size: 8px;" class="text">
+                    Designed and Developed by
+                    <a href="https://uideck.com" rel="nofollow" style="font-size: 12px;" >UIdeck</a>
+                  </p>
+                </div>
+                <!-- copyright content -->
+              </div>
+              <!-- copyright -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- footer copyright -->
+      </div>
+      <!-- container -->
+      <div id="particles-2"></div>
+    </footer>
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"> <i class="lni lni-chevron-up"> </i> </a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== Javascript Files ======-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-52EKX0KTEX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52EKX0KTEX');
+</script>
+
+
+
+  </body>
+</html>
