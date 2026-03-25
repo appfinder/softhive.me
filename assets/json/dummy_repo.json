@@ -1,0 +1,174 @@
+{
+    "packages": {
+        "7zip": {
+            "title": "7-Zip",
+            "licence": "Open source",
+            "tag": ["featured"],
+            "category": "desktop",
+            "rating": "5",
+            "icon": "https://www.7-zip.org/7ziplogo.png",
+            "version": "26.00",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://www.7-zip.org/a/7z2600-x64.msi",
+                "x86": "https://www.7-zip.org/a/7z2600.msi"
+            }
+        },
+        "1password": {
+            "title": "1Password",
+            "licence": "Trial",
+            "tag": [],
+            "category": "security",
+            "rating": "3.2",
+            "icon": "https://static.filehorse.com/icons/firewalls-and-security/1password-icon-32.png",
+            "version": "7.9.835",
+            "installer": {
+                "kind": "custom",
+                "options": { "arguments": ["{{.installer}}", "--silent"] },
+                "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe",
+                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe"
+            }
+        },
+        "anaconda": {
+            "title": "Anaconda",
+            "licence": "Open source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.1",
+            "icon": "https://static.filehorse.com/icons/developer-tools/anaconda-icon-32.png",
+            "version": "3-2025.12-2",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Windows-x86_64.exe",
+                "x86": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe"
+            }
+        },
+        "android-studio-ide": {
+            "title": "Android Studio IDE",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.5",
+            "icon": "https://static.filehorse.com/icons/developer-tools/android-studio-icon-32.png",
+            "version": "2025.3.1.8",
+            "installer": {
+                "kind": "nsis",
+                "x86_64": "https://edgedl.me.gvt1.com/android/studio/install/2025.3.1.8/android-studio-panda1-patch1-windows.exe"
+            }
+        },
+        "audacity": {
+            "title": "Audacity",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "4.0",
+            "icon": "https://static.filehorse.com/icons/mp3-and-audio/audacity-icon-32.png",
+            "version": "3.7.7",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe",
+                "x86_64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe"
+            }
+        },
+        "vlc": {
+            "title": "VLC Media Player",
+            "licence": "Open source",
+            "tag": ["featured"],
+            "category": "multimedia",
+            "rating": "4.8",
+            "icon": "https://static.filehorse.com/icons/video-software/vlc-media-player-icon-32.png",
+            "version": "3.0.21",
+            "installer": { "kind": "nsis", "x86": "https://example.com/vlc-x86.exe", "x64": "https://example.com/vlc-x64.exe" }
+        },
+        "google-chrome": {
+            "title": "Google Chrome",
+            "licence": "Freeware",
+            "tag": ["featured"],
+            "category": "browser",
+            "rating": "4.6",
+            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/google-chrome-icon-32.png",
+            "version": "123.0.0.0",
+            "installer": { "kind": "msi", "x64": "https://example.com/chrome-x64.msi", "x86": "https://example.com/chrome-x86.msi" }
+        },
+        "firefox": {
+            "title": "Mozilla Firefox",
+            "licence": "Open source",
+            "tag": [],
+            "category": "browser",
+            "rating": "4.7",
+            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/mozilla-firefox-icon-32.png",
+            "version": "124.0",
+            "installer": { "kind": "exe", "x64": "https://example.com/firefox-x64.exe", "x86": "https://example.com/firefox-x86.exe" }
+        },
+        "notepadplusplus": {
+            "title": "Notepad++",
+            "licence": "Open source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.9",
+            "icon": "https://static.filehorse.com/icons/developer-tools/notepad-icon-32.png",
+            "version": "8.7.0",
+            "installer": { "kind": "innosetup", "x64": "https://example.com/npp-x64.exe", "x86": "https://example.com/npp-x86.exe" }
+        },
+        "git": {
+            "title": "Git",
+            "licence": "Open source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.8",
+            "icon": "https://static.filehorse.com/icons/developer-tools/git-icon-32.png",
+            "version": "2.45.0",
+            "installer": { "kind": "exe", "x64": "https://example.com/git-x64.exe", "x86": "https://example.com/git-x86.exe" }
+        },
+        "discord": {
+            "title": "Discord",
+            "licence": "Freeware",
+            "tag": ["featured"],
+            "category": "communication",
+            "rating": "4.4",
+            "icon": "https://static.filehorse.com/icons/social-and-messaging/discord-icon-32.png",
+            "version": "1.0.9200",
+            "installer": { "kind": "exe", "x64": "https://example.com/discord-x64.exe" }
+        },
+        "spotify": {
+            "title": "Spotify",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "4.3",
+            "icon": "https://static.filehorse.com/icons/mp3-and-audio/spotify-icon-32.png",
+            "version": "1.2.3",
+            "installer": { "kind": "exe", "x64": "https://example.com/spotify-x64.exe", "x86": "https://example.com/spotify-x86.exe" }
+        },
+        "slack": {
+            "title": "Slack",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "communication",
+            "rating": "4.2",
+            "icon": "https://static.filehorse.com/icons/social-and-messaging/slack-icon-32.png",
+            "version": "5.10.0",
+            "installer": { "kind": "exe", "x64": "https://example.com/slack-x64.exe" }
+        },
+        "docker": {
+            "title": "Docker Desktop",
+            "licence": "Freeware",
+            "tag": ["featured"],
+            "category": "developer",
+            "rating": "4.5",
+            "icon": "https://static.filehorse.com/icons/developer-tools/docker-icon-32.png",
+            "version": "24.0.2",
+            "installer": { "kind": "msi", "x64": "https://example.com/docker-x64.msi" }
+        },
+        "obs-studio": {
+            "title": "OBS Studio",
+            "licence": "Open source",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "4.7",
+            "icon": "https://static.filehorse.com/icons/video-software/obs-studio-icon-32.png",
+            "version": "29.2.4",
+            "installer": { "kind": "exe", "x64": "https://example.com/obs-x64.exe", "x86": "https://example.com/obs-x86.exe" }
+        }
+    }
+}
