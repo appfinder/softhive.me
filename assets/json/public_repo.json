@@ -3642,25 +3642,6 @@
                 },
                 "x86": "https://dl.yat.qa/stable/"
             }
-        },
-        "youtube-dl": {
-            "title": "youtube-dl",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "latest",
-            "installer": {
-                "kind": "copy",
-                "options": {
-                    "destination": "{{.PROGRAMFILES_X86}}\\youtube-dl\\youtube-dl.exe",
-                    "shims": [
-                        "{{.PROGRAMFILES_X86}}\\youtube-dl\\youtube-dl.exe"
-                    ]
-                },
-                "x86": "https://youtube-dl.org/downloads/latest/youtube-dl.exe"
-            }
         }
     }
 }
