@@ -5,8 +5,11 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>SoftHive | The Modern Windows App Store</title>
+  <title>SoftHive — Install Windows Apps in One Click</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
     rel="stylesheet" />
   <link
@@ -99,6 +102,70 @@
       box-shadow: 0 10px 30px rgba(0, 28, 59, 0.06);
     }
   </style>
+
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="SoftHive is a modern Windows app installer that lets you install multiple apps in one click from official sources. Fast, safe, and completely free." />
+
+  <meta name="keywords"
+    content="Windows app installer, app store for Windows, install Windows apps, one click installer, Windows software manager, safe software downloads, app backup restore, SoftHive" />
+
+  <meta name="author" content="SoftHive" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#004f96" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://softhive.me/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://softhive.me/" />
+  <meta property="og:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta property="og:description"
+    content="Install all your Windows apps safely from official sources. No bundled junk. No fake downloads. Backup and restore your apps instantly." />
+
+  <meta property="og:image" content="https://softhive.me/og-image.png" />
+
+  <meta property="og:site_name" content="SoftHive" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta name="twitter:description"
+    content="Install Windows apps safely and instantly from official sources with SoftHive." />
+
+  <meta name="twitter:image" content="https://softhive.me/og-image.png" />
+
+  <!-- App / Platform SEO -->
+  <meta name="application-name" content="SoftHive" />
+  <meta name="apple-mobile-web-app-title" content="SoftHive" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SoftHive",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "SoftHive is a Windows app installer that lets users install multiple applications safely from official sources in one click.",
+  "url": "https://softhive.me/",
+  "downloadUrl": "https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftHive"
+  }
+}
+</script>
 </head>
 
 <body class="text-on-background">
@@ -106,31 +173,29 @@
   <header
     class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant/15 px-10 py-3 bg-surface sticky top-0 z-50">
     <div class="flex flex-row items-center gap-3">
-		<div class="flex w-10 h-10 px-2  rounded flex items-center justify-center sapphire-shadow">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
-				<path fill-rule="evenodd"
-					d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
-					clip-rule="evenodd" />
-			</svg>
-		</div>
-		<span class="text-primary font-black tracking-tighter text-xl" 
-			>SoftHive</span>
-	</div>
+      <div class="flex w-10 h-10 px-2  rounded flex items-center justify-center sapphire-shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
+          <path fill-rule="evenodd"
+            d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+      <span class="text-primary font-black tracking-tighter text-xl">SoftHive</span>
+    </div>
     <div class="flex flex-1 justify-end gap-8">
       <div class="flex items-center gap-9">
         <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors"
           href="#features">Features</a>
         <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors"
           href="#trusted-apps">Apps</a>
-      
+
       </div>
       <div class="flex gap-2">
-        <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe"
-          download
+        <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
           class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-4 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
           <span class="truncate">Get Started (Free)</span>
         </a>
-      
+
       </div>
     </div>
   </header>
@@ -140,74 +205,75 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="flex flex-col gap-6">
           <div class="flex flex-col gap-4">
-            
-            
+
+
 
             <!-- HERO (Updated Messaging) -->
-<h1 class="text-on-surface text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
-  Install All Your Windows Apps in One Click — Safely
-</h1>
+            <h1 class="text-on-surface text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+              Install All Your Windows Apps in One Click — Safely
+            </h1>
 
-<h2 class="text-on-surface-variant text-lg leading-relaxed">
-  Skip shady download sites and manual setup.
-  SoftHive installs apps from official sources and restores everything instantly.
-</h2>
+            <h2 class="text-on-surface-variant text-lg leading-relaxed">
+              Skip shady download sites and manual setup.
+              SoftHive installs apps from official sources and restores everything instantly.
+            </h2>
 
-<!-- CTA IMPROVED -->
-<a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
-  class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-on-primary text-base font-bold leading-normal tracking-[0.015em]">
-  <span>Install Your Apps in Minutes</span>
-</a>
-<p class="text-xs text-on-surface-variant">
-  No account required • 100% free • No bundled software
-</p>
+            <!-- CTA IMPROVED -->
+            <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe"
+              download
+              class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-on-primary text-base font-bold leading-normal tracking-[0.015em]">
+              <span>Install Your Apps in Minutes</span>
+            </a>
+            <p class="text-xs text-on-surface-variant">
+              No account required • 100% free • No bundled software
+            </p>
 
 
 
             <div class="flex flex-col gap-6">
 
-  <!-- One-Click Install -->
-  <div class="flex gap-4 items-start">
-    <div class="p-2 rounded bg-blue-500/15 text-blue-500">
-      <span class="material-symbols-outlined">bolt</span>
-    </div>
-    <div>
-      <h4 class="font-bold text-on-surface">Install Apps in One Click</h4>
-      <p class="text-on-surface-variant text-sm">
-        Select your apps and install everything instantly — no setup wizards, no manual steps.
-      </p>
-    </div>
-  </div>
+              <!-- One-Click Install -->
+              <div class="flex gap-4 items-start">
+                <div class="p-2 rounded bg-blue-500/15 text-blue-500">
+                  <span class="material-symbols-outlined">bolt</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Install Apps in One Click</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Select your apps and install everything instantly — no setup wizards, no manual steps.
+                  </p>
+                </div>
+              </div>
 
-  <!-- Safe & Trusted -->
-  <div class="flex gap-4 items-start">
-    <div class="p-2 rounded bg-green-500/15 text-green-600">
-      <span class="material-symbols-outlined">verified</span>
-    </div>
-    <div>
-      <h4 class="font-bold text-on-surface">Safe & Verified Downloads</h4>
-      <p class="text-on-surface-variant text-sm">
-        Apps come directly from official sources — no fake links, no malware, no bundled junk.
-      </p>
-    </div>
-  </div>
+              <!-- Safe & Trusted -->
+              <div class="flex gap-4 items-start">
+                <div class="p-2 rounded bg-green-500/15 text-green-600">
+                  <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Safe & Verified Downloads</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Apps come directly from official sources — no fake links, no malware, no bundled junk.
+                  </p>
+                </div>
+              </div>
 
-  <!-- Backup & Restore -->
-  <div class="flex gap-4 items-start">
-    <div class="p-2 rounded bg-purple-500/15 text-purple-500">
-      <span class="material-symbols-outlined">backup</span>
-    </div>
-    <div>
-      <h4 class="font-bold text-on-surface">Backup & Restore Your Apps</h4>
-      <p class="text-on-surface-variant text-sm">
-        Save your setup once and reinstall everything in seconds after formatting your PC.
-      </p>
-    </div>
-  </div>
+              <!-- Backup & Restore -->
+              <div class="flex gap-4 items-start">
+                <div class="p-2 rounded bg-purple-500/15 text-purple-500">
+                  <span class="material-symbols-outlined">backup</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Backup & Restore Your Apps</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Save your setup once and reinstall everything in seconds after formatting your PC.
+                  </p>
+                </div>
+              </div>
 
-</div>
+            </div>
 
- 
+
 
           </div>
           <div class="flex flex-wrap gap-4">
@@ -216,9 +282,9 @@
               class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-on-primary text-base font-bold leading-normal tracking-[0.015em]">
               <span class="truncate">Install Your Apps in Minutes</span>
             </a>
-           
+
           </div>
-          
+
         </div>
         <div class="relative">
           <div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full"></div>
@@ -242,149 +308,159 @@
         </div>
       </div>
     </section>
-  
-  
+
+
     <!-- Feature Highlights -->
 
-<section id="features" class="bg-surface-container-low py-20">
-  <div class="max-w-[1280px] mx-auto px-4">
+    <section id="features" class="bg-surface-container-low py-20">
+      <div class="max-w-[1280px] mx-auto px-4">
 
-    <!-- Section Header -->
-    <div class="flex flex-col gap-4 mb-16 max-w-[720px]">
-      <h2 class="text-on-surface text-3xl md:text-4xl font-bold tracking-tight">
-        Install Faster. Stay Safe. Save Time.
-      </h2>
-      <p class="text-on-surface-variant text-lg">
-        SoftHive removes the risk and friction of installing Windows apps — so you can set up your system in minutes.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <!-- TRUST FEATURES FIRST -->
-
-      <!-- Official Sources -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-green-500/15 flex items-center justify-center text-green-600">
-          <span class="material-symbols-outlined">verified</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Official Sources Only</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Every app is downloaded directly from its official website — no mirrors, no tampering.
+        <!-- Section Header -->
+        <div class="flex flex-col gap-4 mb-16 max-w-[720px]">
+          <h2 class="text-on-surface text-3xl md:text-4xl font-bold tracking-tight">
+            Install Faster. Stay Safe. Save Time.
+          </h2>
+          <p class="text-on-surface-variant text-lg">
+            SoftHive removes the risk and friction of installing Windows apps — so you can set up your system in
+            minutes.
           </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- TRUST FEATURES FIRST -->
+
+          <!-- Official Sources -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-green-500/15 flex items-center justify-center text-green-600">
+              <span class="material-symbols-outlined">verified</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Official Sources Only</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Every app is downloaded directly from its official website — no mirrors, no tampering.
+              </p>
+            </div>
+          </div>
+
+          <!-- No Junk -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-red-500/15 flex items-center justify-center text-red-500">
+              <span class="material-symbols-outlined">block</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">No Ads. No Bundled Junk</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                No hidden installers, no adware, and no unwanted extras — ever.
+              </p>
+            </div>
+          </div>
+
+          <!-- Verified Downloads -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-indigo-500/15 flex items-center justify-center text-indigo-500">
+              <span class="material-symbols-outlined">shield</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Verified & Safe Downloads</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Files are checked to ensure authenticity and integrity before installation.
+              </p>
+            </div>
+          </div>
+
+          <!-- CORE FEATURES -->
+
+          <!-- One Click Install -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-blue-500/15 flex items-center justify-center text-blue-500">
+              <span class="material-symbols-outlined">bolt</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Install Apps in One Click</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Select multiple apps and install everything instantly — no setup wizards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Backup & Restore -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-500">
+              <span class="material-symbols-outlined">backup</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Backup & Restore Apps</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Save your app list and reinstall everything in seconds after formatting.
+              </p>
+            </div>
+          </div>
+
+          <!-- App Library -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-500">
+              <span class="material-symbols-outlined">apps</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Your Personal App Library</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Keep track of your favorite tools and reinstall them anytime.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fast Setup -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-orange-500/15 flex items-center justify-center text-orange-500">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Set Up Your PC Faster</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Go from fresh Windows install to fully ready in minutes, not hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Simple UI -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-sky-500/15 flex items-center justify-center text-sky-500">
+              <span class="material-symbols-outlined">dashboard</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Clean & Simple Interface</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                A distraction-free experience focused on speed and clarity.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- App Presets -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-teal-500/15 flex items-center justify-center text-teal-500">
+              <span class="material-symbols-outlined">visibility</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Transparent</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Open approach with clear download sources.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- No Junk -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-red-500/15 flex items-center justify-center text-red-500">
-          <span class="material-symbols-outlined">block</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">No Ads. No Bundled Junk</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            No hidden installers, no adware, and no unwanted extras — ever.
-          </p>
-        </div>
-      </div>
-
-      <!-- Verified Downloads -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-indigo-500/15 flex items-center justify-center text-indigo-500">
-          <span class="material-symbols-outlined">shield</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Verified & Safe Downloads</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Files are checked to ensure authenticity and integrity before installation.
-          </p>
-        </div>
-      </div>
-
-      <!-- CORE FEATURES -->
-
-      <!-- One Click Install -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-blue-500/15 flex items-center justify-center text-blue-500">
-          <span class="material-symbols-outlined">bolt</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Install Apps in One Click</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Select multiple apps and install everything instantly — no setup wizards.
-          </p>
-        </div>
-      </div>
-
-      <!-- Backup & Restore -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-500">
-          <span class="material-symbols-outlined">backup</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Backup & Restore Apps</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Save your app list and reinstall everything in seconds after formatting.
-          </p>
-        </div>
-      </div>
-
-      <!-- App Library -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-500">
-          <span class="material-symbols-outlined">apps</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Your Personal App Library</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Keep track of your favorite tools and reinstall them anytime.
-          </p>
-        </div>
-      </div>
-
-      <!-- Fast Setup -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-orange-500/15 flex items-center justify-center text-orange-500">
-          <span class="material-symbols-outlined">rocket_launch</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Set Up Your PC Faster</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            Go from fresh Windows install to fully ready in minutes, not hours.
-          </p>
-        </div>
-      </div>
-
-      <!-- Simple UI -->
-      <div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-        <div class="size-14 rounded-lg bg-sky-500/15 flex items-center justify-center text-sky-500">
-          <span class="material-symbols-outlined">dashboard</span>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="text-on-surface text-xl font-bold">Clean & Simple Interface</h3>
-          <p class="text-on-surface-variant leading-relaxed">
-            A distraction-free experience focused on speed and clarity.
-          </p>
-        </div>
-      </div>
-
-
-      <!-- App Presets -->
-<div class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
-  <div class="size-14 rounded-lg bg-teal-500/15 flex items-center justify-center text-teal-500">
-    <span class="material-symbols-outlined">visibility</span>
-  </div>
-  <div class="flex flex-col gap-2">
-    <h3 class="text-on-surface text-xl font-bold">Transparent</h3>
-    <p class="text-on-surface-variant leading-relaxed">
- Open approach with clear download sources.
-    </p>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -531,8 +607,7 @@
         </div>
         <div class="flex flex-col items-center gap-4">
 
-          <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe"
-            download
+          <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
             class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-4 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
             <span class="truncate">Download SoftHive for Free</span>
           </a>
@@ -550,18 +625,19 @@
       <div class="flex items-center gap-3">
         <div class="size-5 text-primary">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
-				<path fill-rule="evenodd"
-					d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
-					clip-rule="evenodd" />
-			</svg>
+            <path fill-rule="evenodd"
+              d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
+              clip-rule="evenodd" />
+          </svg>
         </div>
         <span class="font-bold text-on-surface">SoftHive</span>
       </div>
       <div class="flex gap-8 text-on-surface-variant text-sm font-medium">
-        <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-        <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-        <a class="hover:text-primary transition-colors" href="#">Support</a>
-        <a class="hover:text-primary transition-colors" href="#">GitHub</a>
+        <!-- <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a> -->
+        <!-- <a class="hover:text-primary transition-colors" href="#">Terms of Service</a> -->
+        <a class="hover:text-primary transition-colors" href="https://x.com/softhive_media">Twitter</a>
+        <a class="hover:text-primary transition-colors" href="mailto:contact@softhive.me">Support</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/appfinder/softhive-releases">GitHub</a>
       </div>
       <div class="text-on-surface-variant text-sm">
         © 2024 SoftHive Foundation.
