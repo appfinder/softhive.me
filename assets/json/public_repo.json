@@ -31,7 +31,13 @@
                 "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe",
                 "x86_size": 17042704,
                 "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe",
-                "x64_size": 18543040
+                "x64_size": 18543040,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "--silent"
+                    ]
+                }
             }
         },
         "anaconda": {
@@ -91,7 +97,14 @@
             "installer": {
                 "kind": "custom",
                 "x86": "https://download.bleachbit.org/BleachBit-6.0.0-setup.exe",
-                "x86_size": 17638448
+                "x86_size": 17638448,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/allusers",
+                        "/S"
+                    ]
+                }
             }
         },
         "bcuninstaller": {
@@ -209,7 +222,10 @@
                 "x86": "https://www.dependencywalker.com/depends22_x86.zip",
                 "x86_size": 610769,
                 "x64": "https://www.dependencywalker.com/depends22_x64.zip",
-                "x64_size": 468618
+                "x64_size": 468618,
+                "options": {
+                    "destination": "{{.PROGRAMFILES}}\\DependencyWalker"
+                }
             }
         },
         "ditto": {
@@ -223,7 +239,10 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoSetup_3_25_113_0.exe",
-                "x64_size": 5773896
+                "x64_size": 5773896,
+                "options": {
+                    "extension": ".exe"
+                }
             }
         },
         "etcher": {
@@ -251,7 +270,10 @@
             "installer": {
                 "kind": "zip",
                 "x86": "https://github.com/tim-lebedkov/exe-proxy/releases/download/version_0.5/exeproxy-0.5.zip",
-                "x86_size": 304014
+                "x86_size": 304014,
+                "options": {
+                    "destination": "{{.PROGRAMFILES_X86}}\\exeproxy"
+                }
             }
         },
         "firefox": {
@@ -270,7 +292,10 @@
                 "x86": "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US",
                 "x86_size": 76744616,
                 "x64": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
-                "x64_size": 87242400
+                "x64_size": 87242400,
+                "options": {
+                    "extension": ".exe"
+                }
             }
         },
         "firefox-dev": {
@@ -286,7 +311,10 @@
                 "x86": "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=win&lang=en-US",
                 "x86_size": 77123528,
                 "x64": "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=win64&lang=en-US",
-                "x64_size": 87534712
+                "x64_size": 87534712,
+                "options": {
+                    "extension": ".exe"
+                }
             }
         },
         "firefox-esr": {
@@ -305,7 +333,10 @@
                 "x86": "https://download.mozilla.org/?product=firefox-esr-latest&os=win&lang=en-US",
                 "x86_size": 68971896,
                 "x64": "https://download.mozilla.org/?product=firefox-esr-latest&os=win64&lang=en-US",
-                "x64_size": 73266952
+                "x64_size": 73266952,
+                "options": {
+                    "extension": ".exe"
+                }
             }
         },
         "git": {
@@ -319,7 +350,12 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe",
-                "x64_size": 65175776
+                "x64_size": 65175776,
+                "options": {
+                    "shims": [
+                        "{{.PROGRAMFILES}}\\Git\\bin\\git.exe"
+                    ]
+                }
             }
         },
         "go": {
@@ -381,7 +417,13 @@
                 "x86": "http://download.betanews.com/download/967963863-1/iview473_setup.exe",
                 "x86_size": 3577984,
                 "x64": "http://download.betanews.com/download/967963863-1/iview473_x64_setup.exe",
-                "x64_size": 4466304
+                "x64_size": 4466304,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/silent"
+                    ]
+                }
             }
         },
         "lockhunter": {
@@ -425,7 +467,13 @@
                 "x86": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v6.1.0/MoonlightSetup-6.1.0.exe",
                 "x86_size": 43277432,
                 "x64": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v6.1.0/MoonlightSetup-6.1.0.exe",
-                "x64_size": 43277432
+                "x64_size": 43277432,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/passive"
+                    ]
+                }
             }
         },
         "obs-studio": {
@@ -455,7 +503,13 @@
                 "x86": "https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi",
                 "x86_size": 19632128,
                 "x64": "https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi",
-                "x64_size": 20598784
+                "x64_size": 20598784,
+                "options": {
+                    "shims": [
+                        "{{.SYSTEMDRIVE}}\\Python27\\python.exe",
+                        "{{.SYSTEMDRIVE}}\\Python27\\pythonw.exe"
+                    ]
+                }
             }
         },
         "python3": {
@@ -471,7 +525,14 @@
                 "x86": "https://www.python.org/ftp/python/3.14.5/python-3.14.5.exe",
                 "x86_size": 28926168,
                 "x64": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-amd64.exe",
-                "x64_size": 30361968
+                "x64_size": 30361968,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/quiet",
+                        "InstallAllUsers=1"
+                    ]
+                }
             }
         },
         "signal": {
@@ -529,11 +590,21 @@
             "category": "developer",
             "rating": "5",
             "icon": "https://static.filehorse.com/icons/developer-tools/visual-studio-code-icon-32.png",
-            "version": "1.119.0",
+            "version": "1.120.0",
             "installer": {
                 "kind": "custom",
                 "x64": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
-                "x64_size": 157125880
+                "x64_size": 157176400,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/norestart",
+                        "/sp-",
+                        "/verysilent",
+                        "/mergetasks=!runcode"
+                    ],
+                    "extension": ".exe"
+                }
             }
         },
         "vivaldi": {
@@ -549,7 +620,15 @@
                 "x86": "https://downloads.vivaldi.com/stable/Vivaldi.7.9.3970.64.exe",
                 "x86_size": 123731880,
                 "x64": "https://downloads.vivaldi.com/stable/Vivaldi.7.9.3970.64.x64.exe",
-                "x64_size": 137231784
+                "x64_size": 137231784,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "--vivaldi-silent",
+                        "--do-not-launch-chrome",
+                        "--vivaldi-update"
+                    ]
+                }
             }
         },
         "vlc": {
@@ -567,7 +646,14 @@
                 "x86": "https://download.videolan.org/pub/videolan/vlc/last/win32/vlc-3.0.23-win32.exe",
                 "x86_size": 44568024,
                 "x64": "https://download.videolan.org/pub/videolan/vlc/last/win64/vlc-3.0.23-win64.exe",
-                "x64_size": 45948080
+                "x64_size": 45948080,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/allusers",
+                        "/S"
+                    ]
+                }
             }
         },
         "winrar": {
@@ -581,7 +667,13 @@
             "installer": {
                 "kind": "custom",
                 "x64": "https://rarlab.com/rar/winrar-x64-722.exe",
-                "x64_size": 3770008
+                "x64_size": 3770008,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/S"
+                    ]
+                }
             }
         },
         "wireshark": {
