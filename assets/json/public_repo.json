@@ -593,7 +593,7 @@
             "version": "1.120.0",
             "installer": {
                 "kind": "custom",
-                "x64": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+                "x64": "https://update.code.visualstudio.com/1.120.0/win32-x64-user/stable",
                 "x64_size": 157176400,
                 "options": {
                     "arguments": [
