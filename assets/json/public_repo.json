@@ -8,7 +8,7 @@
             ],
             "category": "desktop",
             "rating": "5",
-            "icon": "https://www.7-zip.org/7ziplogo.png",
+            "icon": "7ziplogo.png",
             "version": "26.01",
             "installer": {
                 "kind": "msi",
@@ -24,7 +24,7 @@
             "tag": [],
             "category": "security",
             "rating": "3.2",
-            "icon": "https://static.filehorse.com/icons/firewalls-and-security/1password-icon-32.png",
+            "icon": "audacity.png",
             "version": "3.7.7",
             "installer": {
                 "kind": "custom",
@@ -46,7 +46,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.1",
-            "icon": "https://static.filehorse.com/icons/developer-tools/anaconda-icon-32.png",
+            "icon": "anaconda-icon-32.png",
             "version": "3-2025.12-2",
             "installer": {
                 "kind": "nsis",
@@ -62,7 +62,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.5",
-            "icon": "https://static.filehorse.com/icons/developer-tools/android-studio-icon-32.png",
+            "icon": "android-studio-icon-32.png",
             "version": "2025.3.4.7",
             "installer": {
                 "kind": "nsis",
@@ -127,7 +127,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.0",
-            "icon": "https://static.filehorse.com/icons/developer-tools/brackets-icon-32.png",
+            "icon": "brackets-icon-32.png",
             "version": "1.14.2",
             "installer": {
                 "kind": "msi",
@@ -141,7 +141,7 @@
             "tag": [],
             "category": "multimedia",
             "rating": "3.8",
-            "icon": "https://static.filehorse.com/icons/mp3-and-audio/clementine-music-player-icon-32.png",
+            "icon": "clementine-player.png",
             "version": "1.4.1",
             "installer": {
                 "kind": "nsis",
@@ -155,7 +155,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.0",
-            "icon": "https://static.filehorse.com/icons/developer-tools/arduino-icon-32.png",
+            "icon": "arduino-icon-32.png",
             "version": "1.8.19",
             "installer": {
                 "kind": "nsis",
@@ -183,7 +183,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.8",
-            "icon": "https://www.cpuid.com/medias/images/softwares/cpu-z.svg",
+            "icon": "cpu-z.svg",
             "version": "2.19",
             "installer": {
                 "kind": "innosetup",
@@ -199,7 +199,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://static.filehorse.com/icons/file-transfer-and-networking/deluge-icon-32.png",
+            "icon": "deluge-icon-32.png",
             "version": "2.2.0",
             "installer": {
                 "kind": "nsis",
@@ -234,7 +234,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.5",
-            "icon": "https://static.filehorse.com/icons/desktop-enhancements/ditto-icon-32.png",
+            "icon": "ditto-icon-32.png",
             "version": "3.25.113.0",
             "installer": {
                 "kind": "innosetup",
@@ -285,7 +285,7 @@
             ],
             "category": "browsers",
             "rating": "5.0",
-            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/firefox-icon-32.png",
+            "icon": "firefox-icon-32.png",
             "version": "150.0.2",
             "installer": {
                 "kind": "nsis",
@@ -304,7 +304,7 @@
             "tag": [],
             "category": "browsers",
             "rating": "5.0",
-            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/firefox-icon-32.png",
+            "icon": "firefox-icon-32.png",
             "version": "151.0b8",
             "installer": {
                 "kind": "nsis",
@@ -326,7 +326,7 @@
             ],
             "category": "browsers",
             "rating": "5.0",
-            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/firefox-icon-32.png",
+            "icon": "firefox-icon-32.png",
             "version": "140.10.2esr",
             "installer": {
                 "kind": "nsis",
@@ -372,6 +372,24 @@
                 "x86_size": 58428109,
                 "x64": "https://dl.google.com/go/go1.26.3.windows-amd64.msi",
                 "x64_size": 59975270
+            }
+        },
+        "google-chrome": {
+            "title": "Google Chrome",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.8",
+            "icon": "1password.png",
+            "version": "latest",
+            "installer": {
+                "kind": "msi",
+                "x86": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi",
+                "x86_size": 137379840,
+                "x64": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+                "x64_size": 152928256
             }
         },
         "handbrake": {
@@ -482,7 +500,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://obsproject.com/assets/images/new_icon_small-r.png",
+            "icon": "new_icon_small-r.png",
             "version": "32.1.2",
             "installer": {
                 "kind": "nsis",
@@ -589,7 +607,7 @@
             ],
             "category": "developer",
             "rating": "5",
-            "icon": "https://static.filehorse.com/icons/developer-tools/visual-studio-code-icon-32.png",
+            "icon": "visual-studio-code-icon-32.png",
             "version": "1.120.0",
             "installer": {
                 "kind": "custom",
@@ -613,7 +631,7 @@
             "tag": [],
             "category": "browsers",
             "rating": "4.0",
-            "icon": "https://static.filehorse.com/icons/browsers-and-plugins/vivaldi-icon-32.png",
+            "icon": "vivaldi-icon-32.png",
             "version": "7.9.3970.64",
             "installer": {
                 "kind": "custom",
@@ -639,7 +657,7 @@
             ],
             "category": "multimedia",
             "rating": "5",
-            "icon": "https://static.filehorse.com/icons/video-software/vlc-icon-32.png",
+            "icon": "vlc-icon-32.png",
             "version": "3.0.23",
             "installer": {
                 "kind": "custom",
