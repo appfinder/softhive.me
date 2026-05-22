@@ -583,6 +583,29 @@
                 "x64_size": 5091328
             }
         },
+        "sumatrapdf": {
+            "title": "SumatraPDF",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "3.6.1",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-install.exe",
+                "x86_size": 10218872,
+                "x64": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
+                "x64_size": 11075960,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/install",
+                        "/s"
+                    ]
+                }
+            }
+        },
         "vagrant": {
             "title": "Vagrant",
             "licence": "Freeware",
