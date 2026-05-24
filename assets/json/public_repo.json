@@ -24,13 +24,13 @@
             "tag": [],
             "category": "security",
             "rating": "3.2",
-            "icon": "audacity.png",
+            "icon": "1password.png",
             "version": "3.7.7",
             "installer": {
                 "kind": "custom",
-                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe",
+                "x86": "https://github.com/1Password/1Password/releases/download/1Password-3.7.7/1Password-win-3.7.7-32bit.exe",
                 "x86_size": 17042704,
-                "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe",
+                "x64": "https://github.com/1Password/1Password/releases/download/1Password-3.7.7/1Password-win-3.7.7-64bit.exe",
                 "x64_size": 18543040,
                 "options": {
                     "arguments": [
@@ -76,7 +76,7 @@
             "tag": [],
             "category": "multimedia",
             "rating": "4.0",
-            "icon": "https://static.filehorse.com/icons/mp3-and-audio/audacity-icon-32.png",
+            "icon": "audacity.png",
             "version": "3.7.7",
             "installer": {
                 "kind": "innosetup",
@@ -92,7 +92,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "bleachbit.svg",
             "version": "6.0.0",
             "installer": {
                 "kind": "custom",
@@ -113,7 +113,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "bcuninstaller.avif",
             "version": "6.1",
             "installer": {
                 "kind": "innosetup",
@@ -161,6 +161,29 @@
                 "kind": "nsis",
                 "x86": "https://downloads.arduino.cc/arduino-1.8.19-windows.exe",
                 "x86_size": 117305832
+            }
+        },
+        "bitwarden": {
+            "title": "Bitwarden",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "security",
+            "rating": "4.7",
+            "icon": "https://static.filehorse.com/icons/firewalls-and-security/bitwarden-icon-32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
+                "x86_size": 734136,
+                "x64": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
+                "x64_size": 734136,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/S",
+                        "/allusers"
+                    ]
+                }
             }
         },
         "blender": {
