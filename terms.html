@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Terms of Service — SoftHive</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#1a1c1c",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#dbe7ff",
+            "inverse-primary": "#a6c8ff",
+            "on-tertiary-fixed-variant": "#763300",
+            "on-secondary": "#ffffff",
+            "tertiary": "#833900",
+            "on-surface-variant": "#414752",
+            "secondary-container": "#d8e3f5",
+            "tertiary-container": "#a84c00",
+            "inverse-surface": "#2f3131",
+            "on-tertiary-fixed": "#331200",
+            "surface-container-low": "#f3f3f3",
+            "surface-bright": "#f9f9f9",
+            "outline": "#717783",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#bcc7d8",
+            "surface-variant": "#e2e2e2",
+            "primary-fixed-dim": "#a6c8ff",
+            "on-error": "#ffffff",
+            "surface-dim": "#dadada",
+            "outline-variant": "#c1c6d4",
+            "secondary": "#545f6e",
+            "on-tertiary-container": "#ffe0d1",
+            "tertiary-fixed": "#ffdbc9",
+            "surface-tint": "#005eb1",
+            "inverse-on-surface": "#f1f1f1",
+            "primary-fixed": "#d5e3ff",
+            "background": "#f9f9f9",
+            "primary-container": "#0067c0",
+            "on-primary-fixed-variant": "#004787",
+            "on-secondary-fixed-variant": "#3d4855",
+            "surface-container-high": "#e8e8e8",
+            "secondary-fixed": "#d8e3f5",
+            "on-surface": "#1a1c1c",
+            "tertiary-fixed-dim": "#ffb68d",
+            "surface-container": "#eeeeee",
+            "on-error-container": "#93000a",
+            "primary": "#004f96",
+            "surface": "#f9f9f9",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary-fixed": "#111c29",
+            "on-secondary-container": "#5a6574",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#001c3b",
+            "surface-container-highest": "#e2e2e2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "display": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+    .primary-gradient { background: linear-gradient(135deg, #004f96 0%, #0067c0 100%); }
+    .ambient-lift { box-shadow: 0 10px 30px rgba(0, 28, 59, 0.06); }
+    .prose-section h2 { font-size: 1.125rem; font-weight: 700; color: #1a1c1c; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .prose-section p, .prose-section li { font-size: 0.9375rem; color: #414752; line-height: 1.75; }
+    .prose-section p + p { margin-top: 0.75rem; }
+    .prose-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.375rem; margin-top: 0.75rem; }
+    .prose-section ul li { display: flex; align-items: flex-start; gap: 0.5rem; }
+    .prose-section ul li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #004f96; margin-top: 0.55rem; flex-shrink: 0; }
+    .badge { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 99px; }
+    .toc-link { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #414752; padding: 0.375rem 0; border-bottom: 1px solid #e2e2e2; transition: color 0.15s; text-decoration: none; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: #004f96; }
+    .toc-num { font-size: 0.75rem; font-weight: 700; color: #004f96; background: #d5e3ff; border-radius: 4px; padding: 0 5px; min-width: 22px; text-align: center; }
+  </style>
+  <meta name="description" content="SoftHive Terms of Service — Read the terms governing your use of SoftHive, the free Windows app installer." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body class="text-on-background">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant/15 px-10 py-3 bg-surface sticky top-0 z-50">
+    <a href="/" class="flex flex-row items-center gap-3">
+      <div class="flex w-10 h-10 px-2 rounded flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
+          <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <span class="text-primary font-black tracking-tighter text-xl">SoftHive</span>
+    </a>
+    <div class="flex flex-1 justify-end gap-8">
+      <div class="flex items-center gap-9">
+        <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors" href="/#features">Features</a>
+        <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors" href="/#trusted-apps">Apps</a>
+      </div>
+      <div class="flex gap-2">
+        <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
+          class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-4 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
+          <span class="truncate">Get Started (Free)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-surface-container-low border-b border-outline-variant/10 py-16 px-4">
+      <div class="max-w-[760px] mx-auto flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <span class="badge bg-blue-500/10 text-blue-700">
+            <span class="material-symbols-outlined" style="font-size:14px;">gavel</span>
+            Terms of Service
+          </span>
+        </div>
+        <h1 class="text-on-surface text-4xl md:text-5xl font-black leading-tight tracking-[-0.02em]">Terms of Service</h1>
+        <p class="text-on-surface-variant text-lg leading-relaxed">
+          By downloading or using SoftHive, you agree to these terms. They're written to be simple and fair — no legal jargon, no surprises.
+        </p>
+        <p class="text-sm text-on-surface-variant/70 font-medium">Last updated: May 2025 &nbsp;·&nbsp; Effective immediately</p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="py-12 px-4 bg-surface">
+      <div class="max-w-[760px] mx-auto flex flex-col gap-4">
+
+        <!-- Table of contents -->
+        <div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">Table of contents</p>
+          <nav class="flex flex-col">
+            <a href="#s1"  class="toc-link"><span class="toc-num">1</span> Acceptance of terms</a>
+            <a href="#s2"  class="toc-link"><span class="toc-num">2</span> Description of service</a>
+            <a href="#s3"  class="toc-link"><span class="toc-num">3</span> Eligibility</a>
+            <a href="#s4"  class="toc-link"><span class="toc-num">4</span> Permitted use</a>
+            <a href="#s5"  class="toc-link"><span class="toc-num">5</span> Prohibited use</a>
+            <a href="#s6"  class="toc-link"><span class="toc-num">6</span> Third-party software</a>
+            <a href="#s7"  class="toc-link"><span class="toc-num">7</span> Intellectual property</a>
+            <a href="#s8"  class="toc-link"><span class="toc-num">8</span> Disclaimer of warranties</a>
+            <a href="#s9"  class="toc-link"><span class="toc-num">9</span> Limitation of liability</a>
+            <a href="#s10" class="toc-link"><span class="toc-num">10</span> Updates and availability</a>
+            <a href="#s11" class="toc-link"><span class="toc-num">11</span> Governing law</a>
+            <a href="#s12" class="toc-link"><span class="toc-num">12</span> Changes to these terms</a>
+            <a href="#s13" class="toc-link"><span class="toc-num">13</span> Contact</a>
+          </nav>
+        </div>
+
+        <!-- 1 -->
+        <div id="s1" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">handshake</span>1. Acceptance of terms</h2>
+          <p>By downloading, installing, or using the SoftHive application or visiting <a href="https://softhive.me" class="text-primary font-medium hover:underline">softhive.me</a> (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms").</p>
+          <p>If you do not agree to these Terms, please do not download or use the Service.</p>
+        </div>
+
+        <!-- 2 -->
+        <div id="s2" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">apps</span>2. Description of service</h2>
+          <p>SoftHive is a free, open-source Windows application that helps you discover, install, and manage software on your PC. It fetches installers directly from each application's official source — no mirrors, no bundled additions.</p>
+          <p>SoftHive is provided free of charge and is currently offered without any paid tiers or subscriptions.</p>
+        </div>
+
+        <!-- 3 -->
+        <div id="s3" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">person_check</span>3. Eligibility</h2>
+          <p>You must be at least 13 years of age to use SoftHive. By using the Service, you represent that you meet this requirement. If you are using SoftHive on behalf of an organisation, you represent that you have the authority to bind that organisation to these Terms.</p>
+        </div>
+
+        <!-- 4 -->
+        <div id="s4" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">check_circle</span>4. Permitted use</h2>
+          <p>You may use SoftHive for any lawful personal or commercial purpose, including:</p>
+          <ul>
+            <li>Installing and managing software on your own Windows devices</li>
+            <li>Backing up and restoring your personal app list</li>
+            <li>Using SoftHive within your organisation to streamline PC setup</li>
+            <li>Contributing to the project via the public GitHub repository</li>
+          </ul>
+        </div>
+
+        <!-- 5 -->
+        <div id="s5" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">block</span>5. Prohibited use</h2>
+          <p>You agree not to use SoftHive to:</p>
+          <ul>
+            <li>Distribute modified versions that misrepresent their origin or impersonate SoftHive</li>
+            <li>Use the app catalog or infrastructure to serve malicious, unlicensed, or counterfeit software</li>
+            <li>Attempt to reverse-engineer, tamper with, or disrupt the SoftHive update or catalog infrastructure</li>
+            <li>Violate any applicable local, national, or international law or regulation</li>
+            <li>Scrape or abuse the SoftHive website or servers in a way that causes disruption to other users</li>
+          </ul>
+        </div>
+
+        <!-- 6 -->
+        <div id="s6" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">open_in_new</span>6. Third-party software</h2>
+          <p>SoftHive acts as a launcher for software developed and distributed by third parties. When you install an application through SoftHive, you are downloading it from that developer's official source and agreeing to their own license terms and conditions.</p>
+          <p>SoftHive is not responsible for the functionality, security, or licensing of any third-party software you choose to install. We encourage you to review the license agreement of any software before proceeding.</p>
+        </div>
+
+        <!-- 7 -->
+        <div id="s7" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">copyright</span>7. Intellectual property</h2>
+          <p>The SoftHive name, logo, website design, and original source code are the property of the SoftHive Foundation. The source code is made available under an open-source license as specified in the GitHub repository.</p>
+          <p>You may not use the SoftHive name or logo to imply endorsement of a product or service without our prior written consent.</p>
+        </div>
+
+        <!-- 8 -->
+        <div id="s8" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">warning</span>8. Disclaimer of warranties</h2>
+          <p>SoftHive is provided <strong class="text-on-surface">"as is"</strong> and <strong class="text-on-surface">"as available"</strong> without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+          <p>We do not warrant that the Service will be uninterrupted, error-free, or free of harmful components. You use SoftHive at your own risk.</p>
+        </div>
+
+        <!-- 9 -->
+        <div id="s9" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">shield_question</span>9. Limitation of liability</h2>
+          <p>To the maximum extent permitted by applicable law, the SoftHive Foundation and its contributors shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of — or inability to use — the Service.</p>
+          <p>This includes damages caused by software installed through SoftHive, loss of data, or system issues. Our total liability for any claim shall not exceed the amount you paid for the Service (which is zero, as SoftHive is free).</p>
+        </div>
+
+        <!-- 10 -->
+        <div id="s10" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">update</span>10. Updates and availability</h2>
+          <p>We may release updates to SoftHive at any time to improve functionality, security, or compatibility. We reserve the right to modify, suspend, or discontinue the Service (or any part of it) at any time, with or without notice.</p>
+          <p>We are not liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+        </div>
+
+        <!-- 11 -->
+        <div id="s11" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">balance</span>11. Governing law</h2>
+          <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the competent courts in the jurisdiction where the SoftHive Foundation is established.</p>
+          <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+        </div>
+
+        <!-- 12 -->
+        <div id="s12" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">edit_note</span>12. Changes to these terms</h2>
+          <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of SoftHive after changes are posted constitutes your acceptance of the revised Terms.</p>
+          <p>We will not retroactively apply material changes that significantly reduce your rights without clear notice.</p>
+        </div>
+
+        <!-- 13 -->
+        <div id="s13" class="prose-section p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift mb-4">
+          <h2><span class="material-symbols-outlined text-primary" style="font-size:20px;">mail</span>13. Contact</h2>
+          <p>If you have any questions about these Terms, please reach out:</p>
+          <p class="mt-3"><a href="mailto:contact@softhive.me" class="text-primary font-bold hover:underline">contact@softhive.me</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-4 bg-on-background text-on-primary">
+      <div class="max-w-[640px] mx-auto text-center flex flex-col items-center gap-6">
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight">Ready to install your apps safely?</h2>
+        <p class="text-primary-fixed-dim text-base opacity-80">No account. No tracking. Just your apps.</p>
+        <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
+          class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-6 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
+          Download SoftHive for Free
+        </a>
+        <p class="text-xs text-primary-fixed-dim/60">Compatible with Windows 10 &amp; 11</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface py-12 px-10 border-t border-outline-variant/10">
+    <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
+          <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z" clip-rule="evenodd" />
+        </svg>
+        <span class="font-bold text-on-surface">SoftHive</span>
+      </div>
+      <div class="flex gap-8 text-on-surface-variant text-sm font-medium">
+        <a class="hover:text-primary transition-colors" href="/privacy.html">Privacy Policy</a>
+        <a class="text-primary font-semibold" href="/terms.html">Terms of Service</a>
+        <a class="hover:text-primary transition-colors" href="https://x.com/softhive_me">Twitter</a>
+        <a class="hover:text-primary transition-colors" href="mailto:contact@softhive.me">Support</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/appfinder/softhive-releases">GitHub</a>
+      </div>
+      <div class="text-on-surface-variant text-sm">© 2024 SoftHive Foundation.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
