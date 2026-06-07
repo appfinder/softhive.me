@@ -405,7 +405,7 @@
             ],
             "category": "browsers",
             "rating": "4.8",
-            "icon": "1password.png",
+            "icon": "chrome.png",
             "version": "latest",
             "installer": {
                 "kind": "msi",
