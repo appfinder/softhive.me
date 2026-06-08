@@ -4,100 +4,115 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Terms of Service — SoftHive</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-background": "#1a1c1c",
-            "surface-container-lowest": "#ffffff",
-            "on-primary-container": "#dbe7ff",
-            "inverse-primary": "#a6c8ff",
-            "on-tertiary-fixed-variant": "#763300",
-            "on-secondary": "#ffffff",
-            "tertiary": "#833900",
-            "on-surface-variant": "#414752",
-            "secondary-container": "#d8e3f5",
-            "tertiary-container": "#a84c00",
-            "inverse-surface": "#2f3131",
-            "on-tertiary-fixed": "#331200",
-            "surface-container-low": "#f3f3f3",
-            "surface-bright": "#f9f9f9",
-            "outline": "#717783",
-            "on-tertiary": "#ffffff",
-            "secondary-fixed-dim": "#bcc7d8",
-            "surface-variant": "#e2e2e2",
-            "primary-fixed-dim": "#a6c8ff",
-            "on-error": "#ffffff",
-            "surface-dim": "#dadada",
-            "outline-variant": "#c1c6d4",
-            "secondary": "#545f6e",
-            "on-tertiary-container": "#ffe0d1",
-            "tertiary-fixed": "#ffdbc9",
-            "surface-tint": "#005eb1",
-            "inverse-on-surface": "#f1f1f1",
-            "primary-fixed": "#d5e3ff",
-            "background": "#f9f9f9",
-            "primary-container": "#0067c0",
-            "on-primary-fixed-variant": "#004787",
-            "on-secondary-fixed-variant": "#3d4855",
-            "surface-container-high": "#e8e8e8",
-            "secondary-fixed": "#d8e3f5",
-            "on-surface": "#1a1c1c",
-            "tertiary-fixed-dim": "#ffb68d",
-            "surface-container": "#eeeeee",
-            "on-error-container": "#93000a",
-            "primary": "#004f96",
-            "surface": "#f9f9f9",
-            "on-primary": "#ffffff",
-            "error": "#ba1a1a",
-            "on-secondary-fixed": "#111c29",
-            "on-secondary-container": "#5a6574",
-            "error-container": "#ffdad6",
-            "on-primary-fixed": "#001c3b",
-            "surface-container-highest": "#e2e2e2"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "fontFamily": {
-            "headline": ["Inter"],
-            "display": ["Inter"],
-            "body": ["Inter"],
-            "label": ["Inter"]
-          }
-        }
-      }
-    }
-  </script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./public/assets/css/images/logo/favicon.ico" type="image/x-icon">
+  <!-- Core theme TailwindCSS-->
+  <link rel="stylesheet" href="./public/css/output.css">
+  <!-- Core theme CSS-->
+  <link rel="stylesheet" href="./public/css/styles.css">
+
+
   <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
-    .primary-gradient { background: linear-gradient(135deg, #004f96 0%, #0067c0 100%); }
-    .ambient-lift { box-shadow: 0 10px 30px rgba(0, 28, 59, 0.06); }
-    .prose-section h2 { font-size: 1.125rem; font-weight: 700; color: #1a1c1c; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
-    .prose-section p, .prose-section li { font-size: 0.9375rem; color: #414752; line-height: 1.75; }
-    .prose-section p + p { margin-top: 0.75rem; }
-    .prose-section ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.375rem; margin-top: 0.75rem; }
-    .prose-section ul li { display: flex; align-items: flex-start; gap: 0.5rem; }
-    .prose-section ul li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #004f96; margin-top: 0.55rem; flex-shrink: 0; }
-    .badge { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 99px; }
-    .toc-link { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #414752; padding: 0.375rem 0; border-bottom: 1px solid #e2e2e2; transition: color 0.15s; text-decoration: none; }
-    .toc-link:last-child { border-bottom: none; }
-    .toc-link:hover { color: #004f96; }
-    .toc-num { font-size: 0.75rem; font-weight: 700; color: #004f96; background: #d5e3ff; border-radius: 4px; padding: 0 5px; min-width: 22px; text-align: center; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .primary-gradient {
+      background: linear-gradient(135deg, #004f96 0%, #0067c0 100%) !important;
+    }
+
+    .ambient-lift {
+      box-shadow: 0 10px 30px rgba(0, 28, 59, 0.06) !important;
+    }
+
+    .text-on-primary {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+
+    .bg-surface {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 249 249 / var(--tw-bg-opacity, 1));
+    }
   </style>
-  <meta name="description" content="SoftHive Terms of Service — Read the terms governing your use of SoftHive, the free Windows app installer." />
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="SoftHive is a modern Windows app installer that lets you install multiple apps in one click from official sources. Fast, safe, and completely free." />
+
+  <meta name="keywords"
+    content="Windows app installer, app store for Windows, install Windows apps, one click installer, Windows software manager, safe software downloads, app backup restore, SoftHive" />
+
+  <meta name="author" content="SoftHive" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#004f96" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://softhive.me/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://softhive.me/" />
+  <meta property="og:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta property="og:description"
+    content="Install all your Windows apps safely from official sources. No bundled junk. No fake downloads. Backup and restore your apps instantly." />
+
+  <meta property="og:image" content="https://softhive.me/og-image.png" />
+
+  <meta property="og:site_name" content="SoftHive" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta name="twitter:description"
+    content="Install Windows apps safely and instantly from official sources with SoftHive." />
+
+  <meta name="twitter:image" content="https://softhive.me/og-image.png" />
+
+  <!-- App / Platform SEO -->
+  <meta name="application-name" content="SoftHive" />
+  <meta name="apple-mobile-web-app-title" content="SoftHive" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SoftHive",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "SoftHive is a Windows app installer that lets users install multiple applications safely from official sources in one click.",
+  "url": "https://softhive.me/",
+  "downloadUrl": "https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftHive"
+  }
+}
+</script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KTTF6F3TT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8KTTF6F3TT');
+  </script>
 </head>
+
 
 <body class="text-on-background">
 

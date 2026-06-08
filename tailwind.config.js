@@ -1,5 +1,8 @@
-tailwind.config = {
-    darkMode: "class",
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
+  content: ["**/*.{html, js}", "**/**/*.{html, js}", "./index.html"],
+   darkMode: "class",
     theme: {
         extend: {
             "colors": {
@@ -65,4 +68,5 @@ tailwind.config = {
             }
         },
     },
+  plugins: [],
 }
