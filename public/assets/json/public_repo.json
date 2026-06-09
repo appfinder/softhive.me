@@ -166,7 +166,9 @@
         "bitwarden": {
             "title": "Bitwarden",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "security",
             "rating": "4.7",
             "icon": "https://static.filehorse.com/icons/firewalls-and-security/bitwarden-icon-32.png",
@@ -189,7 +191,9 @@
         "blender": {
             "title": "Blender",
             "licence": "Open Source",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "multimedia",
             "rating": "4.2",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/120px-Blender_logo_no_text.svg.png",
@@ -520,7 +524,9 @@
         "obs-studio": {
             "title": "OBS Studio",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4",
             "icon": "new_icon_small-r.png",
@@ -674,7 +680,9 @@
         "vivaldi": {
             "title": "Vivaldi",
             "licence": "Open Source",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "browsers",
             "rating": "4.0",
             "icon": "vivaldi-icon-32.png",
@@ -723,7 +731,9 @@
         "winrar": {
             "title": "WinRAR",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
