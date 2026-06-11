@@ -18,78 +18,190 @@
                 "x64_size": 2002432
             }
         },
-        "1password": {
-            "title": "1Password",
-            "licence": "Trial",
-            "tag": [],
-            "category": "security",
-            "rating": "3.2",
-            "icon": "1password.png",
-            "version": "3.7.7",
+        "firefox": {
+            "title": "Firefox",
+            "licence": "Open Source",
+            "tag": [
+                "featured",
+                "win10"
+            ],
+            "category": "browsers",
+            "rating": "5.0",
+            "icon": "firefox-icon-32.png",
+            "version": "151.0.4",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US",
+                "x86_size": 77038688,
+                "x64": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
+                "x64_size": 87456864,
+                "options": {
+                    "extension": ".exe"
+                }
+            }
+        },
+        "brave": {
+            "title": "Brave",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.0",
+            "icon": "brave-browser-icon-32.png",
+            "version": "1.91.171",
+            "installer": {
+                "kind": "as-is",
+                "x86": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSetup32.exe",
+                "x86_size": 136743264,
+                "x64": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserSetup.exe",
+                "x64_size": 1276768,
+                "options": {
+                    "extension": ".exe"
+                }
+            }
+        },
+        "opera": {
+            "title": "Opera",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.0",
+            "icon": "opera-icon-32.png",
+            "version": "100.0.4815.20",
             "installer": {
                 "kind": "custom",
-                "x86": "https://github.com/1Password/1Password/releases/download/1Password-3.7.7/1Password-win-3.7.7-32bit.exe",
-                "x86_size": 17042704,
-                "x64": "https://github.com/1Password/1Password/releases/download/1Password-3.7.7/1Password-win-3.7.7-64bit.exe",
-                "x64_size": 18543040,
+                "x86": "https://get.geo.opera.com/pub/opera/desktop/100.0.4815.20/win/Opera_100.0.4815.20_Setup.exe",
+                "x86_size": 0,
+                "x64": "https://get.geo.opera.com/pub/opera/desktop/100.0.4815.20/win/Opera_100.0.4815.20_Setup_x64.exe",
+                "x64_size": 0,
                 "options": {
                     "arguments": [
                         "{{.installer}}",
-                        "--silent"
+                        "/installer",
+                        "/silent",
+                        "/launchopera 0",
+                        "/setdefault 0"
+                    ],
+                    "extension": ".exe"
+                }
+            }
+        },
+        "vivaldi": {
+            "title": "Vivaldi",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.0",
+            "icon": "vivaldi-icon-32.png",
+            "version": "8.0.4033.46",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://downloads.vivaldi.com/stable/Vivaldi.8.0.4033.46.exe",
+                "x86_size": 130755496,
+                "x64": "https://downloads.vivaldi.com/stable/Vivaldi.8.0.4033.46.x64.exe",
+                "x64_size": 145122728,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "--vivaldi-silent",
+                        "--do-not-launch-chrome",
+                        "--vivaldi-update"
                     ]
                 }
             }
         },
-        "anaconda": {
-            "title": "Anaconda",
-            "licence": "Open source",
-            "tag": [],
-            "category": "developer",
-            "rating": "4.1",
-            "icon": "anaconda-icon-32.png",
-            "version": "3-2025.12-2",
+        "google-chrome": {
+            "title": "Google Chrome",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.8",
+            "icon": "chrome.png",
+            "version": "latest",
             "installer": {
-                "kind": "nsis",
-                "x86": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe",
-                "x86_size": 511528600,
-                "x64": "https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Windows-x86_64.exe",
-                "x64_size": 1200681984
+                "kind": "msi",
+                "x86": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi",
+                "x86_size": 139272192,
+                "x64": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+                "x64_size": 154066944
             }
         },
-        "android-studio-ide": {
-            "title": "Android Studio IDE",
+        "bitwarden": {
+            "title": "Bitwarden",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "security",
+            "rating": "4.7",
+            "icon": "https://static.filehorse.com/icons/firewalls-and-security/bitwarden-icon-32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
+                "x86_size": 734112,
+                "x64": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
+                "x64_size": 734112,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/S",
+                        "/allusers"
+                    ]
+                }
+            }
+        },
+        "winrar": {
+            "title": "WinRAR",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "7.22",
+            "installer": {
+                "kind": "custom",
+                "x64": "https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-722.exe",
+                "x64_size": 3817696,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/S"
+                    ]
+                }
+            }
+        },
+        "putty": {
+            "title": "PuTTY",
             "licence": "Freeware",
             "tag": [],
-            "category": "developer",
-            "rating": "4.5",
-            "icon": "android-studio-icon-32.png",
-            "version": "2025.3.4.7",
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "0.84",
             "installer": {
-                "kind": "nsis",
-                "x64": "https://edgedl.me.gvt1.com/android/studio/install/2025.3.4.7/android-studio-panda4-patch1-windows.exe",
-                "x64_size": 1427218121
-            }
-        },
-        "audacity": {
-            "title": "Audacity",
-            "licence": "Open Source",
-            "tag": [],
-            "category": "multimedia",
-            "rating": "4.0",
-            "icon": "audacity.png",
-            "version": "3.7.7",
-            "installer": {
-                "kind": "innosetup",
-                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe",
-                "x86_size": 17042704,
-                "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe",
-                "x64_size": 18543040
+                "kind": "msi",
+                "x86": "https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.84-installer.msi",
+                "x86_size": 3526144,
+                "x64": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.84-installer.msi",
+                "x64_size": 3853824
             }
         },
         "bleachbit": {
             "title": "BleachBit",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4",
             "icon": "bleachbit.svg",
@@ -107,261 +219,81 @@
                 }
             }
         },
-        "bcuninstaller": {
-            "title": "Bulk Crap Uninstaller",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "bcuninstaller.png",
-            "version": "6.1",
-            "installer": {
-                "kind": "innosetup",
-                "x64": "https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v6.1/BCUninstaller_6.1.0.1_setup.exe",
-                "x64_size": 9218295
-            }
-        },
-        "brackets": {
-            "title": "Brackets",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "developer",
-            "rating": "4.0",
-            "icon": "brackets-icon-32.png",
-            "version": "1.14.2",
-            "installer": {
-                "kind": "msi",
-                "x64": "https://github.com/adobe/brackets/releases/download/release-1.14.2/Brackets.Release.1.14.2.msi",
-                "x64_size": 80896000
-            }
-        },
-        "clementine-player": {
-            "title": "Clementine Player",
-            "licence": "Open Source",
-            "tag": [],
-            "category": "multimedia",
-            "rating": "3.8",
-            "icon": "clementine-player.png",
-            "version": "1.4.1",
-            "installer": {
-                "kind": "nsis",
-                "x64": "https://github.com/clementine-player/Clementine/releases/download/1.4.1-76-gfd1617827/ClementineSetup-1.4.1-76-gfd1617827.exe",
-                "x64_size": 53438797
-            }
-        },
-        "arduino": {
-            "title": "Arduino",
-            "licence": "Open Source",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4.0",
-            "icon": "arduino-icon-32.png",
-            "version": "1.8.19",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://downloads.arduino.cc/arduino-1.8.19-windows.exe",
-                "x86_size": 117305832
-            }
-        },
-        "bitwarden": {
-            "title": "Bitwarden",
+        "everything-search": {
+            "title": "Everything Search",
             "licence": "Freeware",
             "tag": [
                 "featured"
             ],
-            "category": "security",
-            "rating": "4.7",
-            "icon": "https://static.filehorse.com/icons/firewalls-and-security/bitwarden-icon-32.png",
-            "version": "latest",
-            "installer": {
-                "kind": "custom",
-                "x86": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
-                "x86_size": 734136,
-                "x64": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
-                "x64_size": 734136,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/S",
-                        "/allusers"
-                    ]
-                }
-            }
-        },
-        "blender": {
-            "title": "Blender",
-            "licence": "Open Source",
-            "tag": [
-                "featured"
-            ],
-            "category": "multimedia",
-            "rating": "4.2",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/120px-Blender_logo_no_text.svg.png",
-            "version": "5.1.1",
-            "installer": {
-                "kind": "msi",
-                "x64": "https://download.blender.org/release/Blender5.1/blender-5.1.1-windows-x64.msi",
-                "x64_size": 371482624
-            }
-        },
-        "cpu-z": {
-            "title": "CPU-Z",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4.8",
-            "icon": "cpu-z.svg",
-            "version": "2.19",
-            "installer": {
-                "kind": "innosetup",
-                "x86": "https://download.cpuid.com/cpu-z/cpu-z_2.19-en.exe",
-                "x86_size": 4799168
-            }
-        },
-        "deluge": {
-            "title": "Deluge",
-            "licence": "Open Source",
-            "tag": [
-                "featured"
-            ],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "deluge-icon-32.png",
-            "version": "2.2.0",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win32-setup.exe",
-                "x86_size": 37433971,
-                "x64": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win64-setup.exe",
-                "x64_size": 41428406
-            }
-        },
-        "dependency-walker": {
-            "title": "Dependency Walker",
-            "licence": "Freeware",
-            "tag": [],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "2.2",
+            "version": "1.4.1.1032",
             "installer": {
-                "kind": "zip",
-                "x86": "https://www.dependencywalker.com/depends22_x86.zip",
-                "x86_size": 610769,
-                "x64": "https://www.dependencywalker.com/depends22_x64.zip",
-                "x64_size": 468618,
-                "options": {
-                    "destination": "{{.PROGRAMFILES}}\\DependencyWalker"
-                }
+                "kind": "nsis",
+                "x86": "https://www.voidtools.com/Everything-1.4.1.1032.x86-Setup.exe",
+                "x86_size": 1901912,
+                "x64": "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe",
+                "x64_size": 1998736
+            }
+        },
+        "bcuninstaller": {
+            "title": "Bulk Crap Uninstaller",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "bcuninstaller.png",
+            "version": "6.2",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/releases/download/v6.2/BCUninstaller_6.2.0_setup.exe",
+                "x86_size": 9221652
             }
         },
         "ditto": {
             "title": "Ditto",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4.5",
             "icon": "ditto-icon-32.png",
             "version": "3.25.113.0",
             "installer": {
                 "kind": "innosetup",
-                "x64": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoSetup_3_25_113_0.exe",
-                "x64_size": 5773896,
+                "x86": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoSetup_3_25_113_0.exe",
+                "x86_size": 5773896,
                 "options": {
                     "extension": ".exe"
                 }
             }
         },
-        "etcher": {
-            "title": "Etcher",
+        "visual-studio-code": {
+            "title": "Visual Studio Code",
             "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "2.1.5",
-            "installer": {
-                "kind": "nsis",
-                "x64": "https://github.com/balena-io/etcher/releases/download/v2.1.5/balenaEtcher-2.1.5.Setup.exe",
-                "x64_size": 200129176
-            }
-        },
-        "exeproxy": {
-            "title": "ExeProxy",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "0.5",
-            "installer": {
-                "kind": "zip",
-                "x86": "https://github.com/tim-lebedkov/exe-proxy/releases/download/version_0.5/exeproxy-0.5.zip",
-                "x86_size": 304014,
-                "options": {
-                    "destination": "{{.PROGRAMFILES_X86}}\\exeproxy"
-                }
-            }
-        },
-        "firefox": {
-            "title": "Firefox",
-            "licence": "Open Source",
             "tag": [
-                "featured",
-                "win10"
+                "featured"
             ],
-            "category": "browsers",
-            "rating": "5.0",
-            "icon": "firefox-icon-32.png",
-            "version": "150.0.2",
+            "category": "developer",
+            "rating": "5",
+            "icon": "visual-studio-code-icon-32.png",
+            "version": "1.124.0",
             "installer": {
-                "kind": "nsis",
-                "x86": "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US",
-                "x86_size": 76744616,
-                "x64": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
-                "x64_size": 87242400,
+                "kind": "custom",
+                "x64": "https://update.code.visualstudio.com/1.124.0/win32-x64-user/stable",
+                "x64_size": 184949056,
                 "options": {
-                    "extension": ".exe"
-                }
-            }
-        },
-        "firefox-dev": {
-            "title": "Firefox Developer Edition",
-            "licence": "Open Source",
-            "tag": [],
-            "category": "browsers",
-            "rating": "5.0",
-            "icon": "firefox-icon-32.png",
-            "version": "151.0b8",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=win&lang=en-US",
-                "x86_size": 77123528,
-                "x64": "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=win64&lang=en-US",
-                "x64_size": 87534712,
-                "options": {
-                    "extension": ".exe"
-                }
-            }
-        },
-        "firefox-esr": {
-            "title": "Firefox ESR",
-            "licence": "Open Source",
-            "tag": [
-                "featured",
-                "win7"
-            ],
-            "category": "browsers",
-            "rating": "5.0",
-            "icon": "firefox-icon-32.png",
-            "version": "140.10.2esr",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://download.mozilla.org/?product=firefox-esr-latest&os=win&lang=en-US",
-                "x86_size": 68971896,
-                "x64": "https://download.mozilla.org/?product=firefox-esr-latest&os=win64&lang=en-US",
-                "x64_size": 73266952,
-                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/norestart",
+                        "/sp-",
+                        "/verysilent",
+                        "/mergetasks=!runcode"
+                    ],
                     "extension": ".exe"
                 }
             }
@@ -369,7 +301,9 @@
         "git": {
             "title": "Git",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
@@ -385,194 +319,54 @@
                 }
             }
         },
-        "go": {
-            "title": "Go",
+        "node": {
+            "title": "Node.js",
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "1.26.3",
+            "version": "26.3.0",
             "installer": {
                 "kind": "msi",
-                "x86": "https://dl.google.com/go/go1.26.3.windows-386.msi",
-                "x86_size": 58428109,
-                "x64": "https://dl.google.com/go/go1.26.3.windows-amd64.msi",
-                "x64_size": 59975270
+                "x64": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-x64.msi",
+                "x64_size": 36126720
             }
         },
-        "google-chrome": {
-            "title": "Google Chrome",
-            "licence": "Freeware",
-            "tag": [
-                "featured"
-            ],
-            "category": "browsers",
-            "rating": "4.8",
-            "icon": "chrome.png",
-            "version": "latest",
-            "installer": {
-                "kind": "msi",
-                "x86": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi",
-                "x86_size": 137379840,
-                "x64": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi",
-                "x64_size": 152928256
-            }
-        },
-        "handbrake": {
-            "title": "HandBrake",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "1.11.1",
-            "installer": {
-                "kind": "nsis",
-                "x64": "https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1-x86_64-Win_GUI.exe",
-                "x64_size": 25303376
-            }
-        },
-        "hexchat": {
-            "title": "HexChat",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "2.16.2",
-            "installer": {
-                "kind": "innosetup",
-                "x86": "https://github.com/hexchat/hexchat/releases/download/v2.16.2/HexChat.2.16.2.x86.exe",
-                "x86_size": 9727118,
-                "x64": "https://github.com/hexchat/hexchat/releases/download/v2.16.2/HexChat.2.16.2.x64.exe",
-                "x64_size": 10878872
-            }
-        },
-        "irfanview": {
-            "title": "IrfanView",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "4.73",
-            "installer": {
-                "kind": "custom",
-                "x86": "http://download.betanews.com/download/967963863-1/iview473_setup.exe",
-                "x86_size": 3577984,
-                "x64": "http://download.betanews.com/download/967963863-1/iview473_x64_setup.exe",
-                "x64_size": 4466304,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/silent"
-                    ]
-                }
-            }
-        },
-        "lockhunter": {
-            "title": "LockHunter",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "3.4.3",
-            "installer": {
-                "kind": "innosetup",
-                "x86": "https://lockhunter.com/assets/exe/lockhuntersetup_3-4-3.exe",
-                "x86_size": 3376672
-            }
-        },
-        "marktext": {
-            "title": "Mark Text",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "0.17.1",
-            "installer": {
-                "kind": "nsis",
-                "x64": "https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-setup.exe",
-                "x64_size": 156301724
-            }
-        },
-        "moonlight-qt": {
-            "title": "Moonlight QT",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "6.1.0",
-            "installer": {
-                "kind": "custom",
-                "x86": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v6.1.0/MoonlightSetup-6.1.0.exe",
-                "x86_size": 43277432,
-                "x64": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v6.1.0/MoonlightSetup-6.1.0.exe",
-                "x64_size": 43277432,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/passive"
-                    ]
-                }
-            }
-        },
-        "obs-studio": {
-            "title": "OBS Studio",
+        "node-lts": {
+            "title": "Node.js LTS",
             "licence": "Freeware",
             "tag": [
                 "featured"
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "new_icon_small-r.png",
-            "version": "32.1.2",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x86.exe",
-                "x86_size": 106874704
-            }
-        },
-        "python2": {
-            "title": "Python 2",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "2.7.18",
+            "version": "24.16.0",
             "installer": {
                 "kind": "msi",
-                "x86": "https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi",
-                "x86_size": 19632128,
-                "x64": "https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi",
-                "x64_size": 20598784,
-                "options": {
-                    "shims": [
-                        "{{.SYSTEMDRIVE}}\\Python27\\python.exe",
-                        "{{.SYSTEMDRIVE}}\\Python27\\pythonw.exe"
-                    ]
-                }
+                "x86": "",
+                "x86_size": 32829440,
+                "x64": "https://nodejs.org/dist/v24.16.0/node-v24.16.0-x64.msi",
+                "x64_size": 32829440
             }
         },
         "python3": {
             "title": "Python 3",
             "licence": "Freeware",
-            "tag": [],
+            "tag": [
+                "featured"
+            ],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "3.14.5",
+            "version": "3.14.6",
             "installer": {
                 "kind": "custom",
-                "x86": "https://www.python.org/ftp/python/3.14.5/python-3.14.5.exe",
-                "x86_size": 28926168,
-                "x64": "https://www.python.org/ftp/python/3.14.5/python-3.14.5-amd64.exe",
-                "x64_size": 30361968,
+                "x86": "https://www.python.org/ftp/python/3.14.6/python-3.14.6.exe",
+                "x86_size": 29269792,
+                "x64": "https://www.python.org/ftp/python/3.14.6/python-3.14.6-amd64.exe",
+                "x64_size": 30774112,
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -582,125 +376,32 @@
                 }
             }
         },
-        "signal": {
-            "title": "Signal",
+        "pycharm-community": {
+            "title": "PyCharm Community",
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "8.9.1",
+            "version": "2025.3",
             "installer": {
                 "kind": "nsis",
-                "x86": "https://updates.signal.org/desktop/signal-desktop-win-8.9.1.exe",
-                "x86_size": 251587648
+                "x64": "https://download.jetbrains.com/python/pycharm-2025.3.exe",
+                "x64_size": 887691448
             }
         },
-        "sshfs-win": {
-            "title": "SSHFS-Win",
+        "intellij-idea-community": {
+            "title": "IntelliJ IDEA Community",
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "3.5.20357",
+            "version": "2025.3",
             "installer": {
-                "kind": "msi",
-                "x86": "https://github.com/billziss-gh/sshfs-win/releases/download/v3.5.20357/sshfs-win-3.5.20357-x86.msi",
-                "x86_size": 4972544,
-                "x64": "https://github.com/billziss-gh/sshfs-win/releases/download/v3.5.20357/sshfs-win-3.5.20357-x64.msi",
-                "x64_size": 5091328
-            }
-        },
-        "sumatrapdf": {
-            "title": "SumatraPDF",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "3.6.1",
-            "installer": {
-                "kind": "custom",
-                "x86": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-install.exe",
-                "x86_size": 10218872,
-                "x64": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
-                "x64_size": 11075960,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/install",
-                        "/s"
-                    ]
-                }
-            }
-        },
-        "vagrant": {
-            "title": "Vagrant",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "2.4.9",
-            "installer": {
-                "kind": "msi",
-                "x86": "https://releases.hashicorp.com/vagrant/2.4.9/vagrant_2.4.9_windows_i686.msi",
-                "x86_size": 244244480,
-                "x64": "https://releases.hashicorp.com/vagrant/2.4.9/vagrant_2.4.9_windows_amd64.msi",
-                "x64_size": 247914496
-            }
-        },
-        "visual-studio-code": {
-            "title": "Visual Studio Code",
-            "licence": "Freeware",
-            "tag": [
-                "featured"
-            ],
-            "category": "developer",
-            "rating": "5",
-            "icon": "visual-studio-code-icon-32.png",
-            "version": "1.120.0",
-            "installer": {
-                "kind": "custom",
-                "x64": "https://update.code.visualstudio.com/1.120.0/win32-x64-user/stable",
-                "x64_size": 157176400,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/norestart",
-                        "/sp-",
-                        "/verysilent",
-                        "/mergetasks=!runcode"
-                    ],
-                    "extension": ".exe"
-                }
-            }
-        },
-        "vivaldi": {
-            "title": "Vivaldi",
-            "licence": "Open Source",
-            "tag": [
-                "featured"
-            ],
-            "category": "browsers",
-            "rating": "4.0",
-            "icon": "vivaldi-icon-32.png",
-            "version": "7.9.3970.64",
-            "installer": {
-                "kind": "custom",
-                "x86": "https://downloads.vivaldi.com/stable/Vivaldi.7.9.3970.64.exe",
-                "x86_size": 123731880,
-                "x64": "https://downloads.vivaldi.com/stable/Vivaldi.7.9.3970.64.x64.exe",
-                "x64_size": 137231784,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "--vivaldi-silent",
-                        "--do-not-launch-chrome",
-                        "--vivaldi-update"
-                    ]
-                }
+                "kind": "nsis",
+                "x64": "https://download.jetbrains.com/idea/idea-2025.3.exe",
+                "x64_size": 1108206656
             }
         },
         "vlc": {
@@ -728,8 +429,54 @@
                 }
             }
         },
-        "winrar": {
-            "title": "WinRAR",
+        "obs-studio": {
+            "title": "OBS Studio",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "new_icon_small-r.png",
+            "version": "32.1.2",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x86.exe",
+                "x86_size": 106874704
+            }
+        },
+        "anaconda": {
+            "title": "Anaconda",
+            "licence": "Open source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.1",
+            "icon": "anaconda-icon-32.png",
+            "version": "3-2025.12-2",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe",
+                "x86_size": 511528600,
+                "x64": "https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Windows-x86_64.exe",
+                "x64_size": 1200681984
+            }
+        },
+        "android-studio-ide": {
+            "title": "Android Studio IDE",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.5",
+            "icon": "android-studio-icon-32.png",
+            "version": "2026.1.1.9",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://edgedl.me.gvt1.com/android/studio/install/2026.1.1.9/android-studio-quail1-patch1-windows.exe",
+                "x64_size": 1477227708
+            }
+        },
+        "handbrake": {
+            "title": "HandBrake",
             "licence": "Freeware",
             "tag": [
                 "featured"
@@ -737,11 +484,187 @@
             "category": "desktop",
             "rating": "4",
             "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "7.22",
+            "version": "1.11.2",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-x86_64-Win_GUI.exe",
+                "x64_size": 25331264
+            }
+        },
+        "rufus": {
+            "title": "Rufus",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "4.14",
+            "installer": {
+                "kind": "copy",
+                "x86": "https://github.com/pbatard/rufus/releases/download/v4.14/rufus-4.14_x86.exe",
+                "x86_size": 1950568,
+                "x64": "https://github.com/pbatard/rufus/releases/download/v4.14/rufus-4.14.exe",
+                "x64_size": 2002280,
+                "options": {
+                    "destination": "{{.PROGRAMFILES_X86}}\\Rufus\\rufus.exe"
+                }
+            }
+        },
+        "clementine-player": {
+            "title": "Clementine Player",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "3.8",
+            "icon": "clementine-player.png",
+            "version": "1.4.1",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/clementine-player/Clementine/releases/download/1.4.1-78-gb55eca391/ClementineSetup-1.4.1-78-gb55eca391.exe",
+                "x64_size": 53437145
+            }
+        },
+        "brackets": {
+            "title": "Brackets",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.0",
+            "icon": "brackets-icon-32.png",
+            "version": "1.14.2",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://github.com/adobe/brackets/releases/download/release-1.14.2/Brackets.Release.1.14.2.msi",
+                "x64_size": 80896000
+            }
+        },
+        "blender": {
+            "title": "Blender",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.2",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/120px-Blender_logo_no_text.svg.png",
+            "version": "5.1.2",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://download.blender.org/release/Blender5.1/blender-5.1.2-windows-x64.msi",
+                "x64_size": 371490816
+            }
+        },
+        "cpu-z": {
+            "title": "CPU-Z",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.8",
+            "icon": "cpu-z.svg",
+            "version": "2.20.2",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://download.cpuid.com/cpu-z/cpu-z_2.20.2-en.exe",
+                "x86_size": 4811984
+            }
+        },
+        "deluge": {
+            "title": "Deluge",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "deluge-icon-32.png",
+            "version": "2.2.0",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win32-setup.exe",
+                "x86_size": 37433971,
+                "x64": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win64-setup.exe",
+                "x64_size": 41428406
+            }
+        },
+        "etcher": {
+            "title": "Etcher",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "2.1.6",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/balena-io/etcher/releases/download/v2.1.6/balenaEtcher-2.1.6.Setup.exe",
+                "x64_size": 200075928
+            }
+        },
+        "codeblocks": {
+            "title": "Code::Blocks",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "3.4",
+            "icon": "wiki.png",
+            "version": "17.12",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://sourceforge.net/projects/codeblocks/files/Binaries/25.03/Windows/32bit/codeblocks-25.03-32bit-setup.exe/download",
+                "x86_size": 0,
+                "x64": "https://sourceforge.net/projects/codeblocks/files/Binaries/17.12/codeblocks-17.12mingw-setup.exe/download",
+                "x64_size": 0,
+                "options": {
+                    "extension": ".exe"
+                }
+            }
+        },
+        "arduino": {
+            "title": "Arduino",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.0",
+            "icon": "arduino-icon-32.png",
+            "version": "2.3.10",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://downloads.arduino.cc/arduino-1.8.19-windows.exe",
+                "x86_size": 117305832,
+                "x64": "https://github.com/arduino/arduino-ide/releases/download/2.3.10/arduino-ide_2.3.10_Windows_64bit.exe",
+                "x64_size": 158074632
+            }
+        },
+        "antimicro": {
+            "title": "AntiMicro",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.6",
+            "icon": "antimicrox.png",
+            "version": "3.6.1",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://github.com/AntiMicroX/antimicrox/releases/download/3.6.1/antimicrox-3.6.1-Windows-AMD64.exe",
+                "x64_size": 16037291
+            }
+        },
+        "axcrypt": {
+            "title": "AxCrypt",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4",
+            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "version": "2",
             "installer": {
                 "kind": "custom",
-                "x64": "https://rarlab.com/rar/winrar-x64-722.exe",
-                "x64_size": 3770008,
+                "x86": "https://account.axcrypt.net/download/axcrypt-2-setup.exe",
+                "x86_size": 17980712,
+                "x64": "https://www.axcrypt.net/download/axcrypt-latest-win-en-x64.exe",
+                "x64_size": 0,
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -750,20 +673,483 @@
                 }
             }
         },
-        "wireshark": {
-            "title": "Wireshark",
+        "discord": {
+            "title": "Discord",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.5",
+            "icon": "https://static.filehorse.com/icons/messaging-and-chat/discord-icon-32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "squirrel",
+                "x86": "https://discordapp.com/api/download?platform=win",
+                "x86_size": 107226856
+            }
+        },
+        "qbittorrent": {
+            "title": "qBittorrent",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "5.0",
+            "icon": "qbittorrent-icon-32.png",
+            "version": "5.2.1",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/qbittorrent/qBittorrent/releases/download/release-5.2.1/qbittorrent_5.2.1_x64_setup.exe",
+                "x64_size": 43078183
+            }
+        },
+        "powertoys": {
+            "title": "Microsoft PowerToys",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4.9",
+            "icon": "https://raw.githubusercontent.com/microsoft/PowerToys/master/doc/images/logo.png",
+            "version": "0.100.0",
+            "installer": {
+                "kind": "custom",
+                "x64": "https://github.com/microsoft/PowerToys/releases/download/v0.100.0/PowerToysSetup-0.100.0-x64.exe",
+                "x64_size": 284948840,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/quiet"
+                    ]
+                }
+            }
+        },
+        "telegram": {
+            "title": "Telegram Desktop",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.7",
+            "icon": "https://telegram.org/img/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://telegram.org/dl/desktop/win",
+                "x86_size": 48003672,
+                "x64": "https://telegram.org/dl/desktop/win64",
+                "x64_size": 53076064
+            }
+        },
+        "gimp": {
+            "title": "GIMP",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.8",
+            "icon": "https://static.filehorse.com/icons/imaging-and-digital-photo/gimp-icon-32.png",
+            "version": "3.2.4",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://download.gimp.org/gimp/v3.2/windows/gimp-3.2.4-setup.exe",
+                "x64_size": 188132312
+            }
+        },
+        "steam": {
+            "title": "Steam",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4.9",
+            "icon": "https://store.steampowered.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe",
+                "x86_size": 2380800
+            }
+        },
+        "keepass": {
+            "title": "KeePass Password Safe",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "security",
+            "rating": "4.8",
+            "icon": "https://keepass.info/keepass_32x32.png",
+            "version": "2.61.1",
+            "installer": {
+                "kind": "msi",
+                "x86": "https://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.61.1/KeePass-2.61.1.msi",
+                "x86_size": 0
+            }
+        },
+        "winscp": {
+            "title": "WinSCP",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "developer",
+            "rating": "4.7",
+            "icon": "https://winscp.net/favicon.ico",
+            "version": "6.5.6",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://sourceforge.net/projects/winscp/files/WinSCP/6.5.6/WinSCP-6.5.6-Setup.exe/download",
+                "x86_size": 0
+            }
+        },
+        "obsidian": {
+            "title": "Obsidian",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4.9",
+            "icon": "https://obsidian.md/favicon.ico",
+            "version": "1.12.7",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe",
+                "x64_size": 295530200
+            }
+        },
+        "spotify": {
+            "title": "Spotify",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.8",
+            "icon": "https://www.scdn.co/nx/ritter/img/favicon-32x32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://download.scdn.co/SpotifySetup.exe",
+                "x86_size": 1301480,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/silent"
+                    ]
+                }
+            }
+        },
+        "zoom": {
+            "title": "Zoom",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "4.2",
+            "icon": "https://st1.zoom.us/zoom.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "msi",
+                "x86": "https://zoom.us/client/latest/ZoomInstallerFull.msi",
+                "x86_size": 148277248,
+                "x64": "https://zoom.us/client/latest/ZoomInstallerFull.msi?arch=x64",
+                "x64_size": 148277248
+            }
+        },
+        "malwarebytes": {
+            "title": "Malwarebytes",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "security",
+            "rating": "4.7",
+            "icon": "https://www.malwarebytes.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://downloads.malwarebytes.com/file/mb-windows",
+                "x86_size": 2852480
+            }
+        },
+        "postman": {
+            "title": "Postman",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.6",
+            "icon": "https://www.postman.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "squirrel",
+                "x64": "https://dl.pstmn.io/download/latest/win64",
+                "x64_size": 161622144
+            }
+        },
+        "temurin-17-jdk": {
+            "title": "Eclipse Temurin JDK 17",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "developer",
+            "rating": "5.0",
+            "icon": "https://adoptium.net/favicon.ico",
+            "version": "17.0.9+9.1",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.9%2B9.1/OpenJDK17U-jdk_x64_windows_hotspot_17.0.9_9.msi",
+                "x64_size": 168513536
+            }
+        },
+        "slack": {
+            "title": "Slack",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "communication",
+            "rating": "4.5",
+            "icon": "https://a.slack-edge.com/80588/img/favicon-32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "squirrel",
+                "x64": "https://slack.com/ssb/download-win64",
+                "x64_size": 156574784
+            }
+        },
+        "microsoft-teams": {
+            "title": "Microsoft Teams",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "communication",
+            "rating": "4.0",
+            "icon": "https://statics.teams.cdn.office.net/evergreen-assets/apps/teams/images/logo-teams-32x32.png",
+            "version": "latest",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://statics.teams.cdn.office.net/production-windows-x64/lkg/MicrosoftTeams-x64.msix",
+                "x64_size": 192121486
+            }
+        },
+        "anydesk": {
+            "title": "AnyDesk",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4.3",
+            "icon": "https://anydesk.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "as-is",
+                "x86": "https://download.anydesk.com/AnyDesk.exe",
+                "x86_size": 8320952,
+                "options": {
+                    "extension": ".exe"
+                }
+            }
+        },
+        "dropbox": {
+            "title": "Dropbox",
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
-            "version": "4.6.5",
+            "rating": "4.2",
+            "icon": "https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/branding/dropbox-logo-glyph-blue.png",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://www.dropbox.com/download?plat=win&type=full",
+                "x86_size": 242167704,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "/S"
+                    ]
+                }
+            }
+        },
+        "hwinfo": {
+            "title": "HWiNFO",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "5.0",
+            "icon": "https://www.hwinfo.com/favicon.ico",
+            "version": "8.48",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://www.hwinfo.com/files/hwi64_848.exe",
+                "x64_size": 0
+            }
+        },
+        "rustup": {
+            "title": "Rustup (Rust Installer)",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "5.0",
+            "icon": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+            "version": "latest",
+            "installer": {
+                "kind": "as-is",
+                "x86": "https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/rustup-init.exe",
+                "x86_size": 10006016,
+                "x64": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
+                "x64_size": 12814336
+            }
+        },
+        "filezilla": {
+            "title": "FileZilla Client",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.4",
+            "icon": "https://filezilla-project.org/favicon.ico",
+            "version": "3.70.6",
             "installer": {
                 "kind": "nsis",
-                "x86": "https://www.wireshark.org/download/win32/all-versions/Wireshark-win32-3.6.24.msi",
-                "x86_size": 45879296,
-                "x64": "https://www.wireshark.org/download/win64/Wireshark-4.6.5-x64.msi",
-                "x64_size": 81883136
+                "x64": "https://download.filezilla-project.org/client/FileZilla_3.70.6_win64-setup.exe",
+                "x64_size": 0
+            }
+        },
+        "sublime-text-4": {
+            "title": "Sublime Text 4",
+            "licence": "Trial",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.7",
+            "icon": "https://www.sublimetext.com/favicon.ico",
+            "version": "4200",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://download.sublimetext.com/sublime_text_build_4200_x64_setup.exe",
+                "x64_size": 16200128
+            }
+        },
+        "docker-desktop": {
+            "title": "Docker Desktop",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "developer",
+            "rating": "4.5",
+            "icon": "https://www.docker.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x64": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+                "x64_size": 653944752,
+                "options": {
+                    "arguments": [
+                        "install",
+                        "--quiet",
+                        "--accept-license"
+                    ]
+                }
+            }
+        },
+        "epic-games-launcher": {
+            "title": "Epic Games Launcher",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.1",
+            "icon": "https://static-assets-prod.epicgames.com/epic-store/static/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "msi",
+                "x86": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+                "x86_size": 86188032
+            }
+        },
+        "wiztree": {
+            "title": "WizTree",
+            "licence": "Freeware",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "5.0",
+            "icon": "https://diskanalyzer.com/favicon.ico",
+            "version": "4.31",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://diskanalyzer.com/files/wiztree_4_31_setup.exe",
+                "x64_size": 5148752
+            }
+        },
+        "transmission": {
+            "title": "Transmission",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.6",
+            "icon": "https://transmissionbt.com/favicon.ico",
+            "version": "4.1.2",
+            "installer": {
+                "kind": "msi",
+                "x64": "https://github.com/transmission/transmission/releases/download/4.1.2/transmission-4.1.2-x64.msi",
+                "x64_size": 23322624
+            }
+        },
+        "foxit-pdf-reader": {
+            "title": "Foxit PDF Reader",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "desktop",
+            "rating": "4.3",
+            "icon": "https://www.foxit.com/favicon.ico",
+            "version": "latest",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Windows&package_type=exe",
+                "x86_size": 394274472,
+                "options": {
+                    "arguments": [
+                        "/quiet"
+                    ]
+                }
+            }
+        },
+        "winmerge": {
+            "title": "WinMerge",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.8",
+            "icon": "https://winmerge.org/favicon.ico",
+            "version": "2.16.56.2",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://github.com/WinMerge/winmerge/releases/download/v2.16.56.2/WinMerge-2.16.56.2-x64-Setup.exe",
+                "x64_size": 14538952
+            }
+        },
+        "faststone-image-viewer": {
+            "title": "FastStone Image Viewer",
+            "licence": "Freeware",
+            "tag": [],
+            "category": "multimedia",
+            "rating": "4.7",
+            "icon": "https://www.faststone.org/favicon.ico",
+            "version": "8.4",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://www.faststonesoft.net/DN/FSViewerSetup84.exe",
+                "x86_size": 12425936
             }
         }
     }
