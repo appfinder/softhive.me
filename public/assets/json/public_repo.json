@@ -442,7 +442,9 @@
             "installer": {
                 "kind": "nsis",
                 "x86": "https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x86.exe",
-                "x86_size": 106874704
+                "x86_size": 106874704,
+                "x64": "https://github.com/obsproject/obs-studio/releases/download/32.1.2/OBS-Studio-32.1.2-Windows-x64-Installer.exe",
+                "x64_size": 157809480
             }
         },
         "anaconda": {
@@ -807,6 +809,24 @@
                 "kind": "innosetup",
                 "x86": "https://sourceforge.net/projects/winscp/files/WinSCP/6.5.6/WinSCP-6.5.6-Setup.exe/download",
                 "x86_size": 0
+            }
+        },
+        "notepad-plus-plus": {
+            "title": "Notepad++",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "developer",
+            "rating": "5.0",
+            "icon": "https://notepad-plus-plus.org/favicon.ico",
+            "version": "8.9.6.4",
+            "installer": {
+                "kind": "nsis",
+                "x86": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.exe",
+                "x86_size": 6759464,
+                "x64": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.x64.exe",
+                "x64_size": 6899264
             }
         },
         "obsidian": {
