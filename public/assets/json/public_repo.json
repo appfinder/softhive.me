@@ -141,7 +141,7 @@
             ],
             "category": "security",
             "rating": "4.7",
-            "icon": "https://static.filehorse.com/icons/firewalls-and-security/bitwarden-icon-32.png",
+            "icon": "bitwarden.png",
             "version": "latest",
             "installer": {
                 "kind": "custom",
@@ -166,7 +166,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "winrar.png",
             "version": "7.22",
             "installer": {
                 "kind": "custom",
@@ -186,7 +186,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "putty.png",
             "version": "0.84",
             "installer": {
                 "kind": "msi",
@@ -222,12 +222,10 @@
         "everything-search": {
             "title": "Everything Search",
             "licence": "Freeware",
-            "tag": [
-                "featured"
-            ],
+            "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "Everything_(software)_icon.png",
             "version": "1.4.1.1032",
             "installer": {
                 "kind": "nsis",
@@ -306,7 +304,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "git.png",
             "version": "2.54.0",
             "installer": {
                 "kind": "innosetup",
@@ -325,10 +323,12 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "node.png",
             "version": "26.3.0",
             "installer": {
                 "kind": "msi",
+                "x86": "https://nodejs.org/dist/v12.22.3/node-v12.22.3-x86.msi",
+                "x86_size": 18034688,
                 "x64": "https://nodejs.org/dist/v26.3.0/node-v26.3.0-x64.msi",
                 "x64_size": 36126720
             }
@@ -341,12 +341,12 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "node.png",
             "version": "24.16.0",
             "installer": {
                 "kind": "msi",
-                "x86": "",
-                "x86_size": 32829440,
+                "x86": "https://nodejs.org/dist/v12.22.3/node-v12.22.3-x86.msi",
+                "x86_size": 18034688,
                 "x64": "https://nodejs.org/dist/v24.16.0/node-v24.16.0-x64.msi",
                 "x64_size": 32829440
             }
@@ -359,7 +359,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "python.png",
             "version": "3.14.6",
             "installer": {
                 "kind": "custom",
@@ -382,7 +382,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "PyCharm.png",
             "version": "2025.3",
             "installer": {
                 "kind": "nsis",
@@ -396,7 +396,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "intellij.png",
             "version": "2025.3",
             "installer": {
                 "kind": "nsis",
@@ -485,7 +485,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "handbrake.png",
             "version": "1.11.2",
             "installer": {
                 "kind": "nsis",
@@ -501,7 +501,7 @@
             ],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "rufus.png",
             "version": "4.14",
             "installer": {
                 "kind": "copy",
@@ -550,7 +550,7 @@
             ],
             "category": "multimedia",
             "rating": "4.2",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/120px-Blender_logo_no_text.svg.png",
+            "icon": "blender.png",
             "version": "5.1.2",
             "installer": {
                 "kind": "msi",
@@ -596,7 +596,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "",
             "version": "2.1.6",
             "installer": {
                 "kind": "nsis",
@@ -659,7 +659,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "https://github.com/appfinder/appfinder.github.io/blob/main/assets/dist/icon.png?raw=true",
+            "icon": "",
             "version": "2",
             "installer": {
                 "kind": "custom",
@@ -683,7 +683,7 @@
             ],
             "category": "multimedia",
             "rating": "4.5",
-            "icon": "https://static.filehorse.com/icons/messaging-and-chat/discord-icon-32.png",
+            "icon": "discord.png",
             "version": "latest",
             "installer": {
                 "kind": "squirrel",
@@ -715,7 +715,7 @@
             ],
             "category": "desktop",
             "rating": "4.9",
-            "icon": "https://raw.githubusercontent.com/microsoft/PowerToys/master/doc/images/logo.png",
+            "icon": "PowerToys.png",
             "version": "0.100.0",
             "installer": {
                 "kind": "custom",
@@ -737,14 +737,14 @@
             ],
             "category": "multimedia",
             "rating": "4.7",
-            "icon": "https://telegram.org/img/favicon.ico",
+            "icon": "telegram.png",
             "version": "latest",
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://telegram.org/dl/desktop/win",
-                "x86_size": 48003672,
+                "x86_size": 48280528,
                 "x64": "https://telegram.org/dl/desktop/win64",
-                "x64_size": 53076064
+                "x64_size": 53085920
             }
         },
         "gimp": {
@@ -755,7 +755,7 @@
             ],
             "category": "multimedia",
             "rating": "4.8",
-            "icon": "https://static.filehorse.com/icons/imaging-and-digital-photo/gimp-icon-32.png",
+            "icon": "gimp.png",
             "version": "3.2.4",
             "installer": {
                 "kind": "innosetup",
@@ -771,7 +771,7 @@
             ],
             "category": "desktop",
             "rating": "4.9",
-            "icon": "https://store.steampowered.com/favicon.ico",
+            "icon": "Steam_icon_logo.svg.png",
             "version": "latest",
             "installer": {
                 "kind": "nsis",
@@ -787,7 +787,7 @@
             ],
             "category": "security",
             "rating": "4.8",
-            "icon": "https://keepass.info/keepass_32x32.png",
+            "icon": "keepass.png",
             "version": "2.61.1",
             "installer": {
                 "kind": "msi",
@@ -803,7 +803,7 @@
             ],
             "category": "developer",
             "rating": "4.7",
-            "icon": "https://winscp.net/favicon.ico",
+            "icon": "WinSCP.png",
             "version": "6.5.6",
             "installer": {
                 "kind": "innosetup",
@@ -837,7 +837,7 @@
             ],
             "category": "desktop",
             "rating": "4.9",
-            "icon": "https://obsidian.md/favicon.ico",
+            "icon": "Obsidian.png",
             "version": "1.12.7",
             "installer": {
                 "kind": "nsis",
@@ -853,7 +853,7 @@
             ],
             "category": "multimedia",
             "rating": "4.8",
-            "icon": "https://www.scdn.co/nx/ritter/img/favicon-32x32.png",
+            "icon": "spotify.png",
             "version": "latest",
             "installer": {
                 "kind": "custom",
@@ -891,7 +891,7 @@
             ],
             "category": "security",
             "rating": "4.7",
-            "icon": "https://www.malwarebytes.com/favicon.ico",
+            "icon": "Malwarebytes.png",
             "version": "latest",
             "installer": {
                 "kind": "innosetup",
@@ -921,7 +921,7 @@
             ],
             "category": "developer",
             "rating": "5.0",
-            "icon": "https://adoptium.net/favicon.ico",
+            "icon": "Temurin.png",
             "version": "17.0.9+9.1",
             "installer": {
                 "kind": "msi",
@@ -937,7 +937,7 @@
             ],
             "category": "communication",
             "rating": "4.5",
-            "icon": "https://a.slack-edge.com/80588/img/favicon-32.png",
+            "icon": "slack.png",
             "version": "latest",
             "installer": {
                 "kind": "squirrel",
@@ -967,7 +967,7 @@
             ],
             "category": "desktop",
             "rating": "4.3",
-            "icon": "https://anydesk.com/favicon.ico",
+            "icon": "anydesk.png",
             "version": "latest",
             "installer": {
                 "kind": "as-is",
@@ -1006,7 +1006,7 @@
             ],
             "category": "desktop",
             "rating": "5.0",
-            "icon": "https://www.hwinfo.com/favicon.ico",
+            "icon": "HWiNFO.png",
             "version": "8.48",
             "installer": {
                 "kind": "innosetup",
@@ -1066,7 +1066,7 @@
             ],
             "category": "developer",
             "rating": "4.5",
-            "icon": "https://www.docker.com/favicon.ico",
+            "icon": "docker.png",
             "version": "latest",
             "installer": {
                 "kind": "custom",
@@ -1103,7 +1103,7 @@
             ],
             "category": "desktop",
             "rating": "5.0",
-            "icon": "https://diskanalyzer.com/favicon.ico",
+            "icon": "wiztree.png",
             "version": "4.31",
             "installer": {
                 "kind": "innosetup",
