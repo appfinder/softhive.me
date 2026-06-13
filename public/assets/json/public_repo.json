@@ -989,6 +989,20 @@
                 "x64_size": 102937440
             }
         },
+        "dbeaver": {
+            "title": "DBeaver Community",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.7",
+            "icon": "https://dbeaver.io/favicon.ico",
+            "version": "26.1.0",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://github.com/dbeaver/dbeaver/releases/download/26.1.0/dbeaver-ce-26.1.0-windows-x86_64.exe",
+                "x64_size": 116752984
+            }
+        },
         "temurin-17-jdk": {
             "title": "Eclipse Temurin JDK 17",
             "licence": "Open Source",
@@ -1074,6 +1088,22 @@
                 }
             }
         },
+        "crystaldiskinfo": {
+            "title": "CrystalDiskInfo",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "4.9",
+            "icon": "https://crystalmark.info/favicon.ico",
+            "version": "9.9.1",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://downloads.sourceforge.net/project/crystaldiskinfo/9.9.1/CrystalDiskInfo-9.9.1.exe",
+                "x86_size": 0
+            }
+        },
         "hwinfo": {
             "title": "HWiNFO",
             "licence": "Freeware",
@@ -1118,6 +1148,38 @@
                 "kind": "nsis",
                 "x64": "https://download.filezilla-project.org/client/FileZilla_3.70.6_win64-setup.exe",
                 "x64_size": 0
+            }
+        },
+        "krita": {
+            "title": "Krita",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.8",
+            "icon": "https://krita.org/favicon.ico",
+            "version": "5.3.2.1",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://download.kde.org/stable/krita/5.3.2.1/krita-x64-5.3.2.1-setup.exe",
+                "x64_size": 164092376
+            }
+        },
+        "sharex": {
+            "title": "ShareX",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "5.0",
+            "icon": "https://getsharex.com/favicon.ico",
+            "version": "20.2.0",
+            "installer": {
+                "kind": "innosetup",
+                "x64": "https://github.com/ShareX/ShareX/releases/download/v20.2.0/ShareX-20.2.0-setup-x64.exe",
+                "x64_size": 126171096
             }
         },
         "sublime-text-4": {
