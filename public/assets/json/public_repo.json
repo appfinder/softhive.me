@@ -1,5 +1,23 @@
 {
     "packages": {
+        "audacity": {
+            "title": "Audacity",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "multimedia",
+            "rating": "4.0",
+            "icon": "audacity.png",
+            "version": "3.7.8",
+            "installer": {
+                "kind": "innosetup",
+                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-win-3.7.8-32bit.exe",
+                "x86_size": 18940432,
+                "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-win-3.7.8-64bit.exe",
+                "x64_size": 20400664
+            }
+        },
         "7zip": {
             "title": "7-Zip",
             "licence": "Open source",
@@ -49,12 +67,12 @@
             "category": "browsers",
             "rating": "4.0",
             "icon": "brave-browser-icon-32.png",
-            "version": "1.91.171",
+            "version": "1.91.172",
             "installer": {
                 "kind": "as-is",
-                "x86": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSetup32.exe",
-                "x86_size": 136743264,
-                "x64": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserSetup.exe",
+                "x86": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserStandaloneSetup32.exe",
+                "x86_size": 136747360,
+                "x64": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserSetup.exe",
                 "x64_size": 1276768,
                 "options": {
                     "extension": ".exe"
@@ -279,11 +297,11 @@
             "category": "developer",
             "rating": "5",
             "icon": "visual-studio-code-icon-32.png",
-            "version": "1.124.0",
+            "version": "1.124.2",
             "installer": {
                 "kind": "custom",
-                "x64": "https://update.code.visualstudio.com/1.124.0/win32-x64-user/stable",
-                "x64_size": 184949056,
+                "x64": "https://update.code.visualstudio.com/1.124.2/win32-x64-user/stable",
+                "x64_size": 184978920,
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -742,9 +760,9 @@
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://telegram.org/dl/desktop/win",
-                "x86_size": 48280528,
+                "x86_size": 48002464,
                 "x64": "https://telegram.org/dl/desktop/win64",
-                "x64_size": 53085920
+                "x64_size": 53088400
             }
         },
         "gimp": {
@@ -777,6 +795,31 @@
                 "kind": "nsis",
                 "x86": "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe",
                 "x86_size": 2380800
+            }
+        },
+        "sumatrapdf": {
+            "title": "SumatraPDF",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "desktop",
+            "rating": "5.0",
+            "icon": "https://www.sumatrapdfreader.org/img/sumatrapdf-icon.png",
+            "version": "3.6.1",
+            "installer": {
+                "kind": "custom",
+                "x86": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-install.exe",
+                "x86_size": 10218872,
+                "x64": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
+                "x64_size": 11075960,
+                "options": {
+                    "arguments": [
+                        "{{.installer}}",
+                        "-quiet",
+                        "-install"
+                    ]
+                }
             }
         },
         "keepass": {
@@ -899,6 +942,25 @@
                 "x86_size": 2852480
             }
         },
+        "windows-terminal": {
+            "title": "Windows Terminal",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "developer",
+            "rating": "4.9",
+            "icon": "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal.ico",
+            "version": "1.24.11321.0",
+            "installer": {
+                "kind": "as-is",
+                "x64": "https://github.com/microsoft/terminal/releases/download/v1.25.1322.0/Microsoft.WindowsTerminalPreview_1.25.1322.0_8wekyb3d8bbwe.msixbundle",
+                "x64_size": 24026219,
+                "options": {
+                    "extension": ".msixbundle"
+                }
+            }
+        },
         "postman": {
             "title": "Postman",
             "licence": "Freeware",
@@ -910,7 +972,21 @@
             "installer": {
                 "kind": "squirrel",
                 "x64": "https://dl.pstmn.io/download/latest/win64",
-                "x64_size": 161622144
+                "x64_size": 161916544
+            }
+        },
+        "wireshark": {
+            "title": "Wireshark",
+            "licence": "Open Source",
+            "tag": [],
+            "category": "developer",
+            "rating": "4.8",
+            "icon": "https://www.wireshark.org/favicon.ico",
+            "version": "4.6.6",
+            "installer": {
+                "kind": "nsis",
+                "x64": "https://2.na.dl.wireshark.org/win64/Wireshark-4.6.6-x64.exe",
+                "x64_size": 102937440
             }
         },
         "temurin-17-jdk": {
