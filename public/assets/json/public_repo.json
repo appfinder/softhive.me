@@ -70,10 +70,10 @@
             "version": "1.91.172",
             "installer": {
                 "kind": "as-is",
-                "x86": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserStandaloneSetup32.exe",
-                "x86_size": 136747360,
-                "x64": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserSetup.exe",
-                "x64_size": 1276768,
+                "x86": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserStandaloneSilentSetup32.exe",
+                "x86_size": 136745824,
+                "x64": "https://github.com/brave/brave-browser/releases/download/v1.91.172/BraveBrowserStandaloneSilentSetup.exe",
+                "x64_size": 151452000,
                 "options": {
                     "extension": ".exe"
                 }
@@ -614,7 +614,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "",
+            "icon": "etcher.png",
             "version": "2.1.6",
             "installer": {
                 "kind": "nsis",
@@ -677,7 +677,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4",
-            "icon": "",
+            "icon": "axcrypt.png",
             "version": "2",
             "installer": {
                 "kind": "custom",
@@ -805,7 +805,7 @@
             ],
             "category": "desktop",
             "rating": "5.0",
-            "icon": "https://www.sumatrapdfreader.org/img/sumatrapdf-icon.png",
+            "icon": "sumatra.png",
             "version": "3.6.1",
             "installer": {
                 "kind": "custom",
@@ -862,7 +862,7 @@
             ],
             "category": "developer",
             "rating": "5.0",
-            "icon": "https://notepad-plus-plus.org/favicon.ico",
+            "icon": "notpadpp.png",
             "version": "8.9.6.4",
             "installer": {
                 "kind": "nsis",
@@ -916,7 +916,7 @@
             "tag": [],
             "category": "multimedia",
             "rating": "4.2",
-            "icon": "https://st1.zoom.us/zoom.ico",
+            "icon": "zoom.png",
             "version": "latest",
             "installer": {
                 "kind": "msi",
@@ -950,7 +950,7 @@
             ],
             "category": "developer",
             "rating": "4.9",
-            "icon": "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal.ico",
+            "icon": "w-terminal.png",
             "version": "1.24.11321.0",
             "installer": {
                 "kind": "as-is",
@@ -967,7 +967,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.6",
-            "icon": "https://www.postman.com/favicon.ico",
+            "icon": "postman.ico",
             "version": "latest",
             "installer": {
                 "kind": "squirrel",
@@ -981,7 +981,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.8",
-            "icon": "https://www.wireshark.org/favicon.ico",
+            "icon": "Wireshark.png",
             "version": "4.6.6",
             "installer": {
                 "kind": "nsis",
@@ -1041,7 +1041,7 @@
             "tag": [],
             "category": "communication",
             "rating": "4.0",
-            "icon": "https://statics.teams.cdn.office.net/evergreen-assets/apps/teams/images/logo-teams-32x32.png",
+            "icon": "teams.png",
             "version": "latest",
             "installer": {
                 "kind": "msi",
@@ -1074,7 +1074,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.2",
-            "icon": "https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/branding/dropbox-logo-glyph-blue.png",
+            "icon": "dropbox.png",
             "version": "latest",
             "installer": {
                 "kind": "custom",
@@ -1142,7 +1142,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.4",
-            "icon": "https://filezilla-project.org/favicon.ico",
+            "icon": "filezilla.png",
             "version": "3.70.6",
             "installer": {
                 "kind": "nsis",
@@ -1188,7 +1188,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.7",
-            "icon": "https://www.sublimetext.com/favicon.ico",
+            "icon": "sublime.png",
             "version": "4200",
             "installer": {
                 "kind": "innosetup",
@@ -1255,7 +1255,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.6",
-            "icon": "https://transmissionbt.com/favicon.ico",
+            "icon": "transmission.png",
             "version": "4.1.2",
             "installer": {
                 "kind": "msi",
@@ -1269,7 +1269,7 @@
             "tag": [],
             "category": "desktop",
             "rating": "4.3",
-            "icon": "https://www.foxit.com/favicon.ico",
+            "icon": "foxit.png",
             "version": "latest",
             "installer": {
                 "kind": "custom",
@@ -1288,7 +1288,7 @@
             "tag": [],
             "category": "developer",
             "rating": "4.8",
-            "icon": "https://winmerge.org/favicon.ico",
+            "icon": "winmerge.png",
             "version": "2.16.56.2",
             "installer": {
                 "kind": "innosetup",
