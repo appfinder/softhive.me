@@ -7,7 +7,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "audacity.png",
             "version": "3.7.8",
             "installer": {
@@ -25,7 +25,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5",
+            "rating": 5,
             "icon": "7ziplogo.png",
             "version": "26.01",
             "installer": {
@@ -44,7 +44,7 @@
                 "win10"
             ],
             "category": "browsers",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "firefox-icon-32.png",
             "version": "151.0.4",
             "installer": {
@@ -65,7 +65,7 @@
                 "featured"
             ],
             "category": "browsers",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "brave-browser-icon-32.png",
             "version": "1.91.172",
             "installer": {
@@ -86,7 +86,7 @@
                 "featured"
             ],
             "category": "browsers",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "opera-icon-32.png",
             "version": "100.0.4815.20",
             "installer": {
@@ -114,7 +114,7 @@
                 "featured"
             ],
             "category": "browsers",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "vivaldi-icon-32.png",
             "version": "8.0.4033.46",
             "installer": {
@@ -140,7 +140,7 @@
                 "featured"
             ],
             "category": "browsers",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "chrome.png",
             "version": "latest",
             "installer": {
@@ -158,7 +158,7 @@
                 "featured"
             ],
             "category": "security",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "bitwarden.png",
             "version": "latest",
             "installer": {
@@ -183,7 +183,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "winrar.png",
             "version": "7.22",
             "installer": {
@@ -203,7 +203,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "putty.png",
             "version": "0.84",
             "installer": {
@@ -221,7 +221,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "bleachbit.svg",
             "version": "6.0.0",
             "installer": {
@@ -242,7 +242,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "Everything_(software)_icon.png",
             "version": "1.4.1.1032",
             "installer": {
@@ -260,7 +260,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "bcuninstaller.png",
             "version": "6.2",
             "installer": {
@@ -276,7 +276,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.5",
+            "rating": 4.5,
             "icon": "ditto-icon-32.png",
             "version": "3.25.113.0",
             "installer": {
@@ -295,7 +295,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "5",
+            "rating": 5,
             "icon": "visual-studio-code-icon-32.png",
             "version": "1.124.2",
             "installer": {
@@ -321,7 +321,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "git.png",
             "version": "2.54.0",
             "installer": {
@@ -340,7 +340,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "node.png",
             "version": "26.3.0",
             "installer": {
@@ -358,7 +358,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "node.png",
             "version": "24.16.0",
             "installer": {
@@ -376,7 +376,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "python.png",
             "version": "3.14.6",
             "installer": {
@@ -399,7 +399,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "PyCharm.png",
             "version": "2025.3",
             "installer": {
@@ -413,7 +413,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "intellij.png",
             "version": "2025.3",
             "installer": {
@@ -429,7 +429,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "5",
+            "rating": 5,
             "icon": "vlc-icon-32.png",
             "version": "3.0.23",
             "installer": {
@@ -454,7 +454,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "new_icon_small-r.png",
             "version": "32.1.2",
             "installer": {
@@ -470,7 +470,7 @@
             "licence": "Open source",
             "tag": [],
             "category": "developer",
-            "rating": "4.1",
+            "rating": 4.1,
             "icon": "anaconda-icon-32.png",
             "version": "3-2025.12-2",
             "installer": {
@@ -486,7 +486,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "developer",
-            "rating": "4.5",
+            "rating": 4.5,
             "icon": "android-studio-icon-32.png",
             "version": "2026.1.1.9",
             "installer": {
@@ -502,7 +502,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "handbrake.png",
             "version": "1.11.2",
             "installer": {
@@ -518,7 +518,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "rufus.png",
             "version": "4.14",
             "installer": {
@@ -537,7 +537,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "multimedia",
-            "rating": "3.8",
+            "rating": 3.8,
             "icon": "clementine-player.png",
             "version": "1.4.1",
             "installer": {
@@ -551,7 +551,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "developer",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "brackets-icon-32.png",
             "version": "1.14.2",
             "installer": {
@@ -567,7 +567,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.2",
+            "rating": 4.2,
             "icon": "blender.png",
             "version": "5.1.2",
             "installer": {
@@ -581,7 +581,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "cpu-z.svg",
             "version": "2.20.2",
             "installer": {
@@ -597,7 +597,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "deluge-icon-32.png",
             "version": "2.2.0",
             "installer": {
@@ -613,7 +613,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "etcher.png",
             "version": "2.1.6",
             "installer": {
@@ -627,7 +627,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "3.4",
+            "rating": 3.4,
             "icon": "wiki.png",
             "version": "17.12",
             "installer": {
@@ -646,7 +646,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "desktop",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "arduino-icon-32.png",
             "version": "2.3.10",
             "installer": {
@@ -662,7 +662,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "desktop",
-            "rating": "4.6",
+            "rating": 4.6,
             "icon": "antimicrox.png",
             "version": "3.6.1",
             "installer": {
@@ -676,7 +676,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4",
+            "rating": 4,
             "icon": "axcrypt.png",
             "version": "2",
             "installer": {
@@ -700,7 +700,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.5",
+            "rating": 4.5,
             "icon": "discord.png",
             "version": "latest",
             "installer": {
@@ -716,7 +716,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "qbittorrent-icon-32.png",
             "version": "5.2.1",
             "installer": {
@@ -732,7 +732,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.9",
+            "rating": 4.9,
             "icon": "PowerToys.png",
             "version": "0.100.0",
             "installer": {
@@ -754,7 +754,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "telegram.png",
             "version": "latest",
             "installer": {
@@ -772,7 +772,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "gimp.png",
             "version": "3.2.4",
             "installer": {
@@ -788,7 +788,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.9",
+            "rating": 4.9,
             "icon": "Steam_icon_logo.svg.png",
             "version": "latest",
             "installer": {
@@ -804,7 +804,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "sumatra.png",
             "version": "3.6.1",
             "installer": {
@@ -829,7 +829,7 @@
                 "featured"
             ],
             "category": "security",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "keepass.png",
             "version": "2.61.1",
             "installer": {
@@ -845,7 +845,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "WinSCP.png",
             "version": "6.5.6",
             "installer": {
@@ -861,7 +861,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "notpadpp.png",
             "version": "8.9.6.4",
             "installer": {
@@ -879,7 +879,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.9",
+            "rating": 4.9,
             "icon": "Obsidian.png",
             "version": "1.12.7",
             "installer": {
@@ -895,7 +895,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "spotify.png",
             "version": "latest",
             "installer": {
@@ -915,7 +915,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "multimedia",
-            "rating": "4.2",
+            "rating": 4.2,
             "icon": "zoom.png",
             "version": "latest",
             "installer": {
@@ -933,7 +933,7 @@
                 "featured"
             ],
             "category": "security",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "Malwarebytes.png",
             "version": "latest",
             "installer": {
@@ -949,7 +949,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "4.9",
+            "rating": 4.9,
             "icon": "w-terminal.png",
             "version": "1.24.11321.0",
             "installer": {
@@ -966,7 +966,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "developer",
-            "rating": "4.6",
+            "rating": 4.6,
             "icon": "postman.ico",
             "version": "latest",
             "installer": {
@@ -980,7 +980,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "Wireshark.png",
             "version": "4.6.6",
             "installer": {
@@ -994,7 +994,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "https://dbeaver.io/favicon.ico",
             "version": "26.1.0",
             "installer": {
@@ -1010,7 +1010,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "Temurin.png",
             "version": "17.0.9+9.1",
             "installer": {
@@ -1026,7 +1026,7 @@
                 "featured"
             ],
             "category": "communication",
-            "rating": "4.5",
+            "rating": 4.5,
             "icon": "slack.png",
             "version": "latest",
             "installer": {
@@ -1040,7 +1040,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "communication",
-            "rating": "4.0",
+            "rating": 4.0,
             "icon": "teams.png",
             "version": "latest",
             "installer": {
@@ -1056,7 +1056,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.3",
+            "rating": 4.3,
             "icon": "anydesk.png",
             "version": "latest",
             "installer": {
@@ -1073,7 +1073,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4.2",
+            "rating": 4.2,
             "icon": "dropbox.png",
             "version": "latest",
             "installer": {
@@ -1095,7 +1095,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "4.9",
+            "rating": 4.9,
             "icon": "https://crystalmark.info/favicon.ico",
             "version": "9.9.1",
             "installer": {
@@ -1111,7 +1111,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "HWiNFO.png",
             "version": "8.48",
             "installer": {
@@ -1125,7 +1125,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
             "version": "latest",
             "installer": {
@@ -1141,7 +1141,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "4.4",
+            "rating": 4.4,
             "icon": "filezilla.png",
             "version": "3.70.6",
             "installer": {
@@ -1157,7 +1157,7 @@
                 "featured"
             ],
             "category": "multimedia",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "https://krita.org/favicon.ico",
             "version": "5.3.2.1",
             "installer": {
@@ -1173,7 +1173,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "https://getsharex.com/favicon.ico",
             "version": "20.2.0",
             "installer": {
@@ -1187,7 +1187,7 @@
             "licence": "Trial",
             "tag": [],
             "category": "developer",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "sublime.png",
             "version": "4200",
             "installer": {
@@ -1203,7 +1203,7 @@
                 "featured"
             ],
             "category": "developer",
-            "rating": "4.5",
+            "rating": 4.5,
             "icon": "docker.png",
             "version": "latest",
             "installer": {
@@ -1224,7 +1224,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4.1",
+            "rating": 4.1,
             "icon": "https://static-assets-prod.epicgames.com/epic-store/static/favicon.ico",
             "version": "latest",
             "installer": {
@@ -1240,7 +1240,7 @@
                 "featured"
             ],
             "category": "desktop",
-            "rating": "5.0",
+            "rating": 5.0,
             "icon": "wiztree.png",
             "version": "4.31",
             "installer": {
@@ -1254,7 +1254,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "desktop",
-            "rating": "4.6",
+            "rating": 4.6,
             "icon": "transmission.png",
             "version": "4.1.2",
             "installer": {
@@ -1268,7 +1268,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "desktop",
-            "rating": "4.3",
+            "rating": 4.3,
             "icon": "foxit.png",
             "version": "latest",
             "installer": {
@@ -1287,7 +1287,7 @@
             "licence": "Open Source",
             "tag": [],
             "category": "developer",
-            "rating": "4.8",
+            "rating": 4.8,
             "icon": "winmerge.png",
             "version": "2.16.56.2",
             "installer": {
@@ -1301,7 +1301,7 @@
             "licence": "Freeware",
             "tag": [],
             "category": "multimedia",
-            "rating": "4.7",
+            "rating": 4.7,
             "icon": "https://www.faststone.org/favicon.ico",
             "version": "8.4",
             "installer": {
