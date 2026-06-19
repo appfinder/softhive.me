@@ -1,775 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SoftHive — Install Windows Apps in One Click, From Official Sources</title>
-
-  <!-- Primary SEO -->
-  <meta name="description" content="SoftHive is a free Windows app installer that lets you pick from 70+ apps and install them all at once — straight from official sources, with no bundled junk. Backup and restore your setup in seconds." />
-  <meta name="keywords" content="Windows app installer, bulk app installer, install Windows apps, one click installer, Windows setup tool, software manager, app backup restore, official software downloads, SoftHive" />
-  <meta name="author" content="SoftHive" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0E1024" />
-  <link rel="canonical" href="https://softhive.me/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://softhive.me/" />
-  <meta property="og:title" content="SoftHive — Install Windows Apps in One Click" />
-  <meta property="og:description" content="Pick your apps, click once, and SoftHive installs everything from official sources. No bundled junk, no shady mirrors. Free for Windows 10 & 11." />
-  <meta property="og:image" content="https://softhive.me/og-image.png" />
-  <meta property="og:site_name" content="SoftHive" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SoftHive — Install Windows Apps in One Click" />
-  <meta name="twitter:description" content="A free, open bulk installer for Windows. Official sources only, zero bundled extras, built with Rust." />
-  <meta name="twitter:image" content="https://softhive.me/og-image.png" />
-
-  <!-- App / platform SEO -->
-  <meta name="application-name" content="SoftHive" />
-  <meta name="apple-mobile-web-app-title" content="SoftHive" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/public/assets/css/images/logo/favicon.ico" type="image/x-icon" />
-
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-
-   <link rel="stylesheet" href="./public/css/output.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SoftHive — Install Windows Apps in One Click</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./public/assets/css/images/logo/favicon.ico" type="image/x-icon">
+  <!-- Core theme TailwindCSS-->
+  <link rel="stylesheet" href="./public/css/output.css">
   <!-- Core theme CSS-->
   <link rel="stylesheet" href="./public/css/styles.css">
 
 
-
-  <!-- Tailwind -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#0E1024',
-            cell: '#171B36',
-            paper: '#F7F8FC',
-            mist: '#A6ACD9',
-            graphite: '#5B6178',
-            hive: { DEFAULT: '#4F5BD5', bright: '#6C75F0', dim: '#3A3F8F' },
-            honey: '#FFB627'
-          },
-          fontFamily: {
-            display: ['"Space Grotesk"', 'sans-serif'],
-            sans: ['Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Structured Data: Software -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "SoftHive",
-    "operatingSystem": "Windows 10, Windows 11",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "SoftHive is a Windows app installer that lets users pick from a curated library of apps and install them all at once, from official sources, with no bundled extras.",
-    "url": "https://softhive.me/",
-    "downloadUrl": "https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe",
-    "publisher": {
-      "@type": "Organization",
-      "name": "SoftHive",
-      "url": "https://softhive.me/"
-    }
-  }
-  </script>
-
-  <!-- Structured Data: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is SoftHive free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. SoftHive is completely free, with no account, subscription, or hidden fees."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where do the apps come from?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every app is fetched directly from its official source at install time. SoftHive does not host modified installers or redirect downloads through mirrors."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does SoftHive install extra toolbars or bundled software?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. SoftHive never adds toolbars, browser extensions, or bundled offers to the apps you install."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I back up and restore my app list?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Save your selection as a list, then reinstall the same set of apps on a new or freshly formatted PC in a couple of clicks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is SoftHive built with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SoftHive is a native desktop app built with Tauri and Rust, which keeps it lightweight, fast to start, and easy on system resources."
-        }
-      }
-    ]
-  }
-  </script>
-
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background-color: #F7F8FC; }
-    h1, h2, h3, .font-display { font-family: 'Space Grotesk', sans-serif; }
-    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
-
-    /* Triangular grid texture, reads as a honeycomb lattice */
-    .lattice {
-      background-color: #0E1024;
-      background-image:
-        repeating-linear-gradient(0deg,   transparent 0 37px, rgba(166,172,217,0.07) 37px 38px),
-        repeating-linear-gradient(60deg,  transparent 0 37px, rgba(166,172,217,0.07) 37px 38px),
-        repeating-linear-gradient(120deg, transparent 0 37px, rgba(166,172,217,0.07) 37px 38px);
-    }
-    .lattice-light {
-      background-color: #F7F8FC;
-      background-image:
-        repeating-linear-gradient(0deg,   transparent 0 37px, rgba(79,91,213,0.055) 37px 38px),
-        repeating-linear-gradient(60deg,  transparent 0 37px, rgba(79,91,213,0.055) 37px 38px),
-        repeating-linear-gradient(120deg, transparent 0 37px, rgba(79,91,213,0.055) 37px 38px);
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
     }
 
-    /* Hexagon icon cells */
-    .hex {
-      width: 60px;
-      height: 60px;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .hex-logo {
-      width: 38px;
-      height: 38px;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+    .primary-gradient {
+      background: linear-gradient(135deg, #004f96 0%, #0067c0 100%) !important;
     }
 
-    /* Theme toggle for hero screenshot */
-    .toggle-track {
-      width: 52px;
-      height: 28px;
-      border-radius: 999px;
-      background: #2A2F58;
-      position: relative;
-      transition: background .25s ease;
-      flex-shrink: 0;
+    .ambient-lift {
+      box-shadow: 0 10px 30px rgba(0, 28, 59, 0.06) !important;
     }
-    .toggle-thumb {
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background: #FFB627;
-      transition: transform .25s ease;
+
+    .text-on-primary {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
     }
-    input:checked + .toggle-track .toggle-thumb { transform: translateX(24px); background: #4F5BD5; }
-    input:checked + .toggle-track { background: #E3E6F5; }
 
-    /* Reveal-on-scroll */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-
-    .skip-link {
-      position: absolute; left: -9999px; top: 0; background: #4F5BD5; color: #fff;
-      padding: 0.5rem 1rem; z-index: 100; border-radius: 0 0 0.5rem 0;
+    .bg-surface {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 249 249 / var(--tw-bg-opacity, 1));
     }
-    .skip-link:focus { left: 0; }
-
-    details > summary { list-style: none; cursor: pointer; }
-    details > summary::-webkit-details-marker { display: none; }
-    details[open] .faq-icon { transform: rotate(45deg); }
-    .faq-icon { transition: transform .2s ease; }
-
-    /* Mobile nav */
-    #mobile-nav { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-    #mobile-nav.open { max-height: 320px; }
   </style>
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="SoftHive is a modern Windows app installer that lets you install multiple apps in one click from official sources. Fast, safe, and completely free." />
+
+  <meta name="keywords"
+    content="Windows app installer, app store for Windows, install Windows apps, one click installer, Windows software manager, safe software downloads, app backup restore, SoftHive" />
+
+  <meta name="author" content="SoftHive" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#004f96" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://softhive.me/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://softhive.me/" />
+  <meta property="og:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta property="og:description"
+    content="Install all your Windows apps safely from official sources. No bundled junk. No fake downloads. Backup and restore your apps instantly." />
+
+  <meta property="og:image" content="https://softhive.me/og-image.png" />
+
+  <meta property="og:site_name" content="SoftHive" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SoftHive | Install Windows Apps in One Click" />
+  <meta name="twitter:description"
+    content="Install Windows apps safely and instantly from official sources with SoftHive." />
+
+  <meta name="twitter:image" content="https://softhive.me/og-image.png" />
+
+  <!-- App / Platform SEO -->
+  <meta name="application-name" content="SoftHive" />
+  <meta name="apple-mobile-web-app-title" content="SoftHive" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SoftHive",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "SoftHive is a Windows app installer that lets users install multiple applications safely from official sources in one click.",
+  "url": "https://softhive.me/",
+  "downloadUrl": "https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SoftHive"
+  }
+}
+</script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KTTF6F3TT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8KTTF6F3TT');
+  </script>
 </head>
 
-<body class="text-ink antialiased">
-  <a href="#main" class="skip-link">Skip to content</a>
+<!-- If you want to change the primary color from green to something else. Change it with the tailwind.config.js in the Project Root Folder -->
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-ink/5">
-    <div class="max-w-[1280px] mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#main" class="flex items-center gap-3" aria-label="SoftHive home">
-        <div class="hex-logo bg-hive">
-          <svg viewBox="0 0 40 40" class="w-6 h-6" aria-hidden="true">
-            <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="white" stroke-width="2.5" />
-            <polygon points="20,14 27,18 27,26 20,30 13,26 13,18" fill="#FFB627" />
-          </svg>
-        </div>
-        <span class="font-display font-bold tracking-tight text-xl">SoftHive</span>
-      </a>
+<body class="text-on-background">
+  <!-- Header / Navigation (Destination) -->
+  <header
+    class="flex items-center justify-between whitespace-nowrap border-b border-solid border-outline-variant/15 px-10 py-3 bg-surface sticky top-0 z-50">
+    <div class="flex flex-row items-center gap-3">
+      <div class="flex w-10 h-10 px-2  rounded flex items-center justify-center sapphire-shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
+          <path fill-rule="evenodd"
+            d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+      <span class="text-primary font-black tracking-tighter text-xl">SoftHive</span>
+    </div>
+    <div class="flex flex-1 justify-end gap-8">
+      <div class="flex items-center gap-9">
+        <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors"
+          href="#features">Features</a>
+        <a class="text-on-surface text-sm font-medium leading-normal hover:text-primary transition-colors"
+          href="#trusted-apps">Apps</a>
 
-      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
-        <a href="#library" class="text-sm font-medium text-graphite hover:text-hive transition-colors">Library</a>
-        <a href="#features" class="text-sm font-medium text-graphite hover:text-hive transition-colors">Features</a>
-        <a href="#tech" class="text-sm font-medium text-graphite hover:text-hive transition-colors">Built with Rust</a>
-        <a href="#faq" class="text-sm font-medium text-graphite hover:text-hive transition-colors">FAQ</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
+      </div>
+      <div class="flex gap-2">
         <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
-          class="hidden sm:flex items-center justify-center rounded-lg h-10 px-5 bg-hive text-white text-sm font-bold tracking-tight hover:bg-hive-bright transition-colors">
-          Get SoftHive — Free
+          class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-4 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
+          <span class="truncate">Get Started (Free)</span>
         </a>
-        <button id="nav-toggle" class="md:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </button>
+
       </div>
     </div>
-    <nav id="mobile-nav" class="md:hidden border-t border-ink/5" aria-label="Mobile">
-      <div class="px-6 py-4 flex flex-col gap-4">
-        <a href="#library" class="text-sm font-medium text-graphite">Library</a>
-        <a href="#features" class="text-sm font-medium text-graphite">Features</a>
-        <a href="#tech" class="text-sm font-medium text-graphite">Built with Rust</a>
-        <a href="#faq" class="text-sm font-medium text-graphite">FAQ</a>
-        <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download class="inline-flex items-center justify-center rounded-lg h-10 px-5 bg-hive text-white text-sm font-bold">Get SoftHive — Free</a>
-      </div>
-    </nav>
   </header>
-
-  <main id="main" class="flex flex-col">
-
-    <!-- Hero -->
-    <section class="lattice text-white">
-      <div class="max-w-[1280px] mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+  <main class="flex flex-col">
+    <!-- Hero Section -->
+    <section class="px-4 py-16 md:py-24 max-w-[1280px] mx-auto w-full @container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="flex flex-col gap-6">
-          <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-honey">For Windows 10 &amp; 11</span>
-          <h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight">
-            Set up a new PC<br/>in one click.
-          </h1>
-          <p class="text-lg text-mist leading-relaxed max-w-md">
-            Pick the apps you need from a curated library and SoftHive installs every one of them — straight from each publisher's official source. No wizards, no mirrors, no extras you didn't ask for.
-          </p>
+          <div class="flex flex-col gap-4">
 
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
-              class="inline-flex items-center justify-center rounded-lg h-14 px-8 bg-hive text-white text-base font-bold tracking-tight hover:bg-hive-bright transition-colors">
-              Download SoftHive — Free
+
+
+            <!-- HERO (Updated Messaging) -->
+            <h1 class="text-on-surface text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+              Install All Your Windows Apps in One Click — Safely
+            </h1>
+
+            <h2 class="text-on-surface-variant text-lg leading-relaxed">
+              Skip shady download sites and manual setup.
+              SoftHive installs apps from official sources and restores everything instantly.
+            </h2>
+
+            <!-- CTA IMPROVED -->
+            <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe"
+              download
+              class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-on-primary text-base font-bold leading-normal tracking-[0.015em]">
+              <span>Install Your Apps in Minutes</span>
             </a>
-            <a href="#library" class="inline-flex items-center justify-center rounded-lg h-14 px-6 border border-white/15 text-white text-base font-semibold hover:border-white/40 transition-colors">
-              See the library
-            </a>
-          </div>
-          <p class="text-xs text-mist/70 font-mono-num">NO ACCOUNT · 100% FREE · NO BUNDLED EXTRAS</p>
-
-          <!-- Stat strip -->
-          <dl class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 mt-4 max-w-md">
-            <div>
-              <dt class="text-xs text-mist uppercase tracking-wide">Apps in library</dt>
-              <dd class="font-mono-num text-2xl font-semibold mt-1">70+</dd>
-            </div>
-            <div>
-              <dt class="text-xs text-mist uppercase tracking-wide">Bundled extras</dt>
-              <dd class="font-mono-num text-2xl font-semibold mt-1">0</dd>
-            </div>
-            <div>
-              <dt class="text-xs text-mist uppercase tracking-wide">Built with</dt>
-              <dd class="font-mono-num text-2xl font-semibold mt-1">Rust</dd>
-            </div>
-          </dl>
-        </div>
-
-        <!-- Window mockup with theme toggle -->
-        <div class="relative">
-          <div class="absolute -inset-6 bg-hive/20 blur-3xl rounded-full" aria-hidden="true"></div>
-          <div class="relative bg-cell rounded-xl border border-white/10 shadow-2xl overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
-              <div class="flex gap-1.5">
-                <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
-              </div>
-              <span class="font-mono-num text-[11px] text-mist">SoftHive — Featured</span>
-              <label class="flex items-center gap-2 cursor-pointer select-none">
-                <span class="text-[11px] font-mono-num text-mist" id="theme-label">Dark</span>
-                <input id="theme-toggle" type="checkbox" class="sr-only" aria-label="Preview SoftHive in light mode" />
-                <span class="toggle-track"><span class="toggle-thumb"></span></span>
-              </label>
-            </div>
-            <img id="hero-shot" src="assets/dashboard-dark.png" width="1920" height="1042"
-              alt="SoftHive app library showing Audacity, 7-Zip, Firefox, Brave, Opera and more, each with a one-click Install button"
-              class="w-full h-full block" loading="eager" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust section -->
-    <section class="bg-paper py-20">
-      <div class="max-w-[1280px] mx-auto px-6">
-        <div class="max-w-2xl mb-12 reveal">
-          <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-hive">Why people trust the hive</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mt-3">Every cell is checked before it's offered to you.</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-hive/10 text-hive">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 3 4 6v5c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-3z"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Official sources only</h3>
-              <p class="text-graphite leading-relaxed mt-2">Every app is fetched straight from its publisher's own site at install time — no mirrors, no re-hosted installers.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-red-500/10 text-red-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M9 9l6 6M15 9l-6 6"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">No ads, no bundled junk</h3>
-              <p class="text-graphite leading-relaxed mt-2">No toolbars, no extra "offers" tucked into the installer, and nothing runs in the background that you didn't choose.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-emerald-500/10 text-emerald-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="4" y="11" width="16" height="9" rx="2"/>
-                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Verified before install</h3>
-              <p class="text-graphite leading-relaxed mt-2">Downloads are checked for integrity before they ever reach the install step, so you know what you're running.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Library preview -->
-    <section id="library" class="bg-cell text-white py-20">
-      <div class="max-w-[1280px] mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 reveal">
-          <div class="max-w-xl">
-            <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-honey">The library</span>
-            <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mt-3">Browse the hive, pick your cells, hit install.</h2>
-          </div>
-          <p class="text-mist max-w-sm">A few of the 70+ apps waiting in your library — browsers, utilities, dev tools, and more, each rated and sized so you know what you're getting.</p>
-        </div>
-
-        <div class="reveal rounded-xl border border-white/10 overflow-hidden">
-          <div class="hidden sm:grid grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 px-6 py-3 text-xs uppercase tracking-wide text-mist border-b border-white/10">
-            <span>App</span>
-            <span>Rating</span>
-            <span>Version</span>
-            <span>Size</span>
-            <span class="text-right">Action</span>
-          </div>
-
-          <!-- Firefox -->
-          <div class="grid grid-cols-2 sm:grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 items-center px-6 py-4 border-b border-white/5">
-            <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <img src="https://blog.mozilla.org/design/files/2019/10/Fx-Browser-icon-fullColor.svg" alt="" width="28" height="28" loading="lazy" />
-              <span class="font-semibold">Firefox</span>
-              <span class="hidden md:inline text-[10px] font-mono-num px-2 py-0.5 rounded bg-white/10 text-mist">FEATURED</span>
-            </div>
-            <span class="font-mono-num text-honey">★★★★★ <span class="text-mist">5.0</span></span>
-            <span class="font-mono-num text-mist">151.0</span>
-            <span class="font-mono-num text-mist">83 MB</span>
-            <span class="justify-self-start sm:justify-self-end text-xs font-bold px-4 py-2 rounded-lg bg-hive/20 text-hive-bright">Install</span>
-          </div>
-
-          <!-- 7-Zip -->
-          <div class="grid grid-cols-2 sm:grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 items-center px-6 py-4 border-b border-white/5">
-            <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/7-Zip_Logo.svg" alt="" width="28" height="28" loading="lazy" />
-              <span class="font-semibold">7-Zip</span>
-              <span class="hidden md:inline text-[10px] font-mono-num px-2 py-0.5 rounded bg-white/10 text-mist">FEATURED</span>
-            </div>
-            <span class="font-mono-num text-honey">★★★★★ <span class="text-mist">5.0</span></span>
-            <span class="font-mono-num text-mist">26.01</span>
-            <span class="font-mono-num text-mist">1.9 MB</span>
-            <span class="justify-self-start sm:justify-self-end text-xs font-bold px-4 py-2 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center gap-1">
-              <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              Installed
-            </span>
-          </div>
-
-          <!-- Brave -->
-          <div class="grid grid-cols-2 sm:grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 items-center px-6 py-4 border-b border-white/5">
-            <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Brave_icon_lionface.png" alt="" width="28" height="28" loading="lazy" />
-              <span class="font-semibold">Brave</span>
-              <span class="hidden md:inline text-[10px] font-mono-num px-2 py-0.5 rounded bg-white/10 text-mist">FEATURED</span>
-            </div>
-            <span class="font-mono-num text-honey">★★★★☆ <span class="text-mist">4.0</span></span>
-            <span class="font-mono-num text-mist">1.91</span>
-            <span class="font-mono-num text-mist">144 MB</span>
-            <span class="justify-self-start sm:justify-self-end text-xs font-bold px-4 py-2 rounded-lg bg-hive/20 text-hive-bright">Install</span>
-          </div>
-
-          <!-- VS Code -->
-          <div class="grid grid-cols-2 sm:grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 items-center px-6 py-4 border-b border-white/5">
-            <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="" width="28" height="28" loading="lazy" />
-              <span class="font-semibold">VS Code</span>
-              <span class="hidden md:inline text-[10px] font-mono-num px-2 py-0.5 rounded bg-white/10 text-mist">DEV TOOLS</span>
-            </div>
-            <span class="font-mono-num text-honey">★★★★★ <span class="text-mist">4.8</span></span>
-            <span class="font-mono-num text-mist">latest</span>
-            <span class="font-mono-num text-mist">95 MB</span>
-            <span class="justify-self-start sm:justify-self-end text-xs font-bold px-4 py-2 rounded-lg bg-hive/20 text-hive-bright">Install</span>
-          </div>
-
-          <!-- VLC -->
-          <div class="grid grid-cols-2 sm:grid-cols-[2fr_1fr_1fr_1fr_auto] gap-4 items-center px-6 py-4">
-            <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/VLC_icon.png" alt="" width="28" height="28" loading="lazy" />
-              <span class="font-semibold">VLC</span>
-              <span class="hidden md:inline text-[10px] font-mono-num px-2 py-0.5 rounded bg-white/10 text-mist">MULTIMEDIA</span>
-            </div>
-            <span class="font-mono-num text-honey">★★★★★ <span class="text-mist">4.9</span></span>
-            <span class="font-mono-num text-mist">3.0.20</span>
-            <span class="font-mono-num text-mist">42 MB</span>
-            <span class="justify-self-start sm:justify-self-end text-xs font-bold px-4 py-2 rounded-lg bg-hive/20 text-hive-bright">Install</span>
-          </div>
-        </div>
-
-        <p class="text-center text-mist text-sm mt-6">…and 60+ more across browsers, security, multimedia and developer tools.</p>
-      </div>
-    </section>
-
-    <!-- Features grid -->
-    <section id="features" class="bg-paper py-20">
-      <div class="max-w-[1280px] mx-auto px-6">
-        <div class="max-w-2xl mb-12 reveal">
-          <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-hive">What SoftHive does</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mt-3">Install faster. Stay safe. Save time.</h2>
-          <p class="text-graphite text-lg mt-4">SoftHive removes the risk and friction of installing Windows apps, so you can go from a blank desktop to a fully set-up PC in minutes.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-hive/10 text-hive">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">One-click install</h3>
-              <p class="text-graphite leading-relaxed mt-2">Select the apps you need and SoftHive downloads and installs every one of them silently, back to back.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-purple-500/10 text-purple-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 21a8 8 0 1 0-8-8"/><path d="M4 13H1l3-3 3 3H4"/><path d="M12 9v4l3 2"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Backup &amp; restore</h3>
-              <p class="text-graphite leading-relaxed mt-2">Save your app list once. After a reformat or on a new PC, restore your whole setup in a couple of clicks.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-emerald-500/10 text-emerald-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Your personal library</h3>
-              <p class="text-graphite leading-relaxed mt-2">Keep a shortlist of your go-to tools, organised by category, ready whenever you need them again.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-orange-500/10 text-orange-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="13" r="8"/><path d="M12 13 15 9"/><path d="M12 2v2"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Set up your PC fast</h3>
-              <p class="text-graphite leading-relaxed mt-2">Go from a fresh Windows install to fully ready in minutes — no babysitting setup wizards one by one.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-sky-500/10 text-sky-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="9" cy="6.5" r=".5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Clean, simple interface</h3>
-              <p class="text-graphite leading-relaxed mt-2">A distraction-free layout built for speed and clarity, with a dark and light mode to match your setup.</p>
-            </div>
-          </div>
-          <div class="reveal flex flex-col gap-5 p-8 rounded-xl bg-white border border-ink/5 shadow-sm">
-            <div class="hex bg-teal-500/10 text-teal-500">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-xl">Transparent by default</h3>
-              <p class="text-graphite leading-relaxed mt-2">Every app's source is visible before you install — nothing hidden, nothing swapped behind the scenes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Built for Windows, Powered by Rust -->
-    <section id="tech" class="lattice-light py-24">
-      <div class="max-w-[1280px] mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="relative reveal order-2 lg:order-1">
-            <div class="absolute -inset-4 bg-hive/10 blur-3xl rounded-full" aria-hidden="true"></div>
-            <div class="relative rounded-xl border border-ink/10 shadow-xl overflow-hidden">
-              <img src="assets/dashboard-light.png" width="1920" height="1042"
-                alt="SoftHive in light mode, showing the featured apps list with install status"
-                class="w-full h-full block" loading="lazy" />
-            </div>
-          </div>
-          <div class="flex flex-col gap-8 order-1 lg:order-2 reveal">
-            <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-hive">Engineered for performance</span>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Built for Windows, powered by Rust.</h2>
-            <p class="text-graphite text-lg leading-relaxed">
-              SoftHive is a native desktop app built with <strong>Tauri</strong> and <strong>Rust</strong>, combining
-              system-level efficiency with a clean, responsive interface. It starts instantly, uses a fraction of
-              the memory of an Electron app, and feels at home on Windows 11.
+            <p class="text-xs text-on-surface-variant">
+              No account required • 100% free • No bundled software
             </p>
 
+
+
             <div class="flex flex-col gap-6">
+
+              <!-- One-Click Install -->
               <div class="flex gap-4 items-start">
-                <div class="hex bg-hive/10 text-hive shrink-0 !w-12 !h-12">
-                  <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+                <div class="p-2 rounded bg-blue-500/15 text-blue-500">
+                  <!-- <span class="material-symbols-outlined">bolt</span> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z">
+                    </path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-display font-bold">High-performance engine</h4>
-                  <p class="text-graphite text-sm mt-1">Rust handles downloads and installs with low memory overhead and rock-solid stability.</p>
+                  <h4 class="font-bold text-on-surface">Install Apps in One Click</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Select your apps and install everything instantly — no setup wizards, no manual steps.
+                  </p>
                 </div>
               </div>
+
+              <!-- Safe & Trusted -->
               <div class="flex gap-4 items-start">
-                <div class="hex bg-hive/10 text-hive shrink-0 !w-12 !h-12">
-                  <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                <div class="p-2 rounded bg-green-500/15 text-green-600">
+                  <!-- <span class="material-symbols-outlined">verified</span> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z">
+                    </path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-display font-bold">Secure native runtime</h4>
-                  <p class="text-graphite text-sm mt-1">Tauri's architecture keeps the attack surface small and isolates SoftHive from the rest of your system.</p>
+                  <h4 class="font-bold text-on-surface">Safe & Verified Downloads</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Apps come directly from official sources — no fake links, no malware, no bundled junk.
+                  </p>
                 </div>
               </div>
+
+              <!-- Backup & Restore -->
               <div class="flex gap-4 items-start">
-                <div class="hex bg-hive/10 text-hive shrink-0 !w-12 !h-12">
-                  <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/>
+                <div class="p-2 rounded bg-purple-500/15 text-purple-500">
+                  <!-- <span class="material-symbols-outlined">backup</span> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z">
+                    </path>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-display font-bold">Modern interface</h4>
-                  <p class="text-graphite text-sm mt-1">A fluid, responsive UI designed for clarity and speed, with native Windows 11 styling.</p>
+                  <h4 class="font-bold text-on-surface">Backup & Restore Your Apps</h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Save your setup once and reinstall everything in seconds after formatting your PC.
+                  </p>
                 </div>
               </div>
+
+            </div>
+
+
+
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe"
+              download
+              class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-on-primary text-base font-bold leading-normal tracking-[0.015em]">
+              <span class="truncate">Install Your Apps in Minutes</span>
+            </a>
+
+          </div>
+
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full"></div>
+          <div
+            class="relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 ambient-lift overflow-hidden aspect-[16/10]">
+            <img alt="SoftHive Dashboard" class="w-full h-full "
+              src="http://softhive.me/public/assets/images/screenshots/Capture3.PNG" />
+            <!-- Floating Glass Element -->
+             
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Feature Highlights -->
+
+    <section id="features" class="bg-surface-container-low py-20">
+      <div class="max-w-[1280px] mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="flex flex-col gap-4 mb-16 max-w-[720px]">
+          <h2 class="text-on-surface text-3xl md:text-4xl font-bold tracking-tight">
+            Install Faster. Stay Safe. Save Time.
+          </h2>
+          <p class="text-on-surface-variant text-lg">
+            SoftHive removes the risk and friction of installing Windows apps — so you can set up your system in
+            minutes.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- TRUST FEATURES FIRST -->
+
+          <!-- Official Sources -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-green-500/15 flex items-center justify-center text-green-600">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Official Sources Only</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Every app is downloaded directly from its official website — no mirrors, no tampering.
+              </p>
+            </div>
+          </div>
+
+          <!-- No Junk -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-red-500/15 flex items-center justify-center text-red-500">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M188,88a27.75,27.75,0,0,0-12,2.71V60a28,28,0,0,0-41.36-24.6A28,28,0,0,0,80,44v6.71A27.75,27.75,0,0,0,68,48,28,28,0,0,0,40,76v76a88,88,0,0,0,176,0V116A28,28,0,0,0,188,88Zm12,64a72,72,0,0,1-144,0V76a12,12,0,0,1,24,0v44a8,8,0,0,0,16,0V44a12,12,0,0,1,24,0v68a8,8,0,0,0,16,0V60a12,12,0,0,1,24,0v68.67A48.08,48.08,0,0,0,120,176a8,8,0,0,0,16,0,32,32,0,0,1,32-32,8,8,0,0,0,8-8V116a12,12,0,0,1,24,0Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">No Ads. No Bundled Junk</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                No hidden installers, no adware, and no unwanted extras — ever.
+              </p>
+            </div>
+          </div>
+
+          <!-- Verified Downloads -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-indigo-500/15 flex items-center justify-center text-indigo-500">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Verified & Safe Downloads</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Files are checked to ensure authenticity and integrity before installation.
+              </p>
+            </div>
+          </div>
+
+          <!-- CORE FEATURES -->
+
+          <!-- One Click Install -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-blue-500/15 flex items-center justify-center text-blue-500">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Install Apps in One Click</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Select multiple apps and install everything instantly — no setup wizards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Backup & Restore -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M178.34,165.66,160,147.31V208a8,8,0,0,1-16,0V147.31l-18.34,18.35a8,8,0,0,1-11.32-11.32l32-32a8,8,0,0,1,11.32,0l32,32a8,8,0,0,1-11.32,11.32ZM160,40A88.08,88.08,0,0,0,81.29,88.68,64,64,0,1,0,72,216h40a8,8,0,0,0,0-16H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.12A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,100.8,66,8,8,0,0,0,3.2,15.34,7.9,7.9,0,0,0,3.2-.68A88,88,0,0,0,160,40Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Backup & Restore Apps</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Save your app list and reinstall everything in seconds after formatting.
+              </p>
+            </div>
+          </div>
+
+          <!-- App Library -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM80,84A12,12,0,1,1,68,72,12,12,0,0,1,80,84Zm40,0a12,12,0,1,1-12-12A12,12,0,0,1,120,84Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Your Personal App Library</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Keep track of your favorite tools and reinstall them anytime.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fast Setup -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-orange-500/15 flex items-center justify-center text-orange-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Set Up Your PC Faster</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Go from fresh Windows install to fully ready in minutes, not hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Simple UI -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-sky-500/15 flex items-center justify-center text-sky-500">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M207.06,72.67A111.24,111.24,0,0,0,128,40h-.4C66.07,40.21,16,91,16,153.13V176a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V152A111.25,111.25,0,0,0,207.06,72.67ZM224,176H119.71l54.76-75.3a8,8,0,0,0-12.94-9.42L99.92,176H32V153.13c0-3.08.15-6.12.43-9.13H56a8,8,0,0,0,0-16H35.27c10.32-38.86,44-68.24,84.73-71.66V80a8,8,0,0,0,16,0V56.33A96.14,96.14,0,0,1,221,128H200a8,8,0,0,0,0,16h23.67c.21,2.65.33,5.31.33,8Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Clean & Simple Interface</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                A distraction-free experience focused on speed and clarity.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- App Presets -->
+          <div
+            class="flex flex-col gap-6 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 ambient-lift">
+            <div class="size-14 rounded-lg bg-teal-500/15 flex items-center justify-center text-teal-500">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-on-surface text-xl font-bold">Transparent</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Open approach with clear download sources.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trusted apps -->
-    <section class="bg-paper py-16 border-t border-ink/5">
+
+
+    <section id="trusted-apps" class="pt-20 pb-10">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-center font-display text-2xl font-bold mb-10">Some of the 70+ apps in the hive</h2>
-        <div class="flex items-center justify-between gap-8 flex-wrap md:flex-nowrap">
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://blog.mozilla.org/design/files/2019/10/Fx-Browser-icon-fullColor.svg" alt="Firefox" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Google Chrome" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://upload.wikimedia.org/wikipedia/commons/3/38/VLC_icon.png" alt="VLC media player" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Visual Studio Code" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://brave.com/static-assets/images/brave-logo-sans-text.svg" alt="Brave browser" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg" alt="qBittorrent" width="40" height="40" loading="lazy" />
-          <img class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Opera_2015_icon.svg" alt="Opera browser" width="40" height="40" loading="lazy" />
+
+        <!-- Title -->
+        <h2 class="text-center text-2xl font-bold mb-8">
+          Trusted Apps in SoftHive
+        </h2>
+
+
+        <div class="flex items-center justify-between gap-8 overflow-x-auto scrollbar-hide">
+
+          <!-- Firefox -->
+          <img class="h-12 w-auto shrink-0"
+            src="https://blog.mozilla.org/design/files/2019/10/Fx-Browser-icon-fullColor.svg" alt="Firefox" />
+
+          <!-- Chrome -->
+          <img class="h-12 w-auto shrink-0"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"
+            alt="Chrome" />
+
+          <!-- VLC -->
+          <img class="h-12 w-auto shrink-0" src="https://upload.wikimedia.org/wikipedia/commons/3/38/VLC_icon.png"
+            alt="VLC" />
+
+          <!-- VS Code -->
+          <img class="h-12 w-auto shrink-0"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" />
+
+          <!-- Brave -->
+          <img class="h-12 w-auto shrink-0" src="https://brave.com/static-assets/images/brave-logo-sans-text.svg"
+            alt="Brave" />
+
+          <!-- qBittorrent -->
+          <img class="h-12 w-auto shrink-0"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg" alt="qBittorrent" />
+
+          <!-- Opera -->
+          <img class="h-12 w-auto shrink-0"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/49/Opera_2015_icon.svg" alt="Opera" />
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Built for Windows Section -->
+    <section class="py-24 px-4 overflow-hidden">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="relative order-2 lg:order-1">
+            <div class="aspect-square bg-surface-container p-8 rounded-2xl flex items-center justify-center">
+              <img alt="Performance Architecture" class="rounded-xl w-full h-full  ambient-lift"
+                
+                src="http://softhive.me/public/assets/images/screenshots/Capture3.PNG" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-8 order-1 lg:order-2">
+
+            <div class="flex flex-col gap-8 order-1 lg:order-2">
+
+              <div class="flex flex-col gap-4">
+                <span class="text-primary font-bold tracking-widest text-sm uppercase">
+                  Engineered for Performance
+                </span>
+
+                <h2 class="text-on-surface text-4xl md:text-5xl font-black leading-tight">
+                  Built for Windows, Powered by Rust
+                </h2>
+
+                <p class="text-on-surface-variant text-lg leading-relaxed">
+                  <b>SoftHive</b> is a modern desktop application built with <b>Tauri</b> and <b>Rust</b>, combining
+                  native performance,
+                  system-level efficiency, and a clean, responsive interface. It delivers fast startup times, low
+                  resource usage,
+                  and a seamless experience that feels truly native on Windows.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-6">
+
+                <div class="flex gap-4 items-start">
+                  <div class="p-2 rounded bg-surface-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                      viewBox="0 0 256 256">
+                      <path
+                        d="M114.34,154.34l96-96a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32ZM128,88a63.9,63.9,0,0,1,20.44,3.33,8,8,0,1,0,5.11-15.16A80,80,0,0,0,48.49,160.88,8,8,0,0,0,56.43,168c.29,0,.59,0,.89-.05a8,8,0,0,0,7.07-8.83A64.92,64.92,0,0,1,64,152,64.07,64.07,0,0,1,128,88Zm99.74,13a8,8,0,0,0-14.24,7.3,96.27,96.27,0,0,1,5,75.71l-181.1-.07A96.24,96.24,0,0,1,128,56h.88a95,95,0,0,1,42.82,10.5A8,8,0,1,0,179,52.27a112,112,0,0,0-156.66,137A16.07,16.07,0,0,0,37.46,200H218.53a16,16,0,0,0,15.11-10.71,112.35,112.35,0,0,0-5.9-88.3Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-on-surface">High-Performance Engine</h4>
+                    <p class="text-on-surface-variant text-sm">
+                      Built with Rust for maximum speed, stability, and extremely low memory overhead.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                  <div class="p-2 rounded bg-surface-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                      viewBox="0 0 256 256">
+                      <path
+                        d="M216,40H40A16,16,0,0,0,24,56V192a16,16,0,0,0,16,16H56v16a8,8,0,0,0,16,0V208H184v16a8,8,0,0,0,16,0V208h16a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,152H40V56H216v64H199.32a48,48,0,1,0,0,16H216v56Zm-50.16-72a16,16,0,1,0,0,16H183a32,32,0,1,1,0-16Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-on-surface">Secure Native Runtime</h4>
+                    <p class="text-on-surface-variant text-sm">
+                      Tauri-based architecture ensures a small attack surface and strong system isolation.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                  <div class="p-2 rounded bg-surface-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                      viewBox="0 0 256 256">
+                      <path
+                        d="M207.06,72.67A111.24,111.24,0,0,0,128,40h-.4C66.07,40.21,16,91,16,153.13V176a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V152A111.25,111.25,0,0,0,207.06,72.67ZM224,176H119.71l54.76-75.3a8,8,0,0,0-12.94-9.42L99.92,176H32V153.13c0-3.08.15-6.12.43-9.13H56a8,8,0,0,0,0-16H35.27c10.32-38.86,44-68.24,84.73-71.66V80a8,8,0,0,0,16,0V56.33A96.14,96.14,0,0,1,221,128H200a8,8,0,0,0,0,16h23.67c.21,2.65.33,5.31.33,8Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-on-surface">Modern Interface</h4>
+                    <p class="text-on-surface-variant text-sm">
+                      A fluid, responsive UI designed for clarity, speed, and a native Windows 11 feel.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <button class="flex items-center gap-2 text-primary font-bold hover:underline">
+                  Explore architecture details
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="bg-paper py-20 border-t border-ink/5">
-      <div class="max-w-3xl mx-auto px-6">
-        <div class="mb-10 reveal">
-          <span class="font-mono-num text-xs uppercase tracking-[0.2em] text-hive">Good to know</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mt-3">Frequently asked questions</h2>
-        </div>
 
-        <div class="reveal flex flex-col divide-y divide-ink/10 border border-ink/10 rounded-xl bg-white">
-          <details class="group p-6">
-            <summary class="flex items-center justify-between gap-4 font-display font-semibold text-lg">
-              Is SoftHive free to use?
-              <svg class="faq-icon w-5 h-5 shrink-0 text-hive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            </summary>
-            <p class="text-graphite mt-3 leading-relaxed">Yes. SoftHive is completely free, with no account, subscription, or hidden fees.</p>
-          </details>
-          <details class="group p-6">
-            <summary class="flex items-center justify-between gap-4 font-display font-semibold text-lg">
-              Where do the apps come from?
-              <svg class="faq-icon w-5 h-5 shrink-0 text-hive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            </summary>
-            <p class="text-graphite mt-3 leading-relaxed">Every app is fetched directly from its official source at install time. SoftHive doesn't host modified installers or redirect downloads through mirrors.</p>
-          </details>
-          <details class="group p-6">
-            <summary class="flex items-center justify-between gap-4 font-display font-semibold text-lg">
-              Does SoftHive install extra toolbars or bundled software?
-              <svg class="faq-icon w-5 h-5 shrink-0 text-hive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            </summary>
-            <p class="text-graphite mt-3 leading-relaxed">No. SoftHive never adds toolbars, browser extensions, or bundled offers to the apps you install.</p>
-          </details>
-          <details class="group p-6">
-            <summary class="flex items-center justify-between gap-4 font-display font-semibold text-lg">
-              Can I back up and restore my app list?
-              <svg class="faq-icon w-5 h-5 shrink-0 text-hive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            </summary>
-            <p class="text-graphite mt-3 leading-relaxed">Yes. Save your selection as a list, then reinstall the same set of apps on a new or freshly formatted PC in a couple of clicks.</p>
-          </details>
-          <details class="group p-6">
-            <summary class="flex items-center justify-between gap-4 font-display font-semibold text-lg">
-              What is SoftHive built with?
-              <svg class="faq-icon w-5 h-5 shrink-0 text-hive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            </summary>
-            <p class="text-graphite mt-3 leading-relaxed">SoftHive is a native desktop app built with Tauri and Rust, which keeps it lightweight, fast to start, and easy on system resources.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="lattice py-24 text-white">
-      <div class="max-w-[800px] mx-auto px-6 text-center flex flex-col items-center gap-8 reveal">
-        <div class="hex-logo bg-hive !w-16 !h-16">
-          <svg viewBox="0 0 40 40" class="w-9 h-9" aria-hidden="true">
-            <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="white" stroke-width="2.5" />
-            <polygon points="20,14 27,18 27,26 20,30 13,26 13,18" fill="#FFB627" />
-          </svg>
-        </div>
+    <!-- Final CTA Section -->
+    <section class="py-24 px-4 bg-on-background text-on-primary">
+      <div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-8">
         <div class="flex flex-col gap-4">
-          <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Join the hive</h2>
-          <p class="text-mist text-lg">A free, fast, no-nonsense way to set up Windows. 70+ apps, one click, zero hassle.</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight">Join the Hive</h2>
+          <p class="text-primary-fixed-dim text-lg opacity-80">
+            Experience the future of Windows app management today. Thousands of apps, zero hassle.
+          </p>
         </div>
         <div class="flex flex-col items-center gap-4">
+
           <a href="https://github.com/appfinder/softhive-releases/releases/latest/download/SoftHive-Setup.exe" download
-            class="inline-flex items-center justify-center rounded-lg h-14 px-8 bg-hive text-white text-base font-bold tracking-tight hover:bg-hive-bright transition-colors">
-            Download SoftHive for Free
+            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-10 px-4 primary-gradient text-on-primary text-sm font-bold leading-normal tracking-[0.015em]">
+            <span class="truncate">Download SoftHive for Free</span>
           </a>
-          <p class="text-xs text-mist/70 font-mono-num">COMPATIBLE WITH WINDOWS 10 &amp; 11</p>
+
+
+
+          <p class="text-xs text-primary-fixed-dim/60">Compatible with Windows 10 &amp; 11</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-paper py-12 px-6 border-t border-ink/5">
+  <footer class="bg-surface py-12 px-10 border-t border-outline-variant/10">
     <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <a href="#main" class="flex items-center gap-3" aria-label="SoftHive home">
-        <div class="hex-logo bg-hive !w-9 !h-9">
-          <svg viewBox="0 0 40 40" class="w-5 h-5" aria-hidden="true">
-            <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" fill="none" stroke="white" stroke-width="2.5" />
-            <polygon points="20,14 27,18 27,26 20,30 13,26 13,18" fill="#FFB627" />
+      <div class="flex items-center gap-3">
+        <div class="size-5 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#004f96" class="size-6">
+            <path fill-rule="evenodd"
+              d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z"
+              clip-rule="evenodd" />
           </svg>
         </div>
-        <span class="font-display font-bold">SoftHive</span>
-      </a>
-      <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-graphite text-sm font-medium" aria-label="Footer">
-        <a class="hover:text-hive transition-colors" href="privacy.html">Privacy Policy</a>
-        <a class="hover:text-hive transition-colors" href="terms.html">Terms of Service</a>
-        <a class="hover:text-hive transition-colors" href="https://x.com/softhive_me">Twitter</a>
-        <a class="hover:text-hive transition-colors" href="mailto:contact@softhive.me">Support</a>
-        <a class="hover:text-hive transition-colors" href="https://github.com/appfinder/softhive-releases">GitHub</a>
-      </nav>
-      <p class="text-graphite text-sm">© 2026 SoftHive</p>
+        <span class="font-bold text-on-surface">SoftHive</span>
+      </div>
+      <div class="flex gap-8 text-on-surface-variant text-sm font-medium">
+        <a class="hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a>
+        <a class="hover:text-primary transition-colors" href="terms.html">Terms of Service</a>
+        <a class="hover:text-primary transition-colors" href="https://x.com/softhive_me">Twitter</a>
+        <a class="hover:text-primary transition-colors" href="mailto:contact@softhive.me">Support</a>
+        <a class="hover:text-primary transition-colors" href="https://github.com/appfinder/softhive-releases">GitHub</a>
+      </div>
+      <div class="text-on-surface-variant text-sm">
+        © 2024 SoftHive Foundation.
+      </div>
     </div>
   </footer>
-
-  <script>
-    // Mobile nav
-    const navToggle = document.getElementById('nav-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    navToggle.addEventListener('click', () => {
-      const open = mobileNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    // Theme toggle on hero screenshot
-    const themeToggle = document.getElementById('theme-toggle');
-    const heroShot = document.getElementById('hero-shot');
-    const themeLabel = document.getElementById('theme-label');
-    themeToggle.addEventListener('change', () => {
-      if (themeToggle.checked) {
-        heroShot.src = 'assets/dashboard-light.png';
-        themeLabel.textContent = 'Light';
-      } else {
-        heroShot.src = 'assets/dashboard-dark.png';
-        themeLabel.textContent = 'Dark';
-      }
-    });
-
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach((el) => io.observe(el));
-  </script>
 </body>
+
+
 </html>
