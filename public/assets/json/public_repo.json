@@ -1,23 +1,5 @@
 {
     "packages": {
-        "audacity": {
-            "title": "Audacity",
-            "licence": "Open Source",
-            "tag": [
-                "featured"
-            ],
-            "category": "multimedia",
-            "rating": "4.0",
-            "icon": "audacity.png",
-            "version": "3.7.9",
-            "installer": {
-                "kind": "innosetup",
-                "x86": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-win-3.7.8-32bit.exe",
-                "x86_size": 18940432,
-                "x64": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-win-3.7.8-64bit.exe",
-                "x64_size": 20400664
-            }
-        },
         "7zip": {
             "title": "7-Zip",
             "licence": "Open source",
@@ -27,13 +9,15 @@
             "category": "desktop",
             "rating": "5",
             "icon": "7ziplogo.png",
-            "version": "26.04",
+            "version": "26.05",
             "installer": {
                 "kind": "msi",
-                "x86": "https://www.7-zip.org/a/7z2604.msi",
+                "x86": "https://www.7-zip.org/a/7z2605.msi",
                 "x86_size": 1574400,
-                "x64": "https://www.7-zip.org/a/7z2604-x64.msi",
-                "x64_size": 2009088
+                "x86_sha256": "4c2dab7e18696f25f98348fd981db664a982fb159a5f2dd77c9d985a847c6acd",
+                "x64": "https://www.7-zip.org/a/7z2605-x64.msi",
+                "x64_size": 2008576,
+                "x64_sha256": "3fe4ab99fa15629c652944309a2b2bc6e41fc933fc6b63f5df1ebcf3aea68263"
             }
         },
         "firefox": {
@@ -46,13 +30,38 @@
             "category": "browsers",
             "rating": "5.0",
             "icon": "firefox-icon-32.png",
-            "version": "157.0",
+            "version": "159.0",
             "installer": {
                 "kind": "nsis",
                 "x86": "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US",
-                "x86_size": 82375336,
+                "x86_size": 83160032,
+                "x86_sha256": "2f0943a2cb926ca532bfd0e5ca87b0ffad21919dfd858cfd2c7252e53e17fa85",
                 "x64": "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=en-US",
-                "x64_size": 93423176,
+                "x64_size": 94624752,
+                "x64_sha256": "8776887b79925abbdd407fcdfe257d8382b54e24be52a6466426b95a804d6790",
+                "options": {
+                    "extension": ".exe"
+                }
+            }
+        },
+        "brave": {
+            "title": "Brave",
+            "licence": "Open Source",
+            "tag": [
+                "featured"
+            ],
+            "category": "browsers",
+            "rating": "4.0",
+            "icon": "brave-browser-icon-32.png",
+            "version": "1.98.62",
+            "installer": {
+                "kind": "as-is",
+                "x86": "https://github.com/brave/brave-browser/releases/download/v1.98.62/BraveBrowserStandaloneSetup32.exe",
+                "x86_size": 157216608,
+                "x86_sha256": "343773d7d1f752110863076db6c0664a5daafc37392e920ede06a48d97e414e9",
+                "x64": "https://github.com/brave/brave-browser/releases/download/v1.98.62/BraveBrowserSetup.exe",
+                "x64_size": 1277280,
+                "x64_sha256": "b49b4b360cb9821f894df38e9e85e7b8f05ae49bdd2fc9128d1fb838d375fc71",
                 "options": {
                     "extension": ".exe"
                 }
@@ -72,8 +81,10 @@
                 "kind": "custom",
                 "x86": "https://get.geo.opera.com/pub/opera/desktop/100.0.4815.20/win/Opera_100.0.4815.20_Setup.exe",
                 "x86_size": 0,
+                "x86_sha256": "52aa1bc090cb3685c4940484022467c89ca381386a1a77c550afe99d1382944b",
                 "x64": "https://get.geo.opera.com/pub/opera/desktop/100.0.4815.20/win/Opera_100.0.4815.20_Setup_x64.exe",
                 "x64_size": 0,
+                "x64_sha256": "882f4aaa0460b48cb4988bd2e1a64bf6fbc890fe163d541dd71273edae124824",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -95,13 +106,15 @@
             "category": "browsers",
             "rating": "4.0",
             "icon": "vivaldi-icon-32.png",
-            "version": "8.2.4133.83",
+            "version": "8.2.4133.94",
             "installer": {
                 "kind": "custom",
-                "x86": "https://downloads.vivaldi.com/stable/Vivaldi.8.2.4133.83.exe",
-                "x86_size": 142081960,
-                "x64": "https://downloads.vivaldi.com/stable/Vivaldi.8.2.4133.83.x64.exe",
-                "x64_size": 156204968,
+                "x86": "https://downloads.vivaldi.com/stable/Vivaldi.8.2.4133.94.exe",
+                "x86_size": 141156264,
+                "x86_sha256": "7433061b3ed88ef1893a6e61fb55c50b48a96ee1d78c557d259f879c9dbbf78b",
+                "x64": "https://downloads.vivaldi.com/stable/Vivaldi.8.2.4133.94.x64.exe",
+                "x64_size": 156217256,
+                "x64_sha256": "6f2eee78fd43c9cb5d04150487aa786625c3361c96c43e6032f753909850a893",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -125,9 +138,11 @@
             "installer": {
                 "kind": "msi",
                 "x86": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi",
-                "x86_size": 157167616,
+                "x86_size": 160038912,
+                "x86_sha256": "fa53d325d6c333cdf5e9900cc0d431627a16590cd923f14a3c3a1f71958995b7",
                 "x64": "https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi",
-                "x64_size": 168505344
+                "x64_size": 170467328,
+                "x64_sha256": "5de328a8240459a6833b2cf634096ca341a4ebe2ad69b72cbc0455258d6252b4"
             }
         },
         "bitwarden": {
@@ -143,9 +158,11 @@
             "installer": {
                 "kind": "custom",
                 "x86": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
-                "x86_size": 734248,
+                "x86_size": 734240,
+                "x86_sha256": "d4aaad518e6a088cae48af41a1f49045d7579ab5957c76fcc06bbf0fbf89fe69",
                 "x64": "https://bitwarden.com/download/?app=desktop&platform=windows&variant=exe",
-                "x64_size": 734248,
+                "x64_size": 734240,
+                "x64_sha256": "d4aaad518e6a088cae48af41a1f49045d7579ab5957c76fcc06bbf0fbf89fe69",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -169,28 +186,13 @@
                 "kind": "custom",
                 "x64": "https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-723.exe",
                 "x64_size": 3849112,
+                "x64_sha256": "f435b24d4c2c5342c4f7c0143ef358f0f425b7b8a0972dd34d9dcf94789e9c4d",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
                         "/S"
                     ]
                 }
-            }
-        },
-        "putty": {
-            "title": "PuTTY",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "putty.png",
-            "version": "0.84",
-            "installer": {
-                "kind": "msi",
-                "x86": "https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.84-installer.msi",
-                "x86_size": 3526144,
-                "x64": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.84-installer.msi",
-                "x64_size": 3853824
             }
         },
         "bleachbit": {
@@ -202,11 +204,12 @@
             "category": "desktop",
             "rating": "4",
             "icon": "bleachbit.svg",
-            "version": "6.0.4",
+            "version": "6.0.6",
             "installer": {
                 "kind": "custom",
-                "x86": "https://download.bleachbit.org/BleachBit-6.0.4-setup.exe",
-                "x86_size": 17163024,
+                "x86": "https://download.bleachbit.org/BleachBit-6.0.6-setup.exe",
+                "x86_size": 15140856,
+                "x86_sha256": "a8d27535cdc53e89c21090eabca6026d32c4d385863f8dfc6fc8814bda7881c4",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -228,8 +231,10 @@
                 "kind": "nsis",
                 "x86": "https://www.voidtools.com/Everything-1.4.1.1032.x86-Setup.exe",
                 "x86_size": 1901912,
+                "x86_sha256": "781a31b440045219752a1bb40fbd204b1d96964d4bf56af01b18e3d549b037aa",
                 "x64": "https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe",
-                "x64_size": 1998736
+                "x64_size": 1998736,
+                "x64_sha256": "c42efad041d4c0bb4d4ac97ae7cbe89f153ec1fe078772392e749c7f5d5282d3"
             }
         },
         "bcuninstaller": {
@@ -245,7 +250,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/releases/download/v6.3/BCUninstaller_6.3.0_setup.exe",
-                "x86_size": 9430340
+                "x86_size": 9430340,
+                "x86_sha256": "d89c81f4dd029b4862fc6261262a4a9851a6948827af3e55d54e9a8c53b13d88"
             }
         },
         "ditto": {
@@ -262,6 +268,7 @@
                 "kind": "innosetup",
                 "x86": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoSetup_3_25_113_0.exe",
                 "x86_size": 5773896,
+                "x86_sha256": "fc354f1e9b9d2984099d4da93b4c569866dfe9bf1f590c1313e85e07f41224d3",
                 "options": {
                     "extension": ".exe"
                 }
@@ -276,11 +283,12 @@
             "category": "developer",
             "rating": "5",
             "icon": "visual-studio-code-icon-32.png",
-            "version": "1.140.0",
+            "version": "1.144.0",
             "installer": {
                 "kind": "custom",
-                "x64": "https://update.code.visualstudio.com/1.140.0/win32-x64-user/stable",
-                "x64_size": 244372816,
+                "x64": "https://update.code.visualstudio.com/1.144.0/win32-x64-user/stable",
+                "x64_size": 251590472,
+                "x64_sha256": "d4be210abf9c9739d65445bd7993210d6163f32069297adc2314d9bb04ad4afb",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -305,8 +313,9 @@
             "version": "2.56.0",
             "installer": {
                 "kind": "innosetup",
-                "x64": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.2/Git-2.56.0.2-64-bit.exe",
-                "x64_size": 66763664,
+                "x64": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/Git-2.56.0.4-64-bit.exe",
+                "x64_size": 66850032,
+                "x64_sha256": "4961a4a8cc778d8b6e00a5819e5fe4d078b754555aff7aedc2d77a5d74c2de80",
                 "options": {
                     "shims": [
                         "{{.PROGRAMFILES}}\\Git\\bin\\git.exe"
@@ -321,13 +330,15 @@
             "category": "desktop",
             "rating": "4",
             "icon": "node.png",
-            "version": "22.23.3",
+            "version": "26.13.0",
             "installer": {
                 "kind": "msi",
                 "x86": "https://nodejs.org/dist/v12.22.3/node-v12.22.3-x86.msi",
                 "x86_size": 18034688,
-                "x64": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-x64.msi",
-                "x64_size": 31637504
+                "x86_sha256": "66cd8c2fbccf74040b5457d872162994c72776f1cdf4b5df0168327167a1a1c5",
+                "x64": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-x64.msi",
+                "x64_size": 36564992,
+                "x64_sha256": "0e5ee99c7cbf922887f04af268e3665990748945336a44956f47cc0df695b6df"
             }
         },
         "node-lts": {
@@ -339,13 +350,15 @@
             "category": "desktop",
             "rating": "4",
             "icon": "node.png",
-            "version": "22.23.3",
+            "version": "26.13.0",
             "installer": {
                 "kind": "msi",
                 "x86": "https://nodejs.org/dist/v12.22.3/node-v12.22.3-x86.msi",
                 "x86_size": 18034688,
-                "x64": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-x64.msi",
-                "x64_size": 31637504
+                "x86_sha256": "66cd8c2fbccf74040b5457d872162994c72776f1cdf4b5df0168327167a1a1c5",
+                "x64": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-x64.msi",
+                "x64_size": 36564992,
+                "x64_sha256": "0e5ee99c7cbf922887f04af268e3665990748945336a44956f47cc0df695b6df"
             }
         },
         "python3": {
@@ -357,13 +370,15 @@
             "category": "desktop",
             "rating": "4",
             "icon": "python.png",
-            "version": "3.14.8",
+            "version": "3.15.2",
             "installer": {
                 "kind": "custom",
-                "x86": "https://www.python.org/ftp/python/3.14.8/python-3.14.8.exe",
-                "x86_size": 31849256,
-                "x64": "https://www.python.org/ftp/python/3.14.8/python-3.14.8-amd64.exe",
-                "x64_size": 33387464,
+                "x86": "https://www.python.org/ftp/python/3.15.2/python-3.15.2.exe",
+                "x86_size": 35929848,
+                "x86_sha256": "a1040151c8af7a31dcfa3d4da2648040806dfe86050622166cbebc7747f23027",
+                "x64": "https://www.python.org/ftp/python/3.15.2/python-3.15.2-amd64.exe",
+                "x64_size": 37694360,
+                "x64_sha256": "06e225a228191b0f4d1dcf6905fbb21bf9f6970d13a2ec63137ab9bee76f15aa",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -384,7 +399,8 @@
             "installer": {
                 "kind": "nsis",
                 "x64": "https://download.jetbrains.com/python/pycharm-2025.3.exe",
-                "x64_size": 887691448
+                "x64_size": 887691448,
+                "x64_sha256": "b1e9a363d5e9a4c59f91610e214646291dfd8b77a02b9688a3a291be33557550"
             }
         },
         "intellij-idea-community": {
@@ -398,7 +414,8 @@
             "installer": {
                 "kind": "nsis",
                 "x64": "https://download.jetbrains.com/idea/idea-2025.3.exe",
-                "x64_size": 1108206656
+                "x64_size": 1108206656,
+                "x64_sha256": "d7f0310423078c6a3b136c8a04090c1b6d316c2104dc2502d99167feb7ecc1fc"
             }
         },
         "vlc": {
@@ -415,8 +432,10 @@
                 "kind": "custom",
                 "x86": "https://download.videolan.org/pub/videolan/vlc/last/win32/vlc-3.0.24-win32.exe",
                 "x86_size": 45183808,
+                "x86_sha256": "39928615829553bf71810119ea6ecd20cd2fa568e7ec5dfe2e48fd30819cf77a",
                 "x64": "https://download.videolan.org/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.exe",
                 "x64_size": 46269360,
+                "x64_sha256": "d711e1e1fe52052748c39080c7dce63f6b7e4c315efedf1774a3f1957b782ff3",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -435,11 +454,15 @@
             "category": "desktop",
             "rating": "4",
             "icon": "new_icon_small-r.png",
-            "version": "32.2.2",
+            "version": "33.0.0",
             "installer": {
                 "kind": "nsis",
                 "x86": "https://github.com/obsproject/obs-studio/releases/download/27.2.4/OBS-Studio-27.2.4-Full-Installer-x86.exe",
-                "x86_size": 106874704
+                "x86_size": 106874704,
+                "x86_sha256": "73847812a6a39f8530bf017f26164c5afff46b52614f2e4d56b6ca36be10940a",
+                "x64": "https://github.com/obsproject/obs-studio/releases/download/33.0.0/OBS-Studio-33.0.0-Windows-x64-Installer.exe",
+                "x64_size": 186671888,
+                "x64_sha256": "3bf55dae6d9db651505828090de74540296c742ed2a94a28cf055cb6ddc6bed3"
             }
         },
         "anaconda": {
@@ -454,8 +477,10 @@
                 "kind": "nsis",
                 "x86": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe",
                 "x86_size": 511528600,
+                "x86_sha256": "cd8c688349bcd1f429e3b383620fb0d19f52be0f765b2eae78d63b41aefb2e73",
                 "x64": "https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe",
-                "x64_size": 1112492048
+                "x64_size": 1112492048,
+                "x64_sha256": "b545f4bd8ab3bf32d99002a0779a887668ebfe479ee32ecbf060375670d5ee09"
             }
         },
         "android-studio-ide": {
@@ -465,11 +490,12 @@
             "category": "developer",
             "rating": "4.5",
             "icon": "android-studio-icon-32.png",
-            "version": "2026.2.1.8",
+            "version": "2026.2.2.8",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://edgedl.me.gvt1.com/android/studio/install/2026.2.1.8/android-studio-rabbit1-windows.exe",
-                "x64_size": 1511000449
+                "x64": "https://edgedl.me.gvt1.com/android/studio/install/2026.2.2.8/android-studio-rabbit2-windows.exe",
+                "x64_size": 1530976930,
+                "x64_sha256": "260af2d6220f1b7239eef0bce4970f9e444c881d42ed994c4fc0c68b07ef85f8"
             }
         },
         "handbrake": {
@@ -485,7 +511,8 @@
             "installer": {
                 "kind": "nsis",
                 "x64": "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-x86_64-Win_GUI.exe",
-                "x64_size": 25331264
+                "x64_size": 25331264,
+                "x64_sha256": "6becb8e5a041941d5f2fd6fe83c66fc15b2b16190e2e79f5ad47eb4cd18df8cd"
             }
         },
         "rufus": {
@@ -502,8 +529,10 @@
                 "kind": "copy",
                 "x86": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_x86.exe",
                 "x86_size": 1933672,
+                "x86_sha256": "20e1345715aff4aebf016839f721390882201a2b5d00655424c4ca38cb919576",
                 "x64": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe",
                 "x64_size": 1989992,
+                "x64_sha256": "84c8a437f8af89257524478489e5c85f1edf25f761d299e2bcde46ac0afbe106",
                 "options": {
                     "destination": "{{.PROGRAMFILES_X86}}\\Rufus\\rufus.exe"
                 }
@@ -516,11 +545,12 @@
             "category": "multimedia",
             "rating": "3.8",
             "icon": "clementine-player.png",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://github.com/clementine-player/Clementine/releases/download/1.4.2-38-g0460c3a33/ClementineSetup-1.4.2-38-g0460c3a33.exe",
-                "x64_size": 108875792
+                "x64": "https://github.com/clementine-player/Clementine/releases/download/1.4.3-38.dev-gad505d75e/ClementineSetup-1.4.3-38.dev-gad505d75e.exe",
+                "x64_size": 109437496,
+                "x64_sha256": "3e475b7626a4f467bb66c04f13a06dd3b107156cb4225c4c647802fc6743f87c"
             }
         },
         "brackets": {
@@ -534,7 +564,8 @@
             "installer": {
                 "kind": "msi",
                 "x64": "https://github.com/adobe/brackets/releases/download/release-1.14.2/Brackets.Release.1.14.2.msi",
-                "x64_size": 80896000
+                "x64_size": 80896000,
+                "x64_sha256": "5f059e271fe78fefe224e187b6ef559445b1efadd6dca9446a99ca1a53eb4e56"
             }
         },
         "blender": {
@@ -546,11 +577,12 @@
             "category": "multimedia",
             "rating": "4.2",
             "icon": "blender.png",
-            "version": "5.2.2",
+            "version": "5.2.3",
             "installer": {
                 "kind": "msi",
-                "x64": "https://download.blender.org/release/Blender5.2/blender-5.2.2-windows-x64.msi",
-                "x64_size": 364822528
+                "x64": "https://download.blender.org/release/Blender5.2/blender-5.2.3-windows-x64.msi",
+                "x64_size": 366215168,
+                "x64_sha256": "a103d4ece8d9acffd2a95c9d8860355b1f209977cc983b4a3d1e1cfb441c8605"
             }
         },
         "cpu-z": {
@@ -564,7 +596,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://download.cpuid.com/cpu-z/cpu-z_3.01-en.exe",
-                "x86_size": 4836472
+                "x86_size": 4836472,
+                "x86_sha256": "74ab9b1c24fb223d0a5c23e2e444b6cbba7d0c6882cc4bf389e3f88bfca37490"
             }
         },
         "deluge": {
@@ -581,8 +614,10 @@
                 "kind": "nsis",
                 "x86": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win32-setup.exe",
                 "x86_size": 37433971,
+                "x86_sha256": "c35dbaea459fad5a3e45910735c1fffdfbbeab24296a0820878312df7285c2be",
                 "x64": "https://ftp.osuosl.org/pub/deluge/windows/deluge-2.2.0-win64-setup.exe",
-                "x64_size": 41428406
+                "x64_size": 41428406,
+                "x64_sha256": "b2e414dd9cf637d3ea9f5b783972bb36cbb801134b6df79d67c1c08f68f4e889"
             }
         },
         "etcher": {
@@ -592,30 +627,12 @@
             "category": "desktop",
             "rating": "4",
             "icon": "",
-            "version": "2.1.7",
+            "version": "2.1.9",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://github.com/balena-io/etcher/releases/download/v2.1.7/balenaEtcher-2.1.7.Setup.exe",
-                "x64_size": 200093336
-            }
-        },
-        "codeblocks": {
-            "title": "Code::Blocks",
-            "licence": "Open Source",
-            "tag": [],
-            "category": "developer",
-            "rating": "3.4",
-            "icon": "wiki.png",
-            "version": "17.12",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://sourceforge.net/projects/codeblocks/files/Binaries/25.03/Windows/32bit/codeblocks-25.03-32bit-setup.exe/download",
-                "x86_size": 0,
-                "x64": "https://sourceforge.net/projects/codeblocks/files/Binaries/17.12/codeblocks-17.12mingw-setup.exe/download",
-                "x64_size": 0,
-                "options": {
-                    "extension": ".exe"
-                }
+                "x64": "https://github.com/balena-io/etcher/releases/download/v2.1.9/balenaEtcher-2.1.9.Setup.exe",
+                "x64_size": 274253464,
+                "x64_sha256": "3fa63ea453e75c0338f8f1444b511f38decdd002e17922a910aec5e29b85b751"
             }
         },
         "arduino": {
@@ -630,8 +647,10 @@
                 "kind": "nsis",
                 "x86": "https://downloads.arduino.cc/arduino-1.8.19-windows.exe",
                 "x86_size": 117305832,
+                "x86_sha256": "9b480a781e823f81c643a67b1a0e53ad25fceb1b2a4a90977df6916877262055",
                 "x64": "https://github.com/arduino/arduino-ide/releases/download/2.3.10/arduino-ide_2.3.10_Windows_64bit.exe",
-                "x64_size": 158074632
+                "x64_size": 158074632,
+                "x64_sha256": "a8f3df0ac57c6b74aa1b1d22e5f202dc5ddb46663579d4e5108a69cc99b6f823"
             }
         },
         "antimicro": {
@@ -645,29 +664,8 @@
             "installer": {
                 "kind": "msi",
                 "x64": "https://github.com/AntiMicroX/antimicrox/releases/download/3.6.1/antimicrox-3.6.1-Windows-AMD64.exe",
-                "x64_size": 16037291
-            }
-        },
-        "axcrypt": {
-            "title": "AxCrypt",
-            "licence": "Freeware",
-            "tag": [],
-            "category": "desktop",
-            "rating": "4",
-            "icon": "",
-            "version": "2",
-            "installer": {
-                "kind": "custom",
-                "x86": "https://account.axcrypt.net/download/axcrypt-2-setup.exe",
-                "x86_size": 17980712,
-                "x64": "https://www.axcrypt.net/download/axcrypt-latest-win-en-x64.exe",
-                "x64_size": 0,
-                "options": {
-                    "arguments": [
-                        "{{.installer}}",
-                        "/S"
-                    ]
-                }
+                "x64_size": 16037291,
+                "x64_sha256": "467648540ab4bcf83641cb22b3359669bf1b9130b87d4be0aa438221ef3eb06b"
             }
         },
         "discord": {
@@ -683,7 +681,8 @@
             "installer": {
                 "kind": "squirrel",
                 "x86": "https://discordapp.com/api/download?platform=win",
-                "x86_size": 107226856
+                "x86_size": 107226856,
+                "x86_sha256": "85060117d7c75378fcbf8b3824e79549002bc5298ae46fcaa2524c83c476596a"
             }
         },
         "qbittorrent": {
@@ -695,11 +694,12 @@
             "category": "desktop",
             "rating": "5.0",
             "icon": "qbittorrent-icon-32.png",
-            "version": "5.2.4",
+            "version": "5.3.0",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://github.com/qbittorrent/qBittorrent/releases/download/release-5.2.4/qbittorrent_5.2.4_x64_setup.exe",
-                "x64_size": 41407004
+                "x64": "https://github.com/qbittorrent/qBittorrent/releases/download/release-5.3.0/qbittorrent_5.3.0_x64_setup.exe",
+                "x64_size": 50030660,
+                "x64_sha256": "aff5b3bdc00d6e5773d6099ba30f9696dd3dfd1669ab0f64ce5c4e7168486436"
             }
         },
         "powertoys": {
@@ -711,11 +711,12 @@
             "category": "desktop",
             "rating": "4.9",
             "icon": "PowerToys.png",
-            "version": "0.101.2712.0",
+            "version": "0.103.3012.0",
             "installer": {
                 "kind": "custom",
-                "x64": "https://github.com/microsoft/PowerToys/releases/download/v0.101.2712.0/PowerToysSetup-0.101.2712.0-x64.exe",
-                "x64_size": 289605296,
+                "x64": "https://github.com/microsoft/PowerToys/releases/download/v0.103.3012/PowerToysSetup-0.103.3012.0-x64.exe",
+                "x64_size": 318284208,
+                "x64_sha256": "a7528319e0e4f439052fb67399bdd08e240d09096ad6b8ff94232b3b529e3ad1",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -737,9 +738,11 @@
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://telegram.org/dl/desktop/win",
-                "x86_size": 50212656,
+                "x86_size": 57053096,
+                "x86_sha256": "ed157dbe8683d5fea22e48daa6f54daf4d45f12005bc1e5844010b15e182d0e7",
                 "x64": "https://telegram.org/dl/desktop/win64",
-                "x64_size": 55677112
+                "x64_size": 63102944,
+                "x64_sha256": "865cd80080ef1948bd818000c05fe81cabbbd0688a91c2cf8978f9cc73fd5a06"
             }
         },
         "gimp": {
@@ -755,7 +758,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://download.gimp.org/gimp/v3.2/windows/gimp-3.2.6-setup.exe",
-                "x64_size": 190358080
+                "x64_size": 190358080,
+                "x64_sha256": "9337cccbc01d4098ee7a3dab215b3afbe6ece99c5287c92441d6f12cf541ebca"
             }
         },
         "steam": {
@@ -771,7 +775,8 @@
             "installer": {
                 "kind": "nsis",
                 "x86": "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe",
-                "x86_size": 2380800
+                "x86_size": 2380800,
+                "x86_sha256": "7d3654531c32d941b8cae81c4137fc542172bfa9635f169cb392f245a0a12bcb"
             }
         },
         "sumatrapdf": {
@@ -786,10 +791,9 @@
             "version": "3.6.1",
             "installer": {
                 "kind": "custom",
-                "x86": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-install.exe",
-                "x86_size": 10218872,
                 "x64": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
                 "x64_size": 11075960,
+                "x64_sha256": "1eee71cccd2ea6e94d5bcea54ee2f759844da3e1a0ee2f6045035b1d17b94381",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -797,24 +801,6 @@
                         "-install"
                     ]
                 }
-            }
-        },
-        "notepad-plus-plus": {
-            "title": "Notepad++",
-            "licence": "Open Source",
-            "tag": [
-                "featured"
-            ],
-            "category": "developer",
-            "rating": "5.0",
-            "icon": "https://notepad-plus-plus.org/favicon.ico",
-            "version": "8.9.6.4",
-            "installer": {
-                "kind": "nsis",
-                "x86": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.exe",
-                "x86_size": 6759464,
-                "x64": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.4/npp.8.9.6.4.Installer.x64.exe",
-                "x64_size": 6899264
             }
         },
         "obsidian": {
@@ -826,11 +812,12 @@
             "category": "desktop",
             "rating": "4.9",
             "icon": "Obsidian.png",
-            "version": "1.14.4",
+            "version": "1.14.5",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.exe",
-                "x64_size": 341331008
+                "x64": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.5/Obsidian-1.14.5.exe",
+                "x64_size": 342084056,
+                "x64_sha256": "4b95aa855062fb253439c392a32b536c3f9f22ac7fad04f1a6cbf176ecbcfa2a"
             }
         },
         "spotify": {
@@ -846,7 +833,8 @@
             "installer": {
                 "kind": "custom",
                 "x86": "https://download.scdn.co/SpotifySetup.exe",
-                "x86_size": 1072104,
+                "x86_size": 1075688,
+                "x86_sha256": "e0a5491cde2bd30afc25fe23ffa9049d037f6546df1f2c553fdab795c7f5c931",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -867,8 +855,10 @@
                 "kind": "msi",
                 "x86": "https://zoom.us/client/latest/ZoomInstallerFull.msi",
                 "x86_size": 148277248,
+                "x86_sha256": "95479d9358760ea88fa347a65d635760a67f0ebc2625750bc9eed35a8c229b48",
                 "x64": "https://zoom.us/client/latest/ZoomInstallerFull.msi?arch=x64",
-                "x64_size": 148277248
+                "x64_size": 148277248,
+                "x64_sha256": "95479d9358760ea88fa347a65d635760a67f0ebc2625750bc9eed35a8c229b48"
             }
         },
         "malwarebytes": {
@@ -884,7 +874,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x86": "https://downloads.malwarebytes.com/file/mb-windows",
-                "x86_size": 2886560
+                "x86_size": 2906704,
+                "x86_sha256": "985d654dab8b1a919bf985a7235079a1097ec77565a807f0a1d6882eb97b6c59"
             }
         },
         "windows-terminal": {
@@ -901,6 +892,7 @@
                 "kind": "as-is",
                 "x64": "https://github.com/microsoft/terminal/releases/download/v1.26.2734.0/Microsoft.WindowsTerminalPreview_1.26.2734.0_8wekyb3d8bbwe.msixbundle",
                 "x64_size": 24542484,
+                "x64_sha256": "dbc240a34e327fa65fc5edabe523a55cdc3a1b165f067e291c165cdc811269dd",
                 "options": {
                     "extension": ".msixbundle"
                 }
@@ -917,7 +909,8 @@
             "installer": {
                 "kind": "squirrel",
                 "x64": "https://dl.pstmn.io/download/latest/win64",
-                "x64_size": 209964512
+                "x64_size": 0,
+                "x64_sha256": "eb7884bc028230a57d41493f7235ca1c737d7b12d275bb890c6b20cbb72e7951"
             }
         },
         "wireshark": {
@@ -931,7 +924,8 @@
             "installer": {
                 "kind": "nsis",
                 "x64": "https://2.na.dl.wireshark.org/win64/Wireshark-4.6.9-x64.exe",
-                "x64_size": 97931232
+                "x64_size": 97931232,
+                "x64_sha256": "bf9b5ce8a89f244c376a9b1a946276eaa06463dde3e33069a34d7f102f5878cf"
             }
         },
         "dbeaver": {
@@ -941,11 +935,12 @@
             "category": "developer",
             "rating": "4.7",
             "icon": "https://dbeaver.io/favicon.ico",
-            "version": "26.2.2",
+            "version": "26.2.3",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://github.com/dbeaver/dbeaver/releases/download/26.2.2/dbeaver-ce-26.2.2-windows-x86_64.exe",
-                "x64_size": 113470696
+                "x64": "https://github.com/dbeaver/dbeaver/releases/download/26.2.3/dbeaver-ce-26.2.3-windows-x86_64.exe",
+                "x64_size": 113997952,
+                "x64_sha256": "49d0c6d4ee0ba5acecfb48b9a4d2bd8d5734730154d5b974d8990205edb8e927"
             }
         },
         "temurin-17-jdk": {
@@ -961,7 +956,8 @@
             "installer": {
                 "kind": "msi",
                 "x64": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.9%2B9.1/OpenJDK17U-jdk_x64_windows_hotspot_17.0.9_9.msi",
-                "x64_size": 168513536
+                "x64_size": 168513536,
+                "x64_sha256": "cd7b319f6fbd7efc68a0e464c55c7f2a28d6b8be3d0bcda315a16f885c57cadb"
             }
         },
         "slack": {
@@ -977,7 +973,8 @@
             "installer": {
                 "kind": "squirrel",
                 "x64": "https://slack.com/ssb/download-win64",
-                "x64_size": 166665792
+                "x64_size": 166753344,
+                "x64_sha256": "e67904b697d082d1770b1ed035d143fa0403ca1cb80d879eb5087198ffc4bd55"
             }
         },
         "microsoft-teams": {
@@ -991,7 +988,8 @@
             "installer": {
                 "kind": "msi",
                 "x64": "https://statics.teams.cdn.office.net/production-windows-x64/lkg/MicrosoftTeams-x64.msix",
-                "x64_size": 192121486
+                "x64_size": 192121486,
+                "x64_sha256": "1b191c262a49efdb9f1a307d4be59a424bf2f64d1d0c524e54dc4efeb1a55b8b"
             }
         },
         "anydesk": {
@@ -1007,7 +1005,8 @@
             "installer": {
                 "kind": "as-is",
                 "x86": "https://download.anydesk.com/AnyDesk.exe",
-                "x86_size": 8554424,
+                "x86_size": 8553912,
+                "x86_sha256": "979a295b6a68881c9ae7a70c7ba117c26316ecdf9d6afa9dd66b048225df5de9",
                 "options": {
                     "extension": ".exe"
                 }
@@ -1024,7 +1023,8 @@
             "installer": {
                 "kind": "custom",
                 "x86": "https://www.dropbox.com/download?plat=win&type=full",
-                "x86_size": 307030936,
+                "x86_size": 315052952,
+                "x86_sha256": "94fcc682640ef38bbebf68e33d2e9710ab3714c5952b8f9e406c7512ef3baab2",
                 "options": {
                     "arguments": [
                         "{{.installer}}",
@@ -1046,7 +1046,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://www.hwinfo.com/files/hwi64_854.exe",
-                "x64_size": 0
+                "x64_size": 0,
+                "x64_sha256": "16281ec83a69a720beac8e2a1dad606fb2eaf4757bb02c7752b72ee2c26ee243"
             }
         },
         "rustup": {
@@ -1060,9 +1061,11 @@
             "installer": {
                 "kind": "as-is",
                 "x86": "https://static.rust-lang.org/rustup/dist/i686-pc-windows-msvc/rustup-init.exe",
-                "x86_size": 9923072,
+                "x86_size": 9890304,
+                "x86_sha256": "26f8b9042534b7d3d22d6c14deb6c9b1d21c99625156a1f6e89614ee99840f0b",
                 "x64": "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe",
-                "x64_size": 12721664
+                "x64_size": 12724224,
+                "x64_sha256": "00f139da614dced87d3c3d4121c43eebdac3c1bf8a5ee86b9d80dfd71c8d70fd"
             }
         },
         "filezilla": {
@@ -1076,7 +1079,8 @@
             "installer": {
                 "kind": "nsis",
                 "x64": "https://download.filezilla-project.org/client/FileZilla_3.71.1_win64-setup.exe",
-                "x64_size": 0
+                "x64_size": 0,
+                "x64_sha256": "f09482e879e465ee23d3691997dbdcd90bc8683bfa5de87adfb378ec2354d1f1"
             }
         },
         "krita": {
@@ -1088,11 +1092,12 @@
             "category": "multimedia",
             "rating": "4.8",
             "icon": "https://krita.org/favicon.ico",
-            "version": "5.3.4",
+            "version": "5.3.4.1",
             "installer": {
                 "kind": "nsis",
-                "x64": "https://download.kde.org/stable/krita/5.3.4/krita-x64-5.3.4-setup.exe",
-                "x64_size": 165547784
+                "x64": "https://download.kde.org/stable/krita/5.3.4.1/krita-x64-5.3.4.1-setup.exe",
+                "x64_size": 165471576,
+                "x64_sha256": "025523cf1751ff209faf7ecfe1cff851f2cdab64acb8c555b307b349ad56ce8f"
             }
         },
         "sharex": {
@@ -1104,11 +1109,12 @@
             "category": "desktop",
             "rating": "5.0",
             "icon": "https://getsharex.com/favicon.ico",
-            "version": "21.0.0",
+            "version": "22.0.0",
             "installer": {
                 "kind": "innosetup",
-                "x64": "https://github.com/ShareX/ShareX/releases/download/v21.0.0/ShareX-21.0.0-setup-x64.exe",
-                "x64_size": 139151207
+                "x64": "https://github.com/ShareX/ShareX/releases/download/v22.0.0/ShareX-22.0.0-setup-x64.exe",
+                "x64_size": 131695352,
+                "x64_sha256": "ab8339422721f7123ab031c6845323ba7a8f2e1ab25db849d76032af6539efa4"
             }
         },
         "sublime-text-4": {
@@ -1122,7 +1128,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://download.sublimetext.com/sublime_text_build_4215_x64_setup.exe",
-                "x64_size": 21975760
+                "x64_size": 21975760,
+                "x64_sha256": "bafea3ffc2d151fbbf7269868d7eaaa20d7b884254ad5512c1548b6bebfa7cde"
             }
         },
         "docker-desktop": {
@@ -1138,7 +1145,8 @@
             "installer": {
                 "kind": "custom",
                 "x64": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
-                "x64_size": 635493296,
+                "x64_size": 620496816,
+                "x64_sha256": "2668273f82b342a058a28f9ab53ea7bddde10bb6d51307ce2ec54c2d36459744",
                 "options": {
                     "arguments": [
                         "install",
@@ -1159,7 +1167,8 @@
             "installer": {
                 "kind": "msi",
                 "x86": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
-                "x86_size": 264237056
+                "x86_size": 264237056,
+                "x86_sha256": "d55d79710edfeaa107a62f2ea007bec1eeeac8b715a43c2ba3858eec7bc60337"
             }
         },
         "wiztree": {
@@ -1175,7 +1184,8 @@
             "installer": {
                 "kind": "innosetup",
                 "x64": "https://diskanalyzer.com/files/wiztree_4_33_setup.exe",
-                "x64_size": 5153232
+                "x64_size": 5153232,
+                "x64_sha256": "3c56dfc08f06c58b9a9133a137c8559e016749e1605cf81e1b1d6b1deead2ff1"
             }
         },
         "transmission": {
@@ -1185,11 +1195,12 @@
             "category": "desktop",
             "rating": "4.6",
             "icon": "https://transmissionbt.com/favicon.ico",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "installer": {
                 "kind": "msi",
-                "x64": "https://github.com/transmission/transmission/releases/download/4.1.3/transmission-4.1.3-x64.msi",
-                "x64_size": 23326720
+                "x64": "https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4-x64.msi",
+                "x64_size": 23457792,
+                "x64_sha256": "cf51e5772f39a3ead3c8f763b689399b9b4b8b016a4c0ca68ab5d6c634be2e1c"
             }
         },
         "foxit-pdf-reader": {
@@ -1204,6 +1215,7 @@
                 "kind": "custom",
                 "x86": "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Windows&package_type=exe",
                 "x86_size": 291221048,
+                "x86_sha256": "b5436a6c210c6a8b0120e7af7823bcd12747883ce6248dc6c21f5b8688413442",
                 "options": {
                     "arguments": [
                         "/quiet"
@@ -1218,11 +1230,12 @@
             "category": "developer",
             "rating": "4.8",
             "icon": "https://winmerge.org/favicon.ico",
-            "version": "2.16.59",
+            "version": "2.16.60",
             "installer": {
                 "kind": "innosetup",
-                "x64": "https://github.com/WinMerge/winmerge/releases/download/v2.16.59/WinMerge-2.16.59-x64-Setup.exe",
-                "x64_size": 18261040
+                "x64": "https://github.com/WinMerge/winmerge/releases/download/v2.16.60/WinMerge-2.16.60-x64-Setup.exe",
+                "x64_size": 18697696,
+                "x64_sha256": "ed01097f60b63b3e7d58b3036064c40f05504a47c23c231a1081142295815f7f"
             }
         },
         "faststone-image-viewer": {
@@ -1236,7 +1249,8 @@
             "installer": {
                 "kind": "nsis",
                 "x86": "https://www.faststonesoft.net/DN/FSViewerSetup85.exe",
-                "x86_size": 12524744
+                "x86_size": 12524744,
+                "x86_sha256": "5679d7b5cbc5bf6e222230eba6f38f52798de830a89de9aaea409ac55f5f6c38"
             }
         }
     }
